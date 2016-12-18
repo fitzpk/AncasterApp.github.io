@@ -56,7 +56,7 @@
 .leaflet-control-search .search-cancel span {
 	display:none;/* comment for cancel button imageless */
 	font-size:18px;
-	line-height:20px;
+	line-height:30px;
 	color:#ccc;
 	font-weight:bold;
 }
