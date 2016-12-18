@@ -93,6 +93,48 @@ html, body, #map {
 <script src="geojson/Tech_Geojson.js"></script>
 <script src="geojson/Utility_Geojson.js"></script>
 <script>
+	//Customize geojson symbols and labels for the search widget layer group
+	//Features are set to transparent because of the conflicting layer groups
+	searchstyle = {
+		pointToLayer: function(feature, latlng) {
+			return L.marker(latlng, {
+				icon: L.divIcon({iconSize: L.point(6, 6),
+				})
+			})
+		}
+	};
+	// Create layer group for the search widget, insert style settings
+	var poiLayers = L.layerGroup([
+		L.geoJson(artmusic, searchstyle),
+		L.geoJson(theatre, searchstyle),
+		L.geoJson(church, searchstyle),
+		L.geoJson(education, searchstyle),
+		L.geoJson(municipal, searchstyle),
+		L.geoJson(fitness, searchstyle),
+		L.geoJson(sport, searchstyle),
+		L.geoJson(grocery, searchstyle),
+		L.geoJson(rest, searchstyle),
+		L.geoJson(specrest, searchstyle),
+		L.geoJson(chirophy, searchstyle),
+		L.geoJson(denop, searchstyle),
+		L.geoJson(pharmphy, searchstyle),
+		L.geoJson(specheal, searchstyle),
+		L.geoJson(vet, searchstyle),
+		L.geoJson(advise, searchstyle),
+		L.geoJson(financelaw, searchstyle),
+		L.geoJson(insurestate, searchstyle),
+		L.geoJson(aes, searchstyle),
+		L.geoJson(clothing, searchstyle),
+		L.geoJson(design, searchstyle),
+		L.geoJson(retail, searchstyle),
+		L.geoJson(autogas, searchstyle),
+		L.geoJson(manueng, searchstyle),
+		L.geoJson(landmain, searchstyle),
+		L.geoJson(tech, searchstyle),
+		L.geoJson(utility, searchstyle),
+		L.geoJson(general, searchstyle),
+	]);
+	
 	//Symbol for Aesthetic Stores
 	var aesIcon = L.icon({
 		iconUrl: 'http://image.flaticon.com/icons/svg/53/53782.svg',
@@ -1533,6 +1575,16 @@ html, body, #map {
 		layers: [streets]
 	});
 
+
+	//Create search widget wth layer group and add it to the map
+	L.control.search({
+		layer: poiLayers,
+		initial: false,
+		propertyName: 'name'
+	}).addTo(map);
+	
+	map.removeLayer(poiLayers);
+
 	var baseMaps = [
 			       	 { 
 						groupName: "<b>Base Maps</b>",
@@ -1638,57 +1690,6 @@ html, body, #map {
 	L.control.tagFilterButton({
         data: ['Franchise', 'Local']
     }).addTo(map);
-	
-	//Customize geojson symbols and labels for the search widget layer group
-	//Features are set to transparent because of the conflicting layer groups
-	searchstyle = {
-		pointToLayer: function(feature, latlng) {
-			return L.marker(latlng, {
-				icon: L.divIcon({iconSize: L.point(6, 6),
-				})
-			})
-		}
-	};
-	// Create layer group for the search widget, insert style settings
-	var poiLayers = L.layerGroup([
-		L.geoJson(artmusic, searchstyle),
-		L.geoJson(theatre, searchstyle),
-		L.geoJson(church, searchstyle),
-		L.geoJson(education, searchstyle),
-		L.geoJson(municipal, searchstyle),
-		L.geoJson(fitness, searchstyle),
-		L.geoJson(sport, searchstyle),
-		L.geoJson(grocery, searchstyle),
-		L.geoJson(rest, searchstyle),
-		L.geoJson(specrest, searchstyle),
-		L.geoJson(chirophy, searchstyle),
-		L.geoJson(denop, searchstyle),
-		L.geoJson(pharmphy, searchstyle),
-		L.geoJson(specheal, searchstyle),
-		L.geoJson(vet, searchstyle),
-		L.geoJson(advise, searchstyle),
-		L.geoJson(financelaw, searchstyle),
-		L.geoJson(insurestate, searchstyle),
-		L.geoJson(aes, searchstyle),
-		L.geoJson(clothing, searchstyle),
-		L.geoJson(design, searchstyle),
-		L.geoJson(retail, searchstyle),
-		L.geoJson(autogas, searchstyle),
-		L.geoJson(manueng, searchstyle),
-		L.geoJson(landmain, searchstyle),
-		L.geoJson(tech, searchstyle),
-		L.geoJson(utility, searchstyle),
-		L.geoJson(general, searchstyle),
-	]);
-
-	//Create search widget wth layer group and add it to the map
-	L.control.search({
-		layer: poiLayers,
-		initial: false,
-		propertyName: 'name'
-	}).addTo(map);
-	
-	map.removeLayer(poiLayers);
 	
     //Add Ancaster Village Logo to Map
     var logo = L.control({position: 'bottomleft'});
