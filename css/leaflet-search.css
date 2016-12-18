@@ -32,7 +32,7 @@
 	margin:3px 0 3px 3px;
 }
 .leaflet-control-search.search-load .search-input {
-	background: url('../images/loader.gif') no-repeat center right #fff;
+	background: url('../images/loader.gif') center no-repeat #fff;
 }
 .leaflet-control-search.search-load .search-cancel {
 	visibility:hidden;
@@ -44,7 +44,7 @@
 	position:absolute;
 	right:22px;
 	margin:3px 0;
-	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') no-repeat 0 -46px;
+	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') center no-repeat;
 	text-decoration:none;
 	filter: alpha(opacity=80);
 	opacity: 0.8;		
@@ -68,11 +68,11 @@
 	float:left;
 	width:30px;
 	height:30px;	
-	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') no-repeat 2px 2px #fff;
+	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') center no-repeat #fff;
 	border-radius:4px;
 }
 .leaflet-control-search .search-button:hover {
-	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') no-repeat 2px 2px #fafafa;
+	background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') center no-repeat #fafafa;
 }
 .leaflet-control-search .search-tooltip {
 	position:absolute;
