@@ -4,6 +4,10 @@
  * Sources: Adapted from https://github.com/davicustodio/Leaflet.StyledLayerControl 
  */
 
+@font-face {
+    font-family: BebasNeueRegular;
+    src: url(fonts/BebasNeue-webfont.woff);
+}
 .ac-container{
 	width: auto;
 	margin: 2px auto 2px auto;
@@ -13,7 +17,7 @@
 	height: auto;
 }
 .ac-container label{
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: BebasNeueRegular;
 	padding: 5px 10px;
 	position: relative;
 	z-index: 20;
@@ -93,14 +97,14 @@
 }
 
 .menu-item-radio{
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: BebasNeueRegular;
 	font-size: 11px;
 	padding: 5px;
 	
 }
 
 .menu-item-checkbox{
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: BebasNeueRegular;
 	font-size: 11px;
 	padding: 5px;
 	
