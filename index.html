@@ -1630,6 +1630,14 @@ html, body, #map {
 	var control = L.Control.styledLayerControl(baseMaps, overlays, options);
 	map.addControl(control);
 	
+  if (!L.Browser.touch) {
+  L.DomEvent
+  .disableClickPropagation(control._container)
+  .disableScrollPropagation(control._container);
+  } else {
+  L.DomEvent.disableClickPropagation(control._container);
+  }
+	
 	L.control.tagFilterButton({
         data: ['Franchise', 'Local']
     }).addTo(map);
