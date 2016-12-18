@@ -139,18 +139,18 @@
 	}
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
-	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
-	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
-	     -o-transition:      -o-transform 0.25s cubic-bezier(0,0,0.25,1);
-	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	-webkit-transition: -webkit-transform 0.15s cubic-bezier(0,0,0.15,1);
+	   -moz-transition:    -moz-transform 0.15s cubic-bezier(0,0,0.15,1);
+	     -o-transition:      -o-transform 0.15s cubic-bezier(0,0,0.15,1);
+	        transition:         transform 0.15s cubic-bezier(0,0,0.15,1);
 	}
 .leaflet-zoom-anim .leaflet-tile,
 .leaflet-pan-anim .leaflet-tile,
 .leaflet-touching .leaflet-zoom-animated {
-	-webkit-transition: none;
-	   -moz-transition: none;
-	     -o-transition: none;
-	        transition: none;
+	-webkit-transition: -webkit-transform 0.15s cubic-bezier(0,0,0.15,1);
+	   -moz-transition:    -moz-transform 0.15s cubic-bezier(0,0,0.15,1);
+	     -o-transition:      -o-transform 0.15s cubic-bezier(0,0,0.15,1);
+	        transition:         transform 0.15s cubic-bezier(0,0,0.15,1);
 	}
 
 .leaflet-zoom-anim .leaflet-zoom-hide {
