@@ -6,6 +6,7 @@
 
 .leaflet-container .leaflet-control-search {
 	position: relative;
+	right: 2px;
 	float:left;
 	color:#1978cf;
 	-moz-border-radius: 5px;
