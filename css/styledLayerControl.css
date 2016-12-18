@@ -111,5 +111,8 @@
 	border-radius: 5px;
 }
 
-
+.leaflet-control-layers {
+max-height: 90%;
+overflow: auto;
+}
 
