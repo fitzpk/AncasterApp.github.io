@@ -3,7 +3,7 @@
 <head> 
 <title>Businesses of Ancaster</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="description" content="Web mapping application for the local businesses of Ancaster, Ontario">
 <meta name="keywords" content="Ancaster, Local, Business, Franchise, Ontario, GIS, Map, Web Mapping, Leaflet, Javascript, GeoJSON">
 <meta name="author" content="Kevin Fitzgerald">
@@ -19,9 +19,13 @@
 <script src="js/leaflet-tag-filter-button.js"></script>
 
 <style>
-#map {
-	width: 800px;
-	height: 600px;
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100vh;
+    width: 100vw;
 }
 #logo {
 	width: 60px;
