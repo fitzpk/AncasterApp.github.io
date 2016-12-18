@@ -122,5 +122,6 @@
 .leaflet-touch .leaflet-control-search {
   width: 30px;
   height: 30px;
-  line-height: 30px;
+  line-height: 30px;	
+  background: url('http://labs.easyblog.it/maps/leaflet-search/images/search-icon.png') center no-repeat #fff;
 }
