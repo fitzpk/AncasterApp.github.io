@@ -6,7 +6,7 @@
 
 .leaflet-bar button,
 .leaflet-bar button:hover {
-  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') no-repeat 4px 3px #fff;
+  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') center no-repeat #fff;
   border: none;
   border-bottom: 1px solid #ccc;
   width: 26px;
@@ -19,7 +19,7 @@
 }
 
 .leaflet-bar button {
-  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') no-repeat 4px 3px #fff;
+  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') center no-repeat #fff;
   overflow: hidden;
   display: block;
   position: absolute;
