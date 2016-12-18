@@ -3,6 +3,10 @@
  * 
  * Sources: Adapted from Stehpano Cudini - http://labs.easyblog.it/maps/leaflet-search/
  */
+a.search-button {
+	width: 26px;
+    height: 26px;
+}
 
 .leaflet-container .leaflet-control-search {
 	position:relative;
@@ -17,8 +21,6 @@
 	box-shadow: 0 1px 7px rgba(0,0,0,0.65);
 	margin-left: 10px;
 	margin-top: 10px;
-	width: 26px;
-    	height: 26px;
 }
 .leaflet-control-search.search-exp {/*expanded*/
 	box-shadow: 0 1px 7px #999;
