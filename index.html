@@ -3,30 +3,30 @@
 <head> 
 <title>Businesses of Ancaster</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Web mapping application for the local businesses of Ancaster, Ontario">
 <meta name="keywords" content="Ancaster, Local, Business, Franchise, Ontario, GIS, Map, Web Mapping, Leaflet, Javascript, GeoJSON">
 <meta name="author" content="Kevin Fitzgerald">
-<script>L_PREFER_CANVAS = true;</script>
-<script src="js/leaflet-src.js"></script>
-<link rel="stylesheet" href="css/leaflet.css" />
-<link rel="stylesheet" href="css/styledLayerControl.css" />
-<link rel="stylesheet" href="css/leaflet-search.css" />
-<link rel="stylesheet" href="css/leaflet-easy-button.css" />
-<link rel="stylesheet" href="css/leaflet-tag-filter-button.css" />
-<script src="js/styledLayerControl.js"></script>
-<script src="js/leaflet-search.js"></script>
-<script src="js/leaflet-easy-button.js"></script>
-<script src="js/leaflet-tag-filter-button.js"></script>
-
+	<link rel="stylesheet" href="css/leaflet.css"/>
+	<link rel="stylesheet" href="css/custom-markercluster.css"/>
+	<link rel="stylesheet" href="css/leaflet-markercluster.css"/>
+	<link rel="stylesheet" href="css/styledLayerControl.css" />
+	<link rel="stylesheet" href="css/leaflet-search.css" />
+	<link rel="stylesheet" href="css/search-mobile.css" />
+	<link rel="stylesheet" href="css/leaflet-easy-button.css" />
+	<link rel="stylesheet" href="css/leaflet-tag-filter-button.css" />
+	<script src="js/leaflet-src.js"></script>
+	<script src="js/leaflet-markercluster.js"></script>
+	<script src="js/leaflet-markercluster-layersupport-src.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/styledLayerControl.js"></script>
+	<script src="js/leaflet-search.js"></script>
+	<script src="js/leaflet-easy-button.js"></script>
+	<script src="js/leaflet-tag-filter-button.js"></script>
 <style>
-body {
-    padding: 0;
-    margin: 0;
-}
-html, body, #map {
-    height: 100vh;
-    width: 100vw;
+#map {
+	width: 800px;
+	height: 600px;
 }
 #logo {
 	width: 60px;
@@ -56,7 +56,8 @@ html, body, #map {
 </style>
 </head>
 <body>
-<div id="map"> </div>
+
+<div id="map"></div>
 <script src="geojson/ArtMusic_Geojson.js"></script>
 <script src="geojson/Theatre_Geojson.js"></script>
 
@@ -587,7 +588,7 @@ html, body, #map {
 		iconSize: [36, 36],
 		iconAnchor: [16, 20],
 		popupAnchor: [0, -28]
-	});	
+	});
 
 	//Customize geojson symbols and labels for the control widget layer group
 	mapstyle = {
@@ -917,7 +918,7 @@ html, body, #map {
 					icon: generalIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 				+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
-			//Marker and pop-up for general services
+			//Marker and pop-up for golf services
 			if (feature.properties.amenity == "Golf" && feature.properties.status == "Franchise")
 				return L.marker(latlng, {
 					tags: ['Franchise'],
@@ -1399,7 +1400,7 @@ html, body, #map {
 				+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 			}
 		};
- 
+
 	// Create layers for arts and entertainment group
 	var artmusiclyr = new L.layerGroup([
 		L.geoJson(artmusic, mapstyle)
@@ -1519,13 +1520,15 @@ html, body, #map {
 	var utilitylyr = new L.layerGroup([
 		L.geoJson(utility, mapstyle)
 	]);
-	
-	var mbAttr = 'Kevin Fitzgerald &copy 2016 | ' + 'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-	    mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+
+
+	var mbAttr = 'Kevin Fitzgerald &copy 2016 | ' +
+				 'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
 
 	var grayscale = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.light', attribution: mbAttr}),
-	    streets = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.streets', attribution: mbAttr}),
-            comic = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.comic', attribution: mbAttr});
+		streets = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.streets', attribution: mbAttr}),
+		comic = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.comic', attribution: mbAttr});
 		
 	//Create map
 	var map = L.map('map', {
@@ -1533,15 +1536,15 @@ html, body, #map {
 		zoom: 13,
 		layers: [streets]
 	});
-
+	
 	var baseMaps = [
 			       	 { 
 						groupName: "<b>Base Maps</b>",
 						expanded: false,
 						layers: {
-						"Streets": streets,
+						"Streets":  streets,
 						"Grayscale": grayscale,
-						"Comic-Style": comic
+						"Comic-Style": comic 
 						}
 				    }							
 				];
@@ -1617,7 +1620,8 @@ html, body, #map {
 					   }	
                   }							 
 			];
-			
+	
+	//Options/setting needed for the styled layer control widget	
 	var options = {
 		autoResize: true,
 		group_maxHeight: "160px",
@@ -1626,21 +1630,160 @@ html, body, #map {
 		collapsed: true, 
 		position: 'topright'
 	};
-		
+
+	//Create styled layer control widget
 	var control = L.Control.styledLayerControl(baseMaps, overlays, options);
 	map.addControl(control);
-	
-  if (!L.Browser.touch) {
-  L.DomEvent
-  .disableClickPropagation(control._container)
-  .disableScrollPropagation(control._container);
-  } else {
-  L.DomEvent.disableClickPropagation(control._container);
-  }
 
-  L.control.tagFilterButton({
+	//Allows for the user to scroll through the layer control on mobile devices
+	if (!L.Browser.touch) {
+	  L.DomEvent
+	  .disableClickPropagation(control._container)
+	  .disableScrollPropagation(control._container);
+	} else {
+	  L.DomEvent.disableClickPropagation(control._container);
+	}	
+
+	//Create filter widget
+	L.control.tagFilterButton({
         data: ['Franchise', 'Local']
-  }).addTo(map);
+    }).addTo(map);
+
+	//Create marker cluster group 1
+	var aesclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var clothingclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var designclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var retailclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 1
+	aesclus.checkIn([
+		aeslyr
+	]);
+	clothingclus.checkIn([
+		clothinglyr
+	]);
+	designclus.checkIn([
+		designlyr
+	]);	
+	retailclus.checkIn([
+		retaillyr
+	]);	
+
+	//Create marker cluster group 2
+	var artmusicclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var theatreclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 2
+	artmusicclus.checkIn([
+		artmusiclyr
+	]);	
+	theatreclus.checkIn([
+		theatrelyr
+	]);
+	
+	//Create marker cluster group 3
+	var fitnessclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var sportclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 3
+	fitnessclus.checkIn([
+		fitnesslyr
+	]);	
+	sportclus.checkIn([
+		sportlyr
+	]);
+	
+	//Create marker cluster group 4
+	var churchclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var educationclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var municipalclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 4
+	churchclus.checkIn([
+		churchlyr
+	]);	
+	educationclus.checkIn([
+		educationlyr
+	]);
+	municipalclus.checkIn([
+		municipallyr
+	]);	
+	
+	//Create marker cluster group 5
+	var groceryclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var restclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var specrestclus = L.markerClusterGroup.layerSupport().addTo(map);	
+	//Check in sub-group 5
+	groceryclus.checkIn([
+		grocerylyr
+	]);	
+	restclus.checkIn([
+		restlyr
+	]);
+	specrestclus.checkIn([
+		specrestlyr
+	]);
+
+	//Create marker cluster group 6
+	var autogasclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var manuengclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var landmainclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var generalclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var techclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var utilityclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 6
+	autogasclus.checkIn([
+		autogaslyr
+	]);	
+	generalclus.checkIn([
+		generallyr
+	]);
+	landmainclus.checkIn([
+		landmainlyr
+	]);	
+	manuengclus.checkIn([
+		manuenglyr
+	]);
+	techclus.checkIn([
+		techlyr
+	]);
+	utilityclus.checkIn([
+		utilitylyr
+	]);
+	
+	//Create marker cluster group 7
+	var chirophyclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var denopclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var pharmphyclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var spechealclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var vetclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 7
+	chirophyclus.checkIn([
+		chirophylyr
+	]);
+	denopclus.checkIn([
+		denoplyr
+	]);
+	pharmphyclus.checkIn([
+		pharmphylyr
+	]);	
+	spechealclus.checkIn([
+		specheallyr
+	]);
+	vetclus.checkIn([
+		vetlyr
+	]);
+	
+	//Create marker cluster group 8
+	var adviseclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var financelawclus = L.markerClusterGroup.layerSupport().addTo(map);
+	var insurestateclus = L.markerClusterGroup.layerSupport().addTo(map);
+	//Check in sub-group 8
+	adviseclus.checkIn([
+		adviselyr
+	]);
+	financelawclus.checkIn([
+		financelawlyr
+	]);
+	insurestateclus.checkIn([
+		insurestatelyr
+	]);
 
 	//Customize geojson symbols and labels for the search widget layer group
 	//Features are set to transparent because of the conflicting layer groups
@@ -1652,6 +1795,7 @@ html, body, #map {
 			})
 		}
 	};
+	
 	// Create layer group for the search widget, insert style settings
 	var poiLayers = L.layerGroup([
 		L.geoJson(artmusic, searchstyle),
@@ -1691,17 +1835,17 @@ html, body, #map {
 		propertyName: 'name'
 	}).addTo(map);
 	
+	//Layers are removed from map to improve functionality (speed) on mobile devices
 	map.removeLayer(poiLayers);
 	
-    //Add Ancaster Village Logo to Map
+	//Add Ancaster Village Logo to Map
     var logo = L.control({position: 'bottomleft'});
     logo.onAdd = function(map){
         var div = L.DomUtil.create('div', 'myclass');
         div.innerHTML= "<img id='logo' src='http://www.shopancasterfarmersmarket.com/bia-dev/wp-content/uploads/2015/08/logo-enclosed.png'/>";
         return div;
     }
-    logo.addTo(map);
-	
-</script>
+    logo.addTo(map);		
+  </script>
 </body>
 </html>
