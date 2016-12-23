@@ -139,10 +139,10 @@
 	}
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
-	-webkit-transition: -webkit-transform 0.2s cubic-bezier(0,0,0.2,1);
-	   -moz-transition:    -moz-transform 0.2s cubic-bezier(0,0,0.2,1);
-	     -o-transition:      -o-transform 0.2s cubic-bezier(0,0,0.2,1);
-	        transition:         transform 0.2s cubic-bezier(0,0,0.2,1);
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	     -o-transition:      -o-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
 	}
 .leaflet-zoom-anim .leaflet-tile,
 .leaflet-pan-anim .leaflet-tile,
@@ -154,7 +154,7 @@
 	}
 
 .leaflet-zoom-anim .leaflet-zoom-hide {
-	visibility: hidden;
+	visibility: visible;
 	}
 
 
@@ -274,9 +274,9 @@
 /* layers control */
 
 .leaflet-control-layers {
-	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-	background: #fff;
-	border-radius: 5px;
+  	box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  	background-color: rgba(255, 255, 255, 1);
+  	border: 2px solid #1978cf;
 	}
 .leaflet-control-layers-toggle {
 	background-image: url(images/layers.png);
