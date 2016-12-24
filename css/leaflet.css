@@ -291,11 +291,11 @@
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
 	background-image: url(images/layers-2x.png);
-	border: none;
+	border: 2px solid #1978cf;
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
-	border: none;
+	border: 2px solid #1978cf;
 	width: 44px;
 	height: 44px;
 	}
