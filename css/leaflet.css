@@ -288,6 +288,7 @@
 	}
 .leaflet-control-layers-toggle {
 	background-image: url(images/layers.png);
+	border: none;
 	width: 36px;
 	height: 36px;
 	}
@@ -305,7 +306,6 @@
 	}
 .leaflet-control-layers .leaflet-control-layers-list{
 	display: none;
-	border: 2px solid #1978cf;
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
