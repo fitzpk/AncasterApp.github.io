@@ -6,7 +6,10 @@
 
 .leaflet-bar button,
 .leaflet-bar button:hover {
-  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') center no-repeat #fff;
+  background-image: url('http://metro.toyls.com/apps/metro/resources/filter-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
   border: 2px solid #1978cf;
   border-radius:6px;
@@ -16,15 +19,17 @@
   display: block;
   text-align: center;
   text-decoration: none;
-  color: black;
 }
 
 .leaflet-bar button {
-  background: url('http://maydemirx.github.io/leaflet-tag-filter-button/filter.png') center no-repeat #fff;
+  background-image: url('http://metro.toyls.com/apps/metro/resources/filter-2.png') #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
   overflow: hidden;
   display: block;
   position: absolute;
-  top: 58px;
+  top: 60px;
   margin-left: -2px;
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
   background-color: rgba(255, 255, 255, 0.8);
@@ -33,6 +38,8 @@
 
 .leaflet-bar button:hover {
   border: 2px solid #1978cf;
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 .leaflet-bar button:first-of-type {
