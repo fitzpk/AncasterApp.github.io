@@ -276,7 +276,13 @@
 .leaflet-control-layers {
   	box-shadow: 0 0 8px rgba(0,0,0,0.4);
   	background-color: rgba(255, 255, 255, 1);
-  	border: 2px solid #1978cf;
+  	border-radius:6px;
+	}
+.leaflet-touch .leaflet-control-layers {
+  	box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  	background-color: rgba(255, 255, 255, 1);
+	border: 2px solid #1978cf;
+	border-radius:6px;
 	}
 .leaflet-control-layers-toggle {
 	background-image: url(images/layers.png);
@@ -285,13 +291,13 @@
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
 	background-image: url(images/layers-2x.png);
+	border: none;
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
+	border: none;
 	width: 44px;
 	height: 44px;
-	border: 2px solid #1978cf;
-	border-radius:6px;
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
