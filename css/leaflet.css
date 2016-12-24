@@ -316,6 +316,12 @@
 	color: #333;
 	background: #fff;
 	}
+.leaflet-touch .leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	border: 2px solid #1978cf;
+	color: #333;
+	background: #fff;
+	}
 .leaflet-control-layers-selector {
 	margin-top: 2px;
 	position: relative;
