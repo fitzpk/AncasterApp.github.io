@@ -6,21 +6,21 @@
 	border: 2px solid #1978cf;
 	border-radius:6px;
 }
-.leaflet-touch .leaflet-control {
-	border: 2px solid #1978cf;
-	border-radius:6px;
-}
-.leaflet-bottom .leaflet-control {
+
+/* CONTROLS */
+.leaflet-bottom .leaflet-control,
+.leaflet-touch .leaflet-bottom .leaflet-control {
 	border: none;
 }
 .leaflet-left.leaflet-top .leaflet-control,
 .leaflet-touch .leaflet-left .leaflet-control {
-	background-color: rgba(255, 255, 255, 0.8);
 	margin-left: 8px;
 	margin-top: 8px;
 	margin-bottom: 0;
 }
-.leaflet-left.leaflet-bottom .leaflet-control {
+.leaflet-left.leaflet-bottom .leaflet-control,
+.leaflet-touch .leaflet-left.leaflet-bottom .leaflet-control {
+	border: none;
 	margin-left: 8px;
 	margin-bottom: 8px;
 	margin-top: 0;
