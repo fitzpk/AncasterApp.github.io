@@ -306,6 +306,7 @@
 .leaflet-control-layers .leaflet-control-layers-list,
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
 	display: none;
+	border: 2px solid #1978cf;
 	}
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
 	display: block;
@@ -313,7 +314,6 @@
 	}
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
-	border: 2px solid #1978cf;
 	color: #333;
 	background: #fff;
 	}
