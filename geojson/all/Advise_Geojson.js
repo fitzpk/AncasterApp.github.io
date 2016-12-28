@@ -1,7 +1,7 @@
 /* * * * * * * * * * * * * * * * * * * * *
  * 
  * GeoJSON features for consulting, advisory, and other specialty services
-
+ *
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
