@@ -1,8 +1,12 @@
-/*
- * Author: Kevin Fitzgerald
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet Styled Layer Control
  * 
- * Sources: Adapted from Davi Custodio (https://github.com/davicustodio/Leaflet.StyledLayerControl)
- */
+ * Adapted from Davi Custodio 
+ * 
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.  
+ * 
+ * Source: https://github.com/davicustodio/Leaflet.StyledLayerControl
+ * * * * * * * * * * * * * * * * * * * */
 
 L.Control.StyledLayerControl = L.Control.Layers.extend({
     options: {
