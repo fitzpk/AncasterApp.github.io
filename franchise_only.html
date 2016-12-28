@@ -18,22 +18,21 @@
 <script src="js/styledLayerControl.js"></script>
 <script src="js/leaflet-search.js"></script>
 <style>
-/*
 html, body {
     padding: 0;
     margin: 0;
 }
-*/
-html, body, #map {
-    height: 100vh;
-    width: 100vw;
-}
 /*
+#mapcontainer {
+	border: 
+	width: 100vw;
+	height: 100vh;
+}*/
 #map {
-	height: 600px;
-	width: 800px;
+	height: 100vh;
+	width: 100vw;
+	margin-top:-18px;
 }
-*/
 #logo {
 	width: 60px;
 	height: 60px;
@@ -82,7 +81,7 @@ html, body, #map {
     border: 2px solid #1978cf;
 	border-radius:6px;
     position: relative;
-    top:130px;
+    top:110px;
     left:6px;
     z-index: 5;
     display: inline-block;
@@ -148,16 +147,17 @@ html, body, #map {
 </style>
 </head>
 <body>
-	
-<div class="dropdown">
-  <button id = "myBtn" class="dropbtn"></button>
-  <div id="dropdown-content" class="dropdown-content">
-    <a href="index.html" id="hidden">All Businesses</a>
-    <a id="shown">Franchise Only</a>
-    <a href="local_only.html" id="hidden">Local Only</a>
-  </div>
+<div id="mapcontainer">
+         <div class="dropdown">
+	  <button id = "myBtn" class="dropbtn"></button>
+	  <div id="dropdown-content" class="dropdown-content">
+	    <a href="index.html" id="hidden">All Businesses</a>
+	    <a id="shown">Franchise Only</a>
+	    <a href="local_only.html" id="hidden">Local Only</a>
+	  </div>
+	</div>
+     <div id="map"> </div>
 </div>
-<div id="map"> </div>
 <script src="geojson/franchise/ArtMusic_Geojson.js"></script>
 <script src="geojson/franchise/Theatre_Geojson.js"></script>
 
