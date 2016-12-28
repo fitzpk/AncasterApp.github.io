@@ -1,8 +1,14 @@
-/*
- Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
- (c) 2010-2013, Vladimir Agafonkin
- (c) 2010-2011, CloudMade
-*/
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet, a Javascrip library for mobile-friendly interactive maps.
+ * 
+ * Copyright 2010-2013 Vladimir Agafonkin
+ * Copyright 2010-2011 CloudMade 
+ * 
+ * Licensed under the 2-clause BSD License. 
+ * 
+ * Source: http://leafletjs.com
+ * * * * * * * * * * * * * * * * * * * */
+
 (function (window, document, undefined) {
 var oldL = window.L,
     L = {};
