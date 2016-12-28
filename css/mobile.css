@@ -1,5 +1,12 @@
-/********** Leaflet Customizations for **********/
-
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet Control Customizations
+ * 
+ * Kevin Fitzgerald (Adapted from Stefano Cudini (C) 2016)
+ * 
+ * Licensed under the MIT License.  
+ * 
+ * Source: git@github.com:stefanocudini/leaflet-search.git
+ * * * * * * * * * * * * * * * * * * * */
 /* CONTROLS */
 .leaflet-control,
 .leaflet-left .leaflet-control {
