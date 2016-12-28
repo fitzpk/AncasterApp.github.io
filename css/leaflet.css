@@ -1,4 +1,13 @@
-/* required styles */
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet's Required Styles
+ * 
+ * Copyright 2010-2013 Vladimir Agafonkin
+ * Copyright 2010-2011 CloudMade 
+ * 
+ * Licensed under the 2-clause BSD License. 
+ * 
+ * Source: http://leafletjs.com
+ * * * * * * * * * * * * * * * * * * * */
 
 .leaflet-map-pane,
 .leaflet-tile,
