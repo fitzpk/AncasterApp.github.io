@@ -277,9 +277,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .educationcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 121, 183, 1);
@@ -292,11 +292,11 @@
 }
 
 .educationcluster-medium, .educationcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -308,9 +308,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .municipalcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 121, 183, 1);
@@ -323,11 +323,11 @@
 }
 
 .municipalcluster-medium, .municipalcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -339,9 +339,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .grocerycluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 85, 55, 1);
@@ -354,11 +354,11 @@
 }
 
 .grocerycluster-medium, .grocerycluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -370,9 +370,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .restcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 85, 55, 1);
@@ -385,11 +385,11 @@
 }
 
 .restcluster-medium, .restcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -401,9 +401,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .specrestcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 85, 55, 1);
@@ -416,11 +416,11 @@
 }
 
 .specrestcluster-medium, .specrestcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -432,9 +432,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .autogascluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -447,11 +447,11 @@
 }
 
 .autogascluster-medium, .autogascluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -463,9 +463,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .manuengcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -478,11 +478,11 @@
 }
 
 .manuengcluster-medium, .manuengcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -494,9 +494,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .landmaincluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -508,11 +508,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .landmaincluster-medium, .landmaincluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -524,9 +524,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .generalcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -538,11 +538,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .generalcluster-medium, .generalcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -554,9 +554,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .techcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -568,11 +568,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .techcluster-medium, .techcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -584,9 +584,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .utilitycluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 178, 102, 1);
@@ -599,11 +599,11 @@
 }
 
 .utilitycluster-medium, .utilitycluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -615,9 +615,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .chirophycluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 102, 102, 1);
@@ -630,11 +630,11 @@
 }
 
 .chirophycluster-medium, .chirophycluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -646,9 +646,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .denopcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 102, 102, 1);
@@ -661,11 +661,11 @@
 }
 
 .denopcluster-medium, .denopcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -677,9 +677,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .pharmphycluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 102, 102, 1);
@@ -692,11 +692,11 @@
 }
 
 .pharmphycluster-medium, .pharmphycluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -708,9 +708,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .spechealcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 102, 102, 1);
@@ -723,11 +723,11 @@
 }
 
 .spechealcluster-medium, .spechealcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -739,9 +739,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .vetcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255, 102, 102, 1);
@@ -754,11 +754,11 @@
 }
 
 .vetcluster-medium, .vetcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -770,9 +770,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .procluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(64, 64, 64, 1);
@@ -784,11 +784,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .procluster-medium, .procluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -800,9 +800,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .financelawcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(64, 64, 64, 1);
@@ -815,11 +815,11 @@
 }
 
 .financelawcluster-medium, .financelawcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -831,9 +831,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .insurestatecluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(64, 64, 64, 1);
@@ -846,11 +846,11 @@
 }
 
 .insurestatecluster-medium, .insurestatecluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
