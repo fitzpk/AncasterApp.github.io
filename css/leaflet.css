@@ -327,6 +327,7 @@
 	}
 .leaflet-touch .leaflet-control-layers-expanded .leaflet-control-layers-list {
 	padding: 6px 6px 6px 6px;
+	border: 2px solid #1978cf;
 	color: #333;
 	background: #fff;
 	}
