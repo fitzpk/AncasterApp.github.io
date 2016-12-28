@@ -1,9 +1,9 @@
- /* * * * * * * * * * * * * * * * * * * *
- * Customized Marker Cluster Styles 
- * 
- * Kevin Fitzgerald Copyright 2016
- * 
- * * * * * * * * * * * * * * * * * * * * */
+ /* * * * * * * * * * * * * * * * * * * * * 
+* Customized Marker Cluster Styles 
+* 
+* Kevin Fitzgerald Copyright 2016
+* 
+* * * * * * * * * * * * * * * * * * * * */
 
 .aescluster-small{
 	background-clip: padding-box;
@@ -21,13 +21,14 @@
 }
 .aescluster-medium, .aescluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255,255,240, 1);
-    border-radius: 20px;
     background-color: rgba(241, 211, 87, 0.6);
     text-align: center;
     vertical-align: center;
@@ -50,13 +51,14 @@
 }
 .clothingcluster-medium, .clothingcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255,255,240, 1);
-    border-radius: 20px;
     background-color: rgba(70,130,180, 0.6);
     text-align: center;
     vertical-align: center;
@@ -79,13 +81,14 @@
 }
 .designcluster-medium, .designcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255,255,240, 1);
-    border-radius: 20px;
     background-color: rgba(205,92,92, 0.6);
     text-align: center;
     vertical-align: center;
@@ -108,13 +111,14 @@
 }
 .retailcluster-medium, .retailcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255,255,240, 1);
-    border-radius: 20px;
     background-color: rgba(143,188,143, 0.6);
     text-align: center;
     vertical-align: center;
@@ -137,13 +141,14 @@
 }
 .artmusiccluster-medium, .artmusiccluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(192,192,192, 1);
-    border-radius: 20px;
     background-color: rgba(72,209,204, 0.6);
     text-align: center;
     vertical-align: center;
@@ -166,13 +171,14 @@
 }
 .theatrecluster-medium, .theatrecluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(192,192,192, 1);
-    border-radius: 20px;
     background-color: rgba(233,84,84, 0.6);
     text-align: center;
     vertical-align: center;
@@ -195,13 +201,14 @@
 }
 .fitnesscluster-medium, .fitnesscluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(0, 119, 255, 1);
-    border-radius: 20px;
     background-color: rgba(2,118,139, 0.6);
     text-align: center;
     vertical-align: center;
@@ -224,13 +231,14 @@
 }
 .sportcluster-medium, .sportcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(0, 119, 255, 1);
-    border-radius: 20px;
     background-color: rgba(75,64,67, 0.6);
     text-align: center;
     vertical-align: center;
@@ -254,13 +262,14 @@
 
 .churchcluster-medium, .churchcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 121, 183, 1);
-    border-radius: 20px;
     background-color: rgba(75,64,67, 0.6);
     text-align: center;
     vertical-align: center;
@@ -284,13 +293,14 @@
 
 .educationcluster-medium, .educationcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 121, 183, 1);
-    border-radius: 20px;
     background-color: rgba(102, 0, 0, 0.6);
     text-align: center;
     vertical-align: center;
@@ -314,13 +324,14 @@
 
 .municipalcluster-medium, .municipalcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 121, 183, 1);
-    border-radius: 20px;
     background-color: rgba(0, 76, 153, 0.6);
     text-align: center;
     vertical-align: center;
@@ -344,13 +355,14 @@
 
 .grocerycluster-medium, .grocerycluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 85, 55, 1);
-    border-radius: 20px;
     background-color: rgba(0, 102, 204, 0.6);
     text-align: center;
     vertical-align: center;
@@ -374,13 +386,14 @@
 
 .restcluster-medium, .restcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 85, 55, 1);
-    border-radius: 20px;
     background-color: rgba(96, 96, 96, 0.6);
     text-align: center;
     vertical-align: center;
@@ -404,13 +417,14 @@
 
 .specrestcluster-medium, .specrestcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(49, 85, 55, 1);
-    border-radius: 20px;
     background-color: rgba(85, 191, 148, 0.6);
     text-align: center;
     vertical-align: center;
@@ -434,13 +448,14 @@
 
 .autogascluster-medium, .autogascluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(25, 0, 51, 0.6);
     text-align: center;
     vertical-align: center;
@@ -464,13 +479,14 @@
 
 .manuengcluster-medium, .manuengcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(64, 64, 64, 0.6);
     text-align: center;
     vertical-align: center;
@@ -493,13 +509,14 @@
 }
 .landmaincluster-medium, .landmaincluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(0, 153, 76, 0.6);
     text-align: center;
     vertical-align: center;
@@ -522,13 +539,14 @@
 }
 .generalcluster-medium, .generalcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(0, 76, 153, 0.6);
     text-align: center;
     vertical-align: center;
@@ -551,13 +569,14 @@
 }
 .techcluster-medium, .techcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(255, 51, 51, 0.6);
     text-align: center;
     vertical-align: center;
@@ -581,13 +600,14 @@
 
 .utilitycluster-medium, .utilitycluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 178, 102, 1);
-    border-radius: 20px;
     background-color: rgba(255, 128, 0, 0.6);
     text-align: center;
     vertical-align: center;
@@ -611,13 +631,14 @@
 
 .chirophycluster-medium, .chirophycluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 102, 102, 1);
-    border-radius: 20px;
     background-color: rgba(64, 64, 64, 0.6);
     text-align: center;
     vertical-align: center;
@@ -641,13 +662,14 @@
 
 .denopcluster-medium, .denopcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 102, 102, 1);
-    border-radius: 20px;
     background-color: rgba(72, 131, 199, 0.6);
     text-align: center;
     vertical-align: center;
@@ -671,13 +693,14 @@
 
 .pharmphycluster-medium, .pharmphycluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 102, 102, 1);
-    border-radius: 20px;
     background-color: rgba(255, 156, 156, 0.6);
     text-align: center;
     vertical-align: center;
@@ -701,13 +724,14 @@
 
 .spechealcluster-medium, .spechealcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 102, 102, 1);
-    border-radius: 20px;
     background-color: rgba(255, 178, 102, 0.6);
     text-align: center;
     vertical-align: center;
@@ -731,13 +755,14 @@
 
 .vetcluster-medium, .vetcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(255, 102, 102, 1);
-    border-radius: 20px;
     background-color: rgba(0, 204, 102, 0.6);
     text-align: center;
     vertical-align: center;
@@ -760,13 +785,14 @@
 }
 .procluster-medium, .procluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(64, 64, 64, 1);
-    border-radius: 20px;
     background-color: rgba(45,65,164, 0.6);
     text-align: center;
     vertical-align: center;
@@ -790,13 +816,14 @@
 
 .financelawcluster-medium, .financelawcluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(64, 64, 64, 1);
-    border-radius: 20px;
     background-color: rgba(32, 112, 70, 0.6);
     text-align: center;
     vertical-align: center;
@@ -820,13 +847,14 @@
 
 .insurestatecluster-medium, .insurestatecluster-large{
 	background-clip: padding-box;
-	padding-top: 5px;
+	padding-top: 9px;
+	padding-left: 1px;
 	padding-right: 2px;
 	padding-bottom: 2px;
-    width: 24px;
-    height: 20px;
+    width: 32px;
+    height: 24px;
+    border-radius: 30px;
     border: 5px solid rgba(64, 64, 64, 1);
-    border-radius: 20px;
     background-color: rgba(164, 45, 45, 0.6);
     text-align: center;
     vertical-align: center;
