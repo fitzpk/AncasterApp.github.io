@@ -1,8 +1,13 @@
-/*
- Leaflet.markercluster, Provides Beautiful Animated Marker Clustering functionality for Leaflet, a JS library for interactive maps.
- https://github.com/Leaflet/Leaflet.markercluster
- (c) 2012-2013, Dave Leaver, smartrak
-*/
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet Marker Cluster
+ * 
+ * Copyright 2012-2013 Dave Leaver, smartrak 
+ * 
+ * Licensed under the MIT License.  
+ * 
+ * Source: https://github.com/Leaflet/Leaflet.markercluster
+ * * * * * * * * * * * * * * * * * * * */
+
 !function(t,e){
 	
 L.MarkerClusterGroup=L.FeatureGroup.extend({
