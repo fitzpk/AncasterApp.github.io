@@ -47,7 +47,7 @@
 	position:absolute;
 	right:22px;
 	margin:3px 3px;
-	background: url('https://openclipart.org/image/2400px/svg_to_png/183568/close-button.png') no-repeat center;
+	background: url('https://dl.dropbox.com/s/d4845dh087emadq/cancelbutton.png?dl=0') no-repeat center;
 	background-size: 70% 70%;
 	text-decoration:none;
 	filter: alpha(opacity=80);
@@ -74,14 +74,14 @@
 	float:left;
 	width:26px;
 	height:26px;	
-	background-image: url('https://maxcdn.icons8.com/windows8/PNG/512/Very_Basic/search-512.png') #fff;
+	background-image: url('https://dl.dropbox.com/s/6pg9dfs4jwbs8ma/search.png?dl=0') #fff;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 75% 75%;
 	border-radius:4px;
 }
 .leaflet-control-search .search-button:hover {
-	background-image: url('https://maxcdn.icons8.com/windows8/PNG/512/Very_Basic/search-512.png') #f4f4f4;
+	background-image: url('https://dl.dropbox.com/s/6pg9dfs4jwbs8ma/search.png?dl=0') #f4f4f4;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 75% 75%;
