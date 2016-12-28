@@ -6,9 +6,9 @@
 * * * * * * * * * * * * * * * * * * * * */
 
 .aescluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255,255,240, 1);
@@ -20,11 +20,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .aescluster-medium, .aescluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -36,9 +36,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .clothingcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255,255,240, 1);
@@ -50,11 +50,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .clothingcluster-medium, .clothingcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -66,9 +66,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .designcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255,255,240, 1);
@@ -80,11 +80,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .designcluster-medium, .designcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -96,9 +96,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .retailcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(255,255,240, 1);
@@ -110,11 +110,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .retailcluster-medium, .retailcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -126,9 +126,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .artmusiccluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(192,192,192, 1);
@@ -140,11 +140,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .artmusiccluster-medium, .artmusiccluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -156,9 +156,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .theatrecluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(192,192,192, 1);
@@ -170,11 +170,11 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .theatrecluster-medium, .theatrecluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
@@ -186,12 +186,12 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .fitnesscluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
-    border: 5px solid rgba(0, 119, 255, 1);
+    border: 5px solid rgba(124, 160, 232, 1);
     border-radius: 20px;
     background-color: rgba(2,118,139, 0.6);
     text-align: center;
@@ -200,15 +200,15 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .fitnesscluster-medium, .fitnesscluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
-    border: 5px solid rgba(0, 119, 255, 1);
+    border: 5px solid rgba(124, 160, 232, 1);
     background-color: rgba(2,118,139, 0.6);
     text-align: center;
     vertical-align: center;
@@ -216,12 +216,12 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .sportcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
-    border: 5px solid rgba(0, 119, 255, 1);
+    border: 5px solid rgba(124, 160, 232, 1);
     border-radius: 20px;
     background-color: rgba(75,64,67, 0.6);
     text-align: center;
@@ -230,15 +230,15 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .sportcluster-medium, .sportcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
-    border: 5px solid rgba(0, 119, 255, 1);
+    border: 5px solid rgba(124, 160, 232, 1);
     background-color: rgba(75,64,67, 0.6);
     text-align: center;
     vertical-align: center;
@@ -246,9 +246,9 @@
     font: 16px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 .churchcluster-small{
-	background-clip: padding-box;
-	padding-top: 5px;
-	padding-bottom: 1px;
+    background-clip: padding-box;
+    padding-top: 5px;
+    padding-bottom: 1px;
     width: 24px;
     height: 20px;
     border: 5px solid rgba(49, 121, 183, 1);
@@ -261,11 +261,11 @@
 }
 
 .churchcluster-medium, .churchcluster-large{
-	background-clip: padding-box;
-	padding-top: 9px;
-	padding-left: 1px;
-	padding-right: 2px;
-	padding-bottom: 2px;
+    background-clip: padding-box;
+    padding-top: 9px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 2px;
     width: 32px;
     height: 24px;
     border-radius: 30px;
