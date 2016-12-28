@@ -1,8 +1,13 @@
-/*
- * Author: Kevin Fitzgerald
+/* * * * * * * * * * * * * * * * * * * *
+ * Leaflet Control Search
  * 
- * Sources: Adapted from Stehpano Cudini - http://labs.easyblog.it/maps/leaflet-search/
- */
+ * Copyright 2016 Stefano Cudini 
+ * 
+ * Licensed under the MIT License.  
+ * 
+ * Source: git@github.com:stefanocudini/leaflet-search.git
+ * * * * * * * * * * * * * * * * * * * */
+
 (function (factory) {
     if(typeof define === 'function' && define.amd) {
     //AMD
