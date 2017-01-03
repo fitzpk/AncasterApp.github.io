@@ -191,7 +191,7 @@ var education = {
 	    "amenity": "School",
 	    "phone": "(905)-648-4115",
         "url": "<a href='http://www.hwdsb.on.ca/fessenden/'>Visit Fessenden</a>",
-        "name": "Fessenden Elememtary School"
+        "name": "Fessenden Elementary School"
       },
       "geometry": {
         "type": "Point",
