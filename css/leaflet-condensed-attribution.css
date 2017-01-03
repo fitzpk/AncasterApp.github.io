@@ -10,7 +10,7 @@
     display: flex;
 }
 
-.leaflet-touch .leaflet-condensed-attribution {
+.leaflet-touch .leaflet-condensed-attribution .attributes-body{
     margin: 10px;
     padding: 0;
     border-radius: 20px;
