@@ -130,7 +130,7 @@ var clothing = {
       "properties": {
 		"address":"14 Martindale Cres.",
 		"status": "Franchise",
-	    "amenity": "Shop",
+	    "amenity": "MensClothing",
 	    "phone": "(905)-304-3838",
         "url": "<a href='https://www.mooresclothing.com/mor/index.jsp'>Visit Moore's</a>",
         "name": "Moore's - Clothing for Men"

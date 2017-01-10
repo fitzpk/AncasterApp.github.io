@@ -13,7 +13,7 @@ var education = {
     "features": [ 
     {
       "type": "Feature",
-      "id": "14",
+      "id": "1",
       "properties": {
 		"address":"240 Wilson St. E",
 		"status": "Franchise",
@@ -32,7 +32,7 @@ var education = {
     }, 
     {
       "type": "Feature",
-      "id": "17",
+      "id": "2",
       "properties": {
 		"address":"1172 Wilson St. W",
 		"status": "Franchise",
@@ -46,6 +46,25 @@ var education = {
         "coordinates": [
 			-80.019813,
             43.196688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "properties": {
+		"address":"26 Legend Crt.",
+		"status": "Franchise",
+	    "amenity": "School",
+	    "phone": "(905)-526-7354",
+        "url": "<a href='http://locations.sylvanlearning.com/ca/hamilton-on'>Visit Sylvan Learning</a>",
+        "name": "Sylvan Learning"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.947331,
+            43.227405
         ]
       }
     }                           

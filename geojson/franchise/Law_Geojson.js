@@ -2,13 +2,13 @@
  * 
  * Franchise Businesses
  * 
- * GeoJSON features for municipal and community services
+ * GeoJSON features legal services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var municipal = {
+var law = {
     "type": "FeatureCollection",
     "features": [
   ]
-};
+}; 

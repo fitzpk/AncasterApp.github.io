@@ -2,12 +2,12 @@
  * 
  * Franchise Businesses
  * 
- * GeoJSON features for municipal and community services
+ * GeoJSON features for chiropractic services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var municipal = {
+var chiro = {
     "type": "FeatureCollection",
     "features": [
   ]

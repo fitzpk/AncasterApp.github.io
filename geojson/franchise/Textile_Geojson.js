@@ -1,13 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * *
  * 
- * Franchise Businesses
- * 
- * GeoJSON features for municipal and community services
+ * GeoJSON features for alterations, dry cleaning, and textile services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var municipal = {
+var textile = {
     "type": "FeatureCollection",
     "features": [
   ]

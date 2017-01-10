@@ -2,12 +2,12 @@
  * 
  * Franchise Businesses
  * 
- * GeoJSON features for municipal and community services
+ * GeoJSON features for fire stations and emergency services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var municipal = {
+var emergency = {
     "type": "FeatureCollection",
     "features": [
   ]

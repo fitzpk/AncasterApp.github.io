@@ -2,12 +2,12 @@
  * 
  * Franchise Businesses
  * 
- * GeoJSON features for municipal and community services
+ * GeoJSON features for physicians and family doctors
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var municipal = {
+var physician = {
     "type": "FeatureCollection",
     "features": [
   ]
