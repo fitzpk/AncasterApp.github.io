@@ -65,28 +65,9 @@ var theatre = {
         ]
       }
     },
-    {    
-      "type": "Feature",
-      "id": "4",
-      "properties": {
-		"address":"180 Filman Rd.",
-		"status": "Local",
-	    "amenity": "Rest",
-	    "phone": "(905)-648-4424",
-        "url": "<a href='https://www.facebook.com/pages/Tamahaac-Club/178898612181878'>Learn more about the Tamahaac Club</a>",
-        "name": "Tamahaac Club"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.954231,
-            43.237572
-        ]
-      }
-    },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "4",
       "properties": {
 		"address":"334 Wilson St. E",
 		"status": "Local",
@@ -105,7 +86,7 @@ var theatre = {
     },
     {    
       "type": "Feature",
-      "id": "6",
+      "id": "5",
       "properties": {
 		"address":"665 Tradewind Dr.",
 		"status": "Local",

@@ -829,6 +829,25 @@ var manueng = {
       "type": "Feature",
       "id": "44",
       "properties": {
+		"address":"1349 Sandhill Dr.",
+	    "status": "Local",
+	    "amenity": "Eng",
+	    "phone": "(905)-648-9800",
+        "url": "<a href='http://provautomation.com/'>Learn more about Provantage</a>",
+        "name": "Provantage Automation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.028401,
+            43.192751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "45",
+      "properties": {
 		"address":"1439 Osprey Dr.",
 	    "status": "Local",
 	    "amenity": "Eng",
@@ -846,7 +865,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "45",
+      "id": "46",
       "properties": {
 		"address":"1418 Osprey Dr.",
 	    "status": "Local",
@@ -865,7 +884,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "46",
+      "id": "47",
       "properties": {
 		"address":"1377 Cormorant Rd.",
 	    "status": "Franchise",
@@ -884,7 +903,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "47",
+      "id": "48",
       "properties": {
 		"address":"1404 Cormorant Rd.",
 	    "status": "Local",
@@ -903,7 +922,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "48",
+      "id": "49",
       "properties": {
 		"address":"1433 Sandhill Dr.",
 	    "status": "Local",
@@ -922,7 +941,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "49",
+      "id": "50",
       "properties": {
 		"address":"1325 Cormorant Rd.",
 	    "status": "Franchise",
@@ -941,7 +960,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "50",
+      "id": "51",
       "properties": {
 		"address":"1310 Cormorant Rd.",
 	    "status": "Franchise",
@@ -960,7 +979,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "51",
+      "id": "52",
       "properties": {
 		"address":"1480 Sandhill Dr.",
 	    "status": "Local",
@@ -979,7 +998,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "52",
+      "id": "53",
       "properties": {
 		"address":"72 Oleary Dr.",
 	    "status": "Local",
@@ -998,7 +1017,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "53",
+      "id": "54",
       "properties": {
 		"address":"601 Tradewind Dr.",
 	    "status": "Local",

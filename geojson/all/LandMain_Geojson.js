@@ -31,25 +31,6 @@ var landmain = {
       "type": "Feature",
       "id": "2",
       "properties": {
-		"address":"49 Carnegie Place",
-	    "status": "Local",
-	    "amenity": "General",
-	    "phone": "(905)-648-7520",
-        "url": '<a href="http://www.action-carpetcleaning.ca/">Learn more about Action Carpet Cleaning</a>',
-        "name": "Action Carpet Cleaning"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-79.987445,
-            43.210041
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "3",
-      "properties": {
 		"address":"219 Wilson St. E",
 		"status": "Local",
 	    "amenity": "Landscape",
@@ -67,7 +48,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "3",
       "properties": {
 		"address":"807 Garner Rd. E",
 	    "status": "Local",
@@ -86,7 +67,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "4",
       "properties": {
 		"address":"1500 Sandhill Dr.",
 	    "status": "Local",
@@ -105,7 +86,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "6",
+      "id": "5",
       "properties": {
 		"address":"1480 Sandhill Dr.",
 	    "status": "Local",
@@ -124,7 +105,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "6",
       "properties": {
 		"address":"611 Tradewind Dr.",
 	    "status": "Local",
@@ -143,7 +124,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "8",
+      "id": "7",
       "properties": {
 		"address":"1363 Osprey Dr.",
 	    "status": "Local",
@@ -162,7 +143,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "8",
       "properties": {
 		"address":"738 Shaver Rd.",
 	    "status": "Local",
@@ -181,7 +162,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "9",
       "properties": {
 		"address":"992 Garner Rd. E",
 	    "status": "Local",
@@ -200,7 +181,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "10",
       "properties": {
 		"address":"1377 Cormorant Rd.",
 	    "status": "Franchise",
@@ -219,7 +200,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "11",
       "properties": {
 		"address":"1735 Wilson St. W",
 	    "status": "Local",
@@ -238,7 +219,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "12",
       "properties": {
 		"address":"1404 Cormorant Rd.",
 	    "status": "Local",
@@ -257,7 +238,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "13",
       "properties": {
 		"address":"587 Westview Ave.",
 	    "status": "Local",
@@ -276,7 +257,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "14",
       "properties": {
 		"address":"343 Book Rd. E",
 	    "status": "Local",
@@ -290,25 +271,6 @@ var landmain = {
         "coordinates": [
         	-79.960148,
             43.187531
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "16",
-      "properties": {
-		"address":"1377 Cormorant Rd.",
-	    "status": "Local",
-	    "amenity": "General",
-	    "phone": "(905)-648-3183",
-        "url": "<a href='http://www.prmaintenance.com/en'>Learn more about PR Maintenance Inc.</a>",
-        "name": "PR Maintenance Inc. - Commercial Cleaning"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.027058,
-            43.187906
         ]
       }
     }

@@ -14,7 +14,7 @@ var municipal = {
       "properties": {
 		"address":"630 Trinity Rd. S",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Fair",
 	    "phone": "(905)-648-6198",
         "url": "<a href='http://ancasterfair.ca/'>Visit the fairgrounds</a>",
         "name": "Ancaster Fairgrounds"
@@ -86,82 +86,6 @@ var municipal = {
     },
     {
       "type": "Feature",
-      "id": "5",
-      "properties": {
-		"address":"590 Tradewind Dr.",
-	    "status": "Franchise",
-	    "amenity": "Mail",
-	    "phone": "1-800-267-1177",
-        "url": "<a href='https://www.canadapost.ca/web/en/home.page'>Visit Canada Post</a>",
-        "name": "Canada Post - Hamilton West Depot"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.031460,
-            43.191183
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "6",
-      "properties": {
-		"address":"27 Legend Crt.",
-	    "status": "Franchise",
-	    "amenity": "Mail",
-	    "phone": "1-800-267-1177",
-        "url": "<a href='https://www.canadapost.ca/web/en/home.page'>Visit Canada Post</a>",
-        "name": "Canada Post - Meadowlands"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-79.949102,
-            43.227397
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "7",
-      "properties": {
-		"address":"1000 Golf Links Rd.",
-	    "status": "Franchise",
-	    "amenity": "Mail",
-	    "phone": "1-800-267-1177",
-        "url": "<a href='https://www.canadapost.ca/web/en/home.page'>Visit Canada Post</a>",
-        "name": "Canada Post - Meadowlands (Shoppers Drug Mart)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-79.941704,
-            43.226795
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "8",
-      "properties": {
-		"address":"47 Wilson St. W",
-	    "status": "Franchise",
-	    "amenity": "Mail",
-	    "phone": "1-800-267-1177",
-        "url": "<a href='https://www.canadapost.ca/web/en/home.page'>Visit Canada Post</a>",
-        "name": "Canada Post - Wilson St. (Shoppers Drug Mart)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-79.989602,
-            43.217819
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "9",
       "properties": {
 		"address":"314 Wilson St. E",
@@ -185,7 +109,7 @@ var municipal = {
       "properties": {
 		"address":"64 Sulphur Springs Rd.",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Museum",
 	    "phone": "(905)-648-8144",
         "url": "<a href='https://www.hamilton.ca/attractions/hamilton-civic-museums/fieldcote-memorial-park-museum'>Visit Fieldcote Memorial Park & Museum</a>",
         "name": "Fieldcote Memorial Park & Museum"
@@ -202,47 +126,9 @@ var municipal = {
       "type": "Feature",
       "id": "11",
       "properties": {
-		"address":"661 Garner Rd. E",
-		"status": "Local",
-	    "amenity": "Fire",
-	    "phone": "(905)-546-2424",
-        "url": "<a href='https://www.hamilton.ca/emergency-services/fire/fire-stations'>Visit the Fire Station</a>",
-        "name": "Hamilton (Ancaster) Fire Station 20"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.953454,
-            43.206845
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "12",
-      "properties": {
-		"address":"365 Wilson St. W",
-		"status": "Local",
-	    "amenity": "Fire",
-	    "phone": "(905)-546-2424",
-        "url": "<a href='https://www.hamilton.ca/emergency-services/fire/fire-stations'>Visit the Fire Station</a>",
-        "name": "Hamilton (Ancaster) Fire Station 21"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.002205,
-            43.208538
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "13",
-      "properties": {
 		"address":"300 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Library",
 	    "phone": "(905)-648-6911",
         "url": "<a href='http://www.hpl.ca/'>Visit The Library</a>",
         "name": "Hamilton Public Library (Ancaster Branch)"
@@ -257,7 +143,7 @@ var municipal = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "12",
       "properties": {
 		"address":"385 Jerseyville Rd. W",
 		"status": "Local",
@@ -276,7 +162,7 @@ var municipal = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "13",
       "properties": {
 		"address":"29 Orchard Dr. W",
 		"status": "Local",

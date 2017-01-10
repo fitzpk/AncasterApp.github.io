@@ -316,25 +316,6 @@ var utility = {
       "type": "Feature",
       "id": "17",
       "properties": {
-		"address":"1040 Garner Rd. W",
-	    "status": "Local",
-	    "amenity": "General",
-	    "phone": "(905)-648-7117",
-        "url": "No Website Provided",
-        "name": "M&M Water Haulage"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.014594,
-            43.195731
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "18",
-      "properties": {
 		"address":"1418 Osprey Dr.",
 	    "status": "Local",
 	    "amenity": "Construct",
@@ -352,7 +333,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "19",
+      "id": "18",
       "properties": {
 		"address":"665 Tradewind Dr.",
 	    "status": "Local",
@@ -371,7 +352,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "20",
+      "id": "19",
       "properties": {
 		"address":"1425 Osprey Dr.",
 	    "status": "Local",
@@ -390,7 +371,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "21",
+      "id": "20",
       "properties": {
 		"address":"1256 Sandhill Dr.",
 	    "status": "Local",
@@ -409,7 +390,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "22",
+      "id": "21",
       "properties": {
 		"address":"1354 Sandhill Dr.",
 	    "status": "Local",
@@ -428,7 +409,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "23",
+      "id": "22",
       "properties": {
 		"address":"1442 Osprey Dr.",
 	    "status": "Local",
@@ -447,7 +428,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "24",
+      "id": "23",
       "properties": {
 		"address":"1404 Cormorant Rd.",
 	    "status": "Local",
@@ -466,7 +447,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "25",
+      "id": "24",
       "properties": {
 		"address":"1295 Cormorant Rd.",
 	    "status": "Franchise",
@@ -485,7 +466,7 @@ var utility = {
     },
     {
       "type": "Feature",
-      "id": "26",
+      "id": "25",
       "properties": {
 		"address":"680 Tradewind Dr.",
 	    "status": "Local",
@@ -504,7 +485,7 @@ var utility = {
     }, 
     {
       "type": "Feature",
-      "id": "27",
+      "id": "26",
       "properties": {
 		"address":"1474 Sandhill Dr.",
 	    "status": "Franchise",
