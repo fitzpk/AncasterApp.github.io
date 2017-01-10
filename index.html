@@ -26,7 +26,7 @@ html, body {
 }
 /*
 #mapcontainer {
-	border: none
+	border: 
 	width: 100vw;
 	height: 100vh;
 }*/
@@ -98,7 +98,6 @@ html, body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -146,6 +145,7 @@ html, body {
 	box-shadow: 0 1px 7px rgba(0,0,0,0.65);
     border: 2px solid #1978cf;
 }
+
 .leaflet-container .leaflet-control-attribution {
   border-radius: 26px;
 }
@@ -177,31 +177,46 @@ html, body {
 <script src="geojson/all/ArtMusic_Geojson.js"></script>
 <script src="geojson/all/Theatre_Geojson.js"></script>
 
+<script src="geojson/all/Daycare_Geojson.js"></script>
 <script src="geojson/all/Education_Geojson.js"></script>
+<script src="geojson/all/EduDrive_Geojson.js"></script>
+
 <script src="geojson/all/Church_Geojson.js"></script>
 <script src="geojson/all/Municipal_Geojson.js"></script>
+<script src="geojson/all/Emergency_Geojson.js"></script>
+<script src="geojson/all/Postal_Geojson.js"></script>
 
 <script src="geojson/all/Fitness_Geojson.js"></script>
 <script src="geojson/all/Sport_Geojson.js"></script>
 
 <script src="geojson/all/Grocery_Geojson.js"></script>
 <script src="geojson/all/Rest_Geojson.js"></script>
+<script src="geojson/all/Alcohol_Geojson.js"></script>
+<script src="geojson/all/Cater_Geojson.js"></script>
+<script src="geojson/all/FastFood_Geojson.js"></script>
+<script src="geojson/all/Cafe_Geojson.js"></script>
 <script src="geojson/all/Special_Rest_Geojson.js"></script>
 
-<script src="geojson/all/ChiroPhy_Geojson.js"></script>
-<script src="geojson/all/DentalOptical_Geojson.js"></script>
-<script src="geojson/all/PharmPhys_Geojson.js"></script>
+<script src="geojson/all/Chiro_Geojson.js"></script>
+<script src="geojson/all/Physio_Geojson.js"></script>
+<script src="geojson/all/Dental_Geojson.js"></script>
+<script src="geojson/all/Optical_Geojson.js"></script>
+<script src="geojson/all/Pharmacy_Geojson.js"></script>
+<script src="geojson/all/Physician_Geojson.js"></script>
 <script src="geojson/all/SpecHeal_Geojson.js"></script>
 <script src="geojson/all/Vet_Geojson.js"></script>
 
 <script src="geojson/all/Advise_Geojson.js"></script>
-<script src="geojson/all/FinanceLaw_Geojson.js"></script>
-<script src="geojson/all/EstateInsure_Geojson.js"></script>
+<script src="geojson/all/Finance_Geojson.js"></script>
+<script src="geojson/all/Law_Geojson.js"></script>
+<script src="geojson/all/Insure_Geojson.js"></script>
+<script src="geojson/all/Estate_Geojson.js"></script>
 
 <script src="geojson/all/Aes_Geojson.js"></script>
 <script src="geojson/all/Clothing_Geojson.js"></script>
 <script src="geojson/all/Design_Geojson.js"></script>
 <script src="geojson/all/Retail_Geojson.js"></script>
+<script src="geojson/all/Textile_Geojson.js"></script>
 
 <script src="geojson/all/Auto_Geojson.js"></script>
 <script src="geojson/all/General_Geojson.js"></script>
@@ -301,6 +316,14 @@ var cafeIcon = L.icon({
 //Symbol for Car Repair Services
 var carrepairIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/hevhpwi1n1fb1g0/carrepair.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for cheese shops
+var cheeseIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/e0d0s7pglfqoh2c/cheese.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -413,6 +436,14 @@ var engIcon = L.icon({
 //Symbol for real estate services
 var estateIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/5hcyhgls6z29sgq/realestate.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for Farmer's Markets/Farms
+var fairIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/t6o48apmf3wrti2/fair.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -554,6 +585,14 @@ var jewelIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
+//Symbol for juice bars
+var juiceIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/1oo5z4wru7mprjd/juice.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
 //Symbol for legal services
 var landscapeIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/ogz8lnxmwzc6ox7/landscape.png?dl=0',
@@ -565,6 +604,14 @@ var landscapeIcon = L.icon({
 //Symbol for legal services
 var lawIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/h1ytn4ik99ly8en/law.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for Libraries
+var libraryIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/s6hw70rny1qfv56/library.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -586,9 +633,25 @@ var martialIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
+//Symbol for Mens clothing stores
+var mensclothingIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/sppkfbmxcjmtfd1/mensclothing.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
 //Symbol for Community Buildings, Schools and Churches
 var municIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/hlkkp8tb5pieda1/municipal.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for Museums
+var museumIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/sid85xrwed2977r/museum.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -698,6 +761,14 @@ var retailIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
+//Symbol for sub and sandwich shops
+var sandwichIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/eoincwsoynmp3je/sandwich.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
 //Symbol for schools and educational services
 var schoolIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/mwd23v42v26q7xu/school.png?dl=0',
@@ -717,6 +788,14 @@ var seniorIcon = L.icon({
 //Symbol for Sewing and Alteration Stores
 var sewIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/sbdvxk5xadq3rxs/sewing.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for Shooting Ranges
+var shootIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/qrakggtftsi9qpd/shootingrange.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -861,6 +940,12 @@ mapstyle = {
 				icon: carrepairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
+		//Marker and pop-up for cheese shops
+		if (feature.properties.amenity == "Cheese")
+			return L.marker(latlng, {
+				icon: cheeseIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
 		//Marker and pop-up for chiropractors
 		if (feature.properties.amenity == "Chiro")
 			return L.marker(latlng, {
@@ -939,6 +1024,12 @@ mapstyle = {
 		if (feature.properties.amenity == "Estate")
 			return L.marker(latlng, {
 				icon: estateIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
+		//Marker and pop-up for fairgrounds
+		if (feature.properties.amenity == "Fair")
+			return L.marker(latlng, {
+				icon: fairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
 		//Marker and pop-up for farms and the farmers market
@@ -1037,6 +1128,12 @@ mapstyle = {
 				icon: jewelIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
 
+		//Marker and pop-up for juice bars
+		if (feature.properties.amenity == "Juice")
+			return L.marker(latlng, {
+				icon: juiceIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
 		//Marker and pop-up for landscape services
 		if (feature.properties.amenity == "Landscape")
 			return L.marker(latlng, {
@@ -1048,6 +1145,12 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: lawIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+
+		//Marker and pop-up for libraries
+		if (feature.properties.amenity == "Library")
+			return L.marker(latlng, {
+				icon: libraryIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
 		//Marker and pop-up for post offices and mail services
 		if (feature.properties.amenity == "Mail")
@@ -1061,11 +1164,23 @@ mapstyle = {
 				icon: martialIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
 
+		//Marker and pop-up for mens clothing services
+		if (feature.properties.amenity == "MensClothing")
+			return L.marker(latlng, {
+				icon: mensclothingIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
 		//Marker and pop-up for municipal services
 		if (feature.properties.amenity == "Munic")
 			return L.marker(latlng, {
 				icon: municIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+
+		//Marker and pop-up for museums
+		if (feature.properties.amenity == "Museum")
+			return L.marker(latlng, {
+				icon: museumIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
 		//Marker and pop-up for music services
 		if (feature.properties.amenity == "Music")
@@ -1151,6 +1266,12 @@ mapstyle = {
 				icon: retailIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
+		//Marker and pop-up for sub and sandwich shops
+		if (feature.properties.amenity == "Sandwich")
+			return L.marker(latlng, {
+				icon: sandwichIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
 		//Marker and pop-up for schools and educational services
 		if (feature.properties.amenity == "School")
 			return L.marker(latlng, {
@@ -1167,6 +1288,12 @@ mapstyle = {
 		if (feature.properties.amenity == "Sew")
 			return L.marker(latlng, {
 				icon: sewIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
+			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+
+		//Marker and pop-up for shooting ranges
+		if (feature.properties.amenity == "Shoot")
+			return L.marker(latlng, {
+				icon: shootIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 		
 		//Marker and pop-up for clothing stores
@@ -1244,18 +1371,18 @@ mapstyle = {
 	};
 	
 	var mbAttr = 'KPF &copy 2016 | ' +
-		     'Basemaps & Imagery Provided By: <a href="http://mapbox.com">Mapbox</a> and <a href="http://google.com">Google</a>',
-	    mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+				 'Basemaps & Imagery Provided By: <a href="http://mapbox.com">Mapbox</a> and <a href="http://google.com">Google</a>',
+		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
 
-	var grayscale = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.light', attribution: mbAttr}),
-	    streets = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.streets', attribution: mbAttr}),
-	    comic = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.comic', attribution: mbAttr});
+	var grayscale = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.satellite', attribution: mbAttr}),
+		streets = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.streets', attribution: mbAttr}),
+		comic = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.comic', attribution: mbAttr});
 		
 	var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
 	    maxZoom: 20,
 	    subdomains:['mt0','mt1','mt2','mt3']
 	});
-		
+	
 	//Create map
 	var map = L.map('map', {
 		center: [43.217779, -79.987283],
@@ -1265,10 +1392,10 @@ mapstyle = {
 	});
 	
 	// set custom emblem and prefix
-        L.control.condensedAttribution({
-      		emblem: '<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
-      		prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
-        }).addTo(map);
+    L.control.condensedAttribution({
+      emblem: '&nbsp&nbsp&nbsp&nbsp&nbsp<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
+      prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
+    }).addTo(map);
 	
 	//Cluster and Layer Creation - create cluster group, customize cluster icon, create layer with custom marker icons, add layer to cluster group
 	//Group 1
@@ -1308,7 +1435,7 @@ mapstyle = {
         var clothinglyr = L.geoJson(clothing, mapstyle)        
         clothingclus.addLayer(clothinglyr);
    
-   		//Design and Home Decor Businesses
+    //Design and Home Decor Businesses
 	var designclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
@@ -1342,7 +1469,25 @@ mapstyle = {
 	    }
 	});
     var retaillyr = L.geoJson(retail, mapstyle)        
-    retailclus.addLayer(retaillyr);  
+    retailclus.addLayer(retaillyr);
+
+    //Alteration, Dry Cleaning, and Textile Businesses
+ 	var textileclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'textilecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var textilelyr = L.geoJson(textile, mapstyle)        
+    textileclus.addLayer(textilelyr);  
     
 	//Group 2
 	//Art and Music Businesses
@@ -1436,6 +1581,79 @@ mapstyle = {
 	});
     var churchlyr = L.geoJson(church, mapstyle)        
     churchclus.addLayer(churchlyr);
+
+    //Municipal Services
+    var municipalclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'municipalcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var municipallyr = L.geoJson(municipal, mapstyle)        
+    municipalclus.addLayer(municipallyr);
+    
+    //Fire Stations & Emergency Services
+    var emergencyclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'emergencycluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var emergencylyr = L.geoJson(emergency, mapstyle)        
+    emergencyclus.addLayer(emergencylyr);
+
+    //Postal Services
+    var postalclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'postalcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var postallyr = L.geoJson(postal, mapstyle)        
+    postalclus.addLayer(postallyr);
+    
+    //Group 5
+    //Daycare Services
+    var daycareclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'daycarecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var daycarelyr = L.geoJson(daycare, mapstyle)        
+    daycareclus.addLayer(daycarelyr);
     
     //Schools and Educational Services
     var educationclus = new L.MarkerClusterGroup({
@@ -1455,11 +1673,11 @@ mapstyle = {
     var educationlyr = L.geoJson(education, mapstyle)        
     educationclus.addLayer(educationlyr);
     
-    //Municipal Services
-    var municipalclus = new L.MarkerClusterGroup({
+    //Driving Schools
+    var edudriveclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'municipalcluster-';
+	        var c = 'edudrivecluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1470,9 +1688,10 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var municipallyr = L.geoJson(municipal, mapstyle)        
-    municipalclus.addLayer(municipallyr);
+    var edudrivelyr = L.geoJson(edudrive, mapstyle)        
+    edudriveclus.addLayer(edudrivelyr);
     
+    //Group 6
     //Farmers Markets and Grocery Stores
     var groceryclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1508,7 +1727,79 @@ mapstyle = {
 	});
     var restlyr = L.geoJson(rest, mapstyle)        
     restclus.addLayer(restlyr);
+
+    //Alcohol Vendors
+    var alcoholclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'alcoholcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var alcohollyr = L.geoJson(alcohol, mapstyle)        
+    alcoholclus.addLayer(alcohollyr);
     
+    //Bakeries and Catering Services
+    var caterclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'catercluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var caterlyr = L.geoJson(cater, mapstyle)        
+    caterclus.addLayer(caterlyr);
+
+    //Breakfast Cafes and Coffee Shops
+    var cafeclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'cafecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var cafelyr = L.geoJson(cafe, mapstyle)        
+    cafeclus.addLayer(cafelyr);
+
+    //Fast Food Restaurants and Convenience Stores
+    var fastfoodclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'fastfoodcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var fastfoodlyr = L.geoJson(fastfood, mapstyle)        
+    fastfoodclus.addLayer(fastfoodlyr);
+
     //Specialty Food Services
     var specrestclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1527,7 +1818,7 @@ mapstyle = {
     var specrestlyr = L.geoJson(specrest, mapstyle)        
     specrestclus.addLayer(specrestlyr);
     
-    //Group 6
+    //Group 7
     //Automotive and Gas Services
     var autogasclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1636,12 +1927,12 @@ mapstyle = {
     var utilitylyr = L.geoJson(utility, mapstyle)        
     utilityclus.addLayer(utilitylyr);
     
-    //Group 7
-    //Chiropractic and Physio Services
-    var chirophyclus = new L.MarkerClusterGroup({
+    //Group 8
+    //Chiropractic Services
+    var chiroclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'chirophycluster-';
+	        var c = 'chirocluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1652,14 +1943,32 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var chirophylyr = L.geoJson(chirophy, mapstyle)        
-    chirophyclus.addLayer(chirophylyr);
+    var chirolyr = L.geoJson(chiro, mapstyle)        
+    chiroclus.addLayer(chirolyr);
+
+    //Physio Services
+    var physioclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'physiocluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var physiolyr = L.geoJson(physio, mapstyle)        
+    physioclus.addLayer(physiolyr);
     
-    //Dental and Optical Services
-    var denopclus = new L.MarkerClusterGroup({
+   //Dental Services
+    var dentalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'denopcluster-';
+	        var c = 'dentalcluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1670,14 +1979,14 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var denoplyr = L.geoJson(denop, mapstyle)        
-    denopclus.addLayer(denoplyr);
+    var dentallyr = L.geoJson(dental, mapstyle)        
+    dentalclus.addLayer(dentallyr);
     
-    //Physicians and Pharmacies
-    var pharmphyclus = new L.MarkerClusterGroup({
+    //Optical Services
+    var opticalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'pharmphycluster-';
+	        var c = 'opticalcluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1688,8 +1997,44 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var pharmphylyr = L.geoJson(pharmphy, mapstyle)        
-    pharmphyclus.addLayer(pharmphylyr);
+    var opticallyr = L.geoJson(optical, mapstyle)        
+    opticalclus.addLayer(opticallyr);
+    
+    //Pharmacies
+    var pharmacyclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'pharmacycluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var pharmacylyr = L.geoJson(pharmacy, mapstyle)        
+    pharmacyclus.addLayer(pharmacylyr);
+    
+    //Physicians
+    var physicianclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'physiciancluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var physicianlyr = L.geoJson(physician, mapstyle)        
+    physicianclus.addLayer(physicianlyr);
     
     //Specialty Health Services
     var spechealclus = new L.MarkerClusterGroup({
@@ -1727,7 +2072,7 @@ mapstyle = {
     var vetlyr = L.geoJson(vet, mapstyle)        
     vetclus.addLayer(vetlyr);
     
-    //Group 8
+    //Group 9
 	//Advisory and Consulting Businesses
     var adviseclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1746,11 +2091,11 @@ mapstyle = {
     var adviselyr = L.geoJson(advise, mapstyle)        
     adviseclus.addLayer(adviselyr);
     
-  	//Financial and Legal Services
-    var financelawclus = new L.MarkerClusterGroup({
+  	//Financial Services
+    var financeclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'financelawcluster-';
+	        var c = 'financecluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1761,14 +2106,14 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var financelawlyr = L.geoJson(financelaw, mapstyle)        
-    financelawclus.addLayer(financelawlyr);
+    var financelyr = L.geoJson(finance, mapstyle)        
+    financeclus.addLayer(financelyr);
     
-    //Insurance and Real Estate Services
-    var insurestateclus = new L.MarkerClusterGroup({
+    //Legal Services
+    var lawclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
-	        var c = 'insurestatecluster-';
+	        var c = 'lawcluster-';
 	        if (childCount < 10) {
 	            c += 'small';
 	        } else if (childCount < 20) {
@@ -1779,8 +2124,44 @@ mapstyle = {
 	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
 	    }
 	});
-    var insurestatelyr = L.geoJson(insurestate, mapstyle)        
-    insurestateclus.addLayer(insurestatelyr);
+    var lawlyr = L.geoJson(law, mapstyle)        
+    lawclus.addLayer(lawlyr);
+    
+    //Insurance Services
+    var insureclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'insurecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var insurelyr = L.geoJson(insure, mapstyle)        
+    insureclus.addLayer(insurelyr);
+
+    //Real Estate Services
+    var estateclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'estatecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var estatelyr = L.geoJson(estate, mapstyle)        
+    estateclus.addLayer(estatelyr);
 
 	var baseMaps = [
 			       	 { 
@@ -1800,7 +2181,8 @@ mapstyle = {
 						expanded : false,
 						layers    : { 
 						"Aesthetics & Spas": aesclus,
-						"Fashion & Textiles": clothingclus,
+						"Fashion": clothingclus,
+						"Alterations, Dry Cleaning, & Textile Services": textileclus,
 						"Design & Home Decor": designclus,
 						"Specialty Retail Services": retailclus,
 			     	  }	
@@ -1816,15 +2198,24 @@ mapstyle = {
 						expanded : false,
 						layers    : { 
 						"Fitness Centres & Nutrition Stores": fitnessclus,
-						"Sport Academies & Stores": sportclus		
-						   }	
+						"Sport Academies, Clubs, & Stores": sportclus		
+				      }	
                   },{
-						groupName : "Churches, Schools, & Municipal Services",
+						groupName : "Churches & Community Services",
 						expanded : false,
 						layers    : { 
-						"Churches & Religious Centres": churchclus,
-						"Schools & Educational Services": educationclus,
-						"Community & Municipal Services": municipalclus
+						"Churches & Places of Worship": churchclus,
+						"Community Services": municipalclus,
+						"Fire Stations & Emergency Services": emergencyclus,
+						"Postal Services": postalclus,
+					  }	
+                  },{
+						groupName : "Educational Services",
+						expanded : false,
+						layers    : { 
+						"Daycare/Child Care Services": daycareclus,
+						"Schools & Private Educational Services": educationclus,
+						"Driving Schools": edudriveclus
 					  }	
                   },{
 						groupName : "Food & Drink Services",
@@ -1832,6 +2223,10 @@ mapstyle = {
 						layers    : { 
 						"Grocery Stores & Farmer's Markets": groceryclus,
 						"Restaurants & Lodges": restclus,
+						"Alcohol Vendors": alcoholclus,
+						"Bakeries & Catering Services": caterclus,
+						"Breakfast Cafes & Coffee Shops": cafeclus,
+						"Fast Food & Convenience Stores": fastfoodclus,
 						"Specialty Food Services": specrestclus	
 					   }	
                   },{
@@ -1849,9 +2244,12 @@ mapstyle = {
 						groupName : "Health Services",
 						expanded : false,
 						layers    : { 
-					    "Chiropractic & Physiotherapy Services": chirophyclus,
-						"Dental & Optical Services": denopclus,	
-						"Physicians & Pharmacies": pharmphyclus,
+					    "Chiropractic Services": chiroclus,
+					    "Physiotherapy Services": physioclus,
+						"Dental Services": dentalclus,	
+						"Optical Services": opticalclus,
+						"Pharmacies": pharmacyclus,
+						"Physicians": physicianclus,
 						"Specialty Health Services": spechealclus,
 						"Veterinary & Pet Services": vetclus,
 					   }	
@@ -1860,8 +2258,10 @@ mapstyle = {
 						expanded : false,
 						layers    : { 
 						"Advisory & Consulting Services": adviseclus,
-						"Financial & Legal Services": financelawclus,
-						"Insurance & Real Estate Services": insurestateclus,
+						"Financial Services": financeclus,
+						"Legal Services": lawclus,
+						"Insurance Services": insureclus,
+						"Real Estate Services": estateclus,
 					   }	
                   }							 
 			];
@@ -1904,26 +2304,48 @@ mapstyle = {
 	var poiLayers = L.layerGroup([
 		L.geoJson(artmusic, searchstyle),
 		L.geoJson(theatre, searchstyle),
-		L.geoJson(church, searchstyle),
+	
+		L.geoJson(daycare, searchstyle),
 		L.geoJson(education, searchstyle),
+		L.geoJson(edudrive, searchstyle),
+		
+		L.geoJson(church, searchstyle),
 		L.geoJson(municipal, searchstyle),
+		L.geoJson(emergency, searchstyle),
+		L.geoJson(postal, searchstyle),
+		
 		L.geoJson(fitness, searchstyle),
 		L.geoJson(sport, searchstyle),
+		
 		L.geoJson(grocery, searchstyle),
 		L.geoJson(rest, searchstyle),
+		L.geoJson(alcohol, searchstyle),
+		L.geoJson(cater, searchstyle),
+		L.geoJson(cafe, searchstyle),
+		L.geoJson(fastfood, searchstyle),
 		L.geoJson(specrest, searchstyle),
-		L.geoJson(chirophy, searchstyle),
-		L.geoJson(denop, searchstyle),
-		L.geoJson(pharmphy, searchstyle),
+		
+		L.geoJson(chiro, searchstyle),
+		L.geoJson(physio, searchstyle),
+		L.geoJson(dental, searchstyle),
+		L.geoJson(optical, searchstyle),
+		L.geoJson(pharmacy, searchstyle),
+		L.geoJson(physician, searchstyle),
 		L.geoJson(specheal, searchstyle),
 		L.geoJson(vet, searchstyle),
+		
 		L.geoJson(advise, searchstyle),
-		L.geoJson(financelaw, searchstyle),
-		L.geoJson(insurestate, searchstyle),
+		L.geoJson(finance, searchstyle),
+		L.geoJson(law, searchstyle),
+		L.geoJson(insure, searchstyle),
+		L.geoJson(estate, searchstyle),
+		
 		L.geoJson(aes, searchstyle),
 		L.geoJson(clothing, searchstyle),
 		L.geoJson(design, searchstyle),
 		L.geoJson(retail, searchstyle),
+		L.geoJson(textile, searchstyle),
+		
 		L.geoJson(autogas, searchstyle),
 		L.geoJson(manueng, searchstyle),
 		L.geoJson(landmain, searchstyle),
