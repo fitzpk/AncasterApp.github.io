@@ -14,6 +14,25 @@ var general = {
       "type": "Feature",
       "id": "1",
       "properties": {
+		"address":"49 Carnegie Place",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(905)-648-7520",
+        "url": '<a href="http://www.action-carpetcleaning.ca/">Learn more about Action Carpet Cleaning</a>',
+        "name": "Action Carpet Cleaning"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-79.987445,
+            43.210041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "properties": {
 		"address":"1235 Osprey Dr.",
 	    "status": "Local",
 	    "amenity": "General",
@@ -31,7 +50,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "2",
+      "id": "3",
       "properties": {
 		"address":"1406 Osprey Dr.",
 	    "status": "Local",
@@ -50,7 +69,7 @@ var general = {
     },  
     {
       "type": "Feature",
-      "id": "3",
+      "id": "4",
       "properties": {
 		"address":"1147 Garner Rd. W",
 	    "status": "Local",
@@ -69,7 +88,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "5",
       "properties": {
 		"address":"635 Trinity Rd. S",
 		"status": "Local",
@@ -88,7 +107,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "6",
       "properties": {
 		"address":"597 Garner Rd. E",
 	    "status": "Local",
@@ -107,7 +126,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "6",
+      "id": "7",
       "properties": {
 		"address":"201 Brookview Court",
 	    "status": "Local",
@@ -126,7 +145,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "8",
       "properties": {
 		"address":"16 Irwin Ave.",
 	    "status": "Local",
@@ -143,9 +162,28 @@ var general = {
         ]
       }
     },
+   {
+      "type": "Feature",
+      "id": "9",
+      "properties": {
+		"address":"601 Tradewind Dr.",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(905)-304-0104",
+        "url": "<a href='http://www.hunco.ca/'>Visit HUNCO</a>",
+        "name": "HUNCO Signs 'N Graphics"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.030021,
+            43.190420
+        ]
+      }
+   },
     {
       "type": "Feature",
-      "id": "8",
+      "id": "10",
       "properties": {
 		"address":"1015 Golf Links Rd.",
 	    "status": "Local",
@@ -164,7 +202,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "11",
       "properties": {
 		"address":"88 Wilson St. W",
 	    "status": "Local",
@@ -183,7 +221,26 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "12",
+      "properties": {
+		"address":"1040 Garner Rd. W",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(905)-648-7117",
+        "url": "No Website Provided",
+        "name": "M&M Water Haulage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.014594,
+            43.195731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
       "properties": {
 		"address":"1632 Wilson St. W",
 	    "status": "Local",
@@ -202,7 +259,45 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "14",
+      "properties": {
+		"address":"1377 Cormorant Rd.",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(905)-648-3183",
+        "url": "<a href='http://www.prmaintenance.com/en'>Learn more about PR Maintenance Inc.</a>",
+        "name": "PR Maintenance Inc. - Commercial Cleaning"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.027058,
+            43.187906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
+      "properties": {
+		"address":"1334 Osprey Dr.",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(289)-259-1323",
+        "url": "No Website Provided",
+        "name": "Sign Edge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.024841,
+            43.191668
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
       "properties": {
 		"address":"1643 Claybar Rd.",
 	    "status": "Local",
@@ -221,7 +316,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "17",
       "properties": {
 		"address":"401 Wilson St. E",
 	    "status": "Local",
@@ -240,7 +335,7 @@ var general = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "18",
       "properties": {
 		"address":"701 Trinity Rd. S",
 	    "status": "Local",

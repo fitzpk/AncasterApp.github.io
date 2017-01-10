@@ -107,6 +107,25 @@ var rest = {
       "type": "Feature",
       "id": "6",
       "properties": {
+		"address":"1172 Wilson St. W",
+		"status": "Local",
+	    "amenity": "Rest",
+	    "phone": "(905)-648-9292",
+        "url": "<a href='http://goldenpitaancaster.ca/'>Visit Golden Pita</a>",
+        "name": "Golden Pita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-80.019984,
+            43.196557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7",
+      "properties": {
 		"address":"370 Wilson St. E",
 		"status": "Local",
 	    "amenity": "Rest",
@@ -124,7 +143,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "8",
       "properties": {
 		"address":"53 Wilson St. W",
 		"status": "Local",
@@ -143,7 +162,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "8",
+      "id": "9",
       "properties": {
 		"address":"35 Stone Church Rd.",
 		"status": "Local",
@@ -162,7 +181,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "10",
       "properties": {
 		"address":"1075 Wilson St. W",
 		"status": "Local",
@@ -181,7 +200,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "11",
       "properties": {
 		"address":"1242 Garner Rd. W",
 		"status": "Local",
@@ -200,7 +219,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "12",
       "properties": {
 		"address":"902 Shaver Rd.",
 		"status": "Local",
@@ -219,7 +238,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "13",
       "properties": {
 		"address":"375 Wilson St. E",
 		"status": "Local",
@@ -238,7 +257,26 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "14",
+      "properties": {
+		"address":"1100 Golf Links Rd.",
+		"status": "Local",
+	    "amenity": "Rest",
+	    "phone": "(905)-648-9900",
+        "url": "<a href='http://www.royalpho.ca/'>Visit Royal Pho</a>",
+        "name": "Royal Pho"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.938693,
+            43.227377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
       "properties": {
 		"address":"534 Garner Rd. E",
 		"status": "Local",
@@ -257,7 +295,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "16",
       "properties": {
 		"address":"1654 Wilson St. W",
 		"status": "Local",
@@ -276,7 +314,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "17",
       "properties": {
 		"address":"402 Wilson St. E",
 		"status": "Local",

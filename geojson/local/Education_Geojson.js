@@ -11,28 +11,9 @@
 var education = {
     "type": "FeatureCollection",
     "features": [
-     {
-      "type": "Feature",
-      "id": "1",
-      "properties": {
-		"address":"81 Wilson St. W",
-		"status": "Local",
-	    "amenity": "School",
-	    "phone": "(905)-648-4888",
-        "url": "<a href='http://www.a1academyofdriving.com/'>Learn to Drive</a>",
-        "name": "A1 Academy of Driving"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.990652,
-            43.216002
-        ]
-      }
-    },
     {
       "type": "Feature",
-      "id": "2",
+      "id": "1",
       "properties": {
 		"address":"374 Jerseyville Rd. W",
 		"status": "Local",
@@ -51,26 +32,7 @@ var education = {
     },        
     {
       "type": "Feature",
-      "id": "3",
-      "properties": {
-		"address":"339 Wilson St. E",
-		"status": "Local",
-	    "amenity": "Daycare",
-	    "phone": "(905)-648-8778",
-        "url": "<a href='http://www.littlegems.org/'>Visit Little Gems</a>",
-        "name": "Ancaster Little Gems Children's Centre"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.976849,
-            43.226792
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "4",
+      "id": "2",
       "properties": {
 		"address":"93 Kitty Murray Ln.",
 		"status": "Local",
@@ -89,7 +51,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "3",
       "properties": {
 		"address":"295 Nakoma Rd.",
 		"status": "Local",
@@ -108,7 +70,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "6",
+      "id": "4",
       "properties": {
 		"address":"100 Panabaker Dr.",
 		"status": "Local",
@@ -127,7 +89,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "5",
       "properties": {
 		"address":"99 Dunham Dr.",
 		"status": "Local",
@@ -143,29 +105,10 @@ var education = {
             43.216779
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "id": "8",
-      "properties": {
-		"address":"1281 Mohawk Rd.",
-		"status": "Local",
-	    "amenity": "Daycare",
-	    "phone": "(905)-304-1415",
-        "url": "<a href='http://childventures.ca/locations/childcare-in-ancaster/'>Visit Childventures</a>",
-        "name": "Childventures - Early Learning Academy"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.932155,
-            43.233453
-        ]
-      }
     }, 
     {
       "type": "Feature",
-      "id": "9",
+      "id": "6",
       "properties": {
 		"address":"522 Book Rd. E",
 		"status": "Local",
@@ -184,7 +127,7 @@ var education = {
     },    
     {
       "type": "Feature",
-      "id": "10",
+      "id": "7",
       "properties": {
 		"address":"168 Huron Ave.",
 		"status": "Local",
@@ -203,7 +146,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "8",
       "properties": {
 		"address":"92 Glancaster Rd.",
 		"status": "Local",
@@ -222,7 +165,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "9",
       "properties": {
 		"address":"161 Meadowlands Blvd.",
 		"status": "Local",
@@ -241,7 +184,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "10",
       "properties": {
 		"address":"470 Kitty Murray Ln",
 		"status": "Local",
@@ -260,26 +203,7 @@ var education = {
     },  
     {
       "type": "Feature",
-      "id": "14",
-      "properties": {
-		"address":"900 Golf Links Rd.",
-		"status": "Local",
-	    "amenity": "Daycare",
-	    "phone": "(905)-304-8005",
-        "url": "No Website Provided",
-        "name": "Meadowlands Preschool & Daycare"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.946094,
-            43.226248
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "15",
+      "id": "11",
       "properties": {
 		"address":"790 Shaver Rd.",
 		"status": "Local",
@@ -298,7 +222,7 @@ var education = {
     }, 
     {
       "type": "Feature",
-      "id": "16",
+      "id": "12",
       "properties": {
 		"address":"777 Garner Rd. E",
 		"status": "Local",
@@ -317,7 +241,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "17",
+      "id": "13",
       "properties": {
 		"address":"103 McNiven Rd.",
 		"status": "Local",
@@ -336,7 +260,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "18",
+      "id": "14",
       "properties": {
 		"address":"24 Fiddlers Green Rd.",
 		"status": "Local",
@@ -355,7 +279,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "19",
+      "id": "15",
       "properties": {
 		"address":"75 Concerto Crt.",
 		"status": "Local",
@@ -374,26 +298,7 @@ var education = {
     },
     {
       "type": "Feature",
-      "id": "20",
-      "properties": {
-		"address":"26 Legend Crt.",
-		"status": "Local",
-	    "amenity": "School",
-	    "phone": "(905)-526-7354",
-        "url": "<a href='http://locations.sylvanlearning.com/ca/hamilton-on'>Visit Sylvan Learning</a>",
-        "name": "Sylvan Learning"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.947331,
-            43.227405
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "21",
+      "id": "16",
       "properties": {
 		"address":"245 Garner Rd. W",
 		"status": "Local",
@@ -407,63 +312,6 @@ var education = {
         "coordinates": [
 			-79.994072,
             43.200315
-        ]
-      }
-    }, 
-    {
-      "type": "Feature",
-      "id": "22",
-      "properties": {
-		"address":"1330 Sandhill Dr.",
-		"status": "Local",
-	    "amenity": "School",
-	    "phone": "(905)-547-7769",
-        "url": "<a href='http://www.unipol.ca/driving-courses-in-ancaster-schedule-registration/'>Learn to drive</a>",
-        "name": "UNIPOL Academy of Driving"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.025386,
-            43.193465
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "23",
-      "properties": {
-		"address":"442 Wilson St. E",
-		"status": "Local",
-	    "amenity": "School",
-	    "phone": "(905)-304-4517",
-        "url": "<a href='http://www.shopancastervillage.com/village-gate-montessori-school/'>Visit Montessori</a>",
-        "name": "Village Gate Montessori School"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.974477,
-            43.229898
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "24",
-      "properties": {
-		"address":"126 Wilson St. E",
-		"status": "Local",
-	    "amenity": "Daycare",
-	    "phone": "(905)-648-1838",
-        "url": "<a href='http://villagetreehouse.com/'>Visit the Treehouse</a>",
-        "name": "Village Treehouse Daycare"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.981992,
-            43.220901
         ]
       }
     }                            

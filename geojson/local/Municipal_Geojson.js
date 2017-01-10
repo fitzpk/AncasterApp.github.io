@@ -16,7 +16,7 @@ var municipal = {
       "properties": {
 		"address":"630 Trinity Rd. S",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Fair",
 	    "phone": "(905)-648-6198",
         "url": "<a href='http://ancasterfair.ca/'>Visit the fairgrounds</a>",
         "name": "Ancaster Fairgrounds"
@@ -111,7 +111,7 @@ var municipal = {
       "properties": {
 		"address":"64 Sulphur Springs Rd.",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Museum",
 	    "phone": "(905)-648-8144",
         "url": "<a href='https://www.hamilton.ca/attractions/hamilton-civic-museums/fieldcote-memorial-park-museum'>Visit Fieldcote Memorial Park & Museum</a>",
         "name": "Fieldcote Memorial Park & Museum"
@@ -126,49 +126,11 @@ var municipal = {
     }, 
     {
       "type": "Feature",
-      "id": "7",
-      "properties": {
-		"address":"661 Garner Rd. E",
-		"status": "Local",
-	    "amenity": "Fire",
-	    "phone": "(905)-546-2424",
-        "url": "<a href='https://www.hamilton.ca/emergency-services/fire/fire-stations'>Visit the Fire Station</a>",
-        "name": "Hamilton (Ancaster) Fire Station 20"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.953454,
-            43.206845
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "8",
-      "properties": {
-		"address":"365 Wilson St. W",
-		"status": "Local",
-	    "amenity": "Fire",
-	    "phone": "(905)-546-2424",
-        "url": "<a href='https://www.hamilton.ca/emergency-services/fire/fire-stations'>Visit the Fire Station</a>",
-        "name": "Hamilton (Ancaster) Fire Station 21"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.002205,
-            43.208538
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "9",
       "properties": {
 		"address":"300 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Munic",
+	    "amenity": "Library",
 	    "phone": "(905)-648-6911",
         "url": "<a href='http://www.hpl.ca/'>Visit The Library</a>",
         "name": "Hamilton Public Library (Ancaster Branch)"

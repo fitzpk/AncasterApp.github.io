@@ -33,6 +33,25 @@ var specheal = {
       "type": "Feature",
       "id": "2",
       "properties": {
+		"address":"352 Wilson St. E",
+		"status": "Local",
+	    "amenity": "Physio",
+	    "phone": "(905)-648-9176",
+        "url": "<a href='http://www.ancasterfootclinic.ca/'>Visit The Ancaster Foot Clinic</a>",
+        "name": "Ancaster Foot Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.975717,
+            43.226901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "properties": {
 		"address":"75 Dunham Dr.",
 		"status": "Local",
 	    "amenity": "Senior",
@@ -50,7 +69,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "3",
+      "id": "4",
       "properties": {
 		"address":"323 Wilson St. E",
 		"status": "Local",
@@ -69,7 +88,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "5",
       "properties": {
 		"address":"325 Fiddlers Green Rd.",
 		"status": "Local",
@@ -88,7 +107,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "6",
       "properties": {
 		"address":"1377 Cormorant Rd.",
 	    "status": "Local",
@@ -107,7 +126,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "6",
+      "id": "7",
       "properties": {
 		"address":"1248 Mohawk Rd.",
 		"status": "Local",
@@ -126,7 +145,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "8",
       "properties": {
 		"address":"12 Tranquility Ave.",
 		"status": "Local",
@@ -145,7 +164,7 @@ var specheal = {
     },
     {
       "type": "Feature",
-      "id": "8",
+      "id": "9",
       "properties": {
 		"address":"326 Wilson St. E",
 		"status": "Local",
@@ -164,7 +183,7 @@ var specheal = {
     },    
     {
       "type": "Feature",
-      "id": "9",
+      "id": "10",
       "properties": {
 		"address":"326 Wilson St. E",
 		"status": "Local",
@@ -183,7 +202,7 @@ var specheal = {
     }, 
     {
       "type": "Feature",
-      "id": "10",
+      "id": "11",
       "properties": {
 		"address":"34 Stone Church Rd.",
 		"status": "Local",
@@ -202,7 +221,7 @@ var specheal = {
     },  
     {
       "type": "Feature",
-      "id": "11",
+      "id": "12",
       "properties": {
 		"address":"352 Wilson St. E",
 		"status": "Local",

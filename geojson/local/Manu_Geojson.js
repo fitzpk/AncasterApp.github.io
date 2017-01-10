@@ -642,6 +642,25 @@ var manueng = {
       "type": "Feature",
       "id": "34",
       "properties": {
+		"address":"1349 Sandhill Dr.",
+	    "status": "Local",
+	    "amenity": "Eng",
+	    "phone": "(905)-648-9800",
+        "url": "<a href='http://provautomation.com/'>Learn more about Provantage</a>",
+        "name": "Provantage Automation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.028401,
+            43.192751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "35",
+      "properties": {
 		"address":"1439 Osprey Dr.",
 	    "status": "Local",
 	    "amenity": "Eng",
@@ -659,7 +678,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "35",
+      "id": "36",
       "properties": {
 		"address":"1418 Osprey Dr.",
 	    "status": "Local",
@@ -678,7 +697,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "36",
+      "id": "37",
       "properties": {
 		"address":"1404 Cormorant Rd.",
 	    "status": "Local",
@@ -697,7 +716,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "37",
+      "id": "38",
       "properties": {
 		"address":"1433 Sandhill Dr.",
 	    "status": "Local",
@@ -716,7 +735,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "38",
+      "id": "39",
       "properties": {
 		"address":"1480 Sandhill Dr.",
 	    "status": "Local",
@@ -735,7 +754,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "39",
+      "id": "40",
       "properties": {
 		"address":"72 Oleary Dr.",
 	    "status": "Local",
@@ -754,7 +773,7 @@ var manueng = {
     },
     {
       "type": "Feature",
-      "id": "40",
+      "id": "41",
       "properties": {
 		"address":"601 Tradewind Dr.",
 	    "status": "Local",

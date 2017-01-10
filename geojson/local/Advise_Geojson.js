@@ -242,25 +242,6 @@ var advise = {
       "type": "Feature",
       "id": "13",
       "properties": {
-		"address":"1349 Sandhill Dr.",
-	    "status": "Local",
-	    "amenity": "Pro",
-	    "phone": "(905)-648-9800",
-        "url": "<a href='http://provautomation.com/'>Learn more about Provantage</a>",
-        "name": "Provantage Automation"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.028401,
-            43.192751
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "14",
-      "properties": {
 		"address":"911 Golf Links Rd.",
 		"status": "Local",
 	    "amenity": "Pro",
@@ -278,7 +259,7 @@ var advise = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "14",
       "properties": {
 		"address":"1425 Cormorant Rd.",
 		"status": "Local",
@@ -297,7 +278,7 @@ var advise = {
     },
     {
       "type": "Feature",
-      "id": "16",
+      "id": "15",
       "properties": {
 		"address":"180 Rosemary Lane",
 	    "status": "Local",

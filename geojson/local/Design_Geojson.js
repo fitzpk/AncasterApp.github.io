@@ -128,25 +128,6 @@ var design = {
       "type": "Feature",
       "id": "7",
       "properties": {
-		"address":"601 Tradewind Dr.",
-	    "status": "Local",
-	    "amenity": "General",
-	    "phone": "(905)-304-0104",
-        "url": "<a href='http://www.hunco.ca/'>Visit HUNCO</a>",
-        "name": "HUNCO Signs 'N Graphics"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.030021,
-            43.190420
-        ]
-      }
-   },
-   {
-      "type": "Feature",
-      "id": "8",
-      "properties": {
 		"address":"680 Tradewind Dr.",
 		"status": "Local",
 	    "amenity": "Home",
@@ -164,7 +145,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "8",
       "properties": {
 		"address":"680 Tradewind Dr.",
 	    "status": "Local",
@@ -183,7 +164,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "9",
       "properties": {
 		"address":"1500 Sandhill Dr.",
 	    "status": "Local",
@@ -202,7 +183,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "10",
       "properties": {
 		"address":"1242 Garner Rd. W",
 	    "status": "Local",
@@ -221,26 +202,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "12",
-      "properties": {
-		"address":"1334 Osprey Dr.",
-	    "status": "Local",
-	    "amenity": "General",
-	    "phone": "(289)-259-1323",
-        "url": "No Website Provided",
-        "name": "Sign Edge"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-        	-80.024841,
-            43.191668
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "13",
+      "id": "11",
       "properties": {
 		"address":"680 Tradewind Dr.",
 	    "status": "Local",
@@ -259,7 +221,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "12",
       "properties": {
 		"address":"680 Tradewind Dr.",
 		"status": "Local",
@@ -278,7 +240,7 @@ var design = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "13",
       "properties": {
 		"address":"1310 Osprey Dr.",
 	    "status": "Local",
