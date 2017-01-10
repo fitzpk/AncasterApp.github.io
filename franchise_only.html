@@ -193,6 +193,7 @@ html, body {
 
 <script src="geojson/franchise/Education_Geojson.js"></script>
 <script src="geojson/franchise/Daycare_Geojson.js"></script>
+<script src="geojson/franchise/Edudrive_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1443,7 +1444,6 @@ mapstyle = {
     var theatrelyr = L.geoJson(theatre, mapstyle)        
     theatreclus.addLayer(theatrelyr);
     
-    
     //Group 3
 	//Fitness and Nutrition Businesses
     var fitnessclus = new L.MarkerClusterGroup({
@@ -1590,7 +1590,7 @@ mapstyle = {
 	});
     var educationlyr = L.geoJson(education, mapstyle)        
     educationclus.addLayer(educationlyr);
-    /*
+    
     //Driving Schools
     var edudriveclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2134,7 +2134,7 @@ mapstyle = {
 						layers    : { 
 						"Daycare/Child Care Services": daycareclus,
 						"Schools & Private Educational Services": educationclus,
-						//"Driving Schools": edudriveclus
+						"Driving Schools": edudriveclus
 					  }	
                   },/*{
 						groupName : "Food & Drink Services",
@@ -2226,7 +2226,7 @@ mapstyle = {
 		
 		L.geoJson(daycare, searchstyle),
 		L.geoJson(education, searchstyle),
-		//L.geoJson(edudrive, searchstyle),
+		L.geoJson(edudrive, searchstyle),
 		
 		L.geoJson(church, searchstyle),
 		L.geoJson(municipal, searchstyle),
