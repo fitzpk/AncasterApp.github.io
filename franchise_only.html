@@ -185,6 +185,8 @@ html, body {
 
 <script src="geojson/franchise/Fitness_Geojson.js"></script>
 <script src="geojson/franchise/Sport_Geojson.js"></script>
+
+<script src="geojson/franchise/Church_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -881,13 +883,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: chiroIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for churches
 		if (feature.properties.amenity == "Church")
 			return L.marker(latlng, {
 				icon: churchIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for computer and software technology services
 		if (feature.properties.amenity == "Comp")
 			return L.marker(latlng, {
@@ -1472,7 +1474,7 @@ mapstyle = {
 	});
     var sportlyr = L.geoJson(sport, mapstyle)        
     sportclus.addLayer(sportlyr);
-    /*
+    
     //Group 4
     //Churches and Religious Services
     var churchclus = new L.MarkerClusterGroup({
@@ -1491,7 +1493,7 @@ mapstyle = {
 	});
     var churchlyr = L.geoJson(church, mapstyle)        
     churchclus.addLayer(churchlyr);
-
+	/*
     //Municipal Services
     var municipalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2111,16 +2113,16 @@ mapstyle = {
 						"Fitness Centres & Nutrition Stores": fitnessclus,
 						"Sport Academies, Clubs, & Stores": sportclus		
 					  }	
-                  },/*{
+                  },{
 						groupName : "Churches & Community Services",
 						expanded : false,
 						layers    : { 
 						"Churches & Places of Worship": churchclus,
-						"Community Services": municipalclus,
-						"Fire Stations & Emergency Services": emergencyclus,
-						"Postal Services": postalclus,
+						//"Community Services": municipalclus,
+						//"Fire Stations & Emergency Services": emergencyclus,
+						//"Postal Services": postalclus,
 					  }	
-                  },{
+                  },/*{
 						groupName : "Educational Services",
 						expanded : false,
 						layers    : { 
@@ -2215,16 +2217,16 @@ mapstyle = {
 	var poiLayers = L.layerGroup([
 		L.geoJson(artmusic, searchstyle),
 		L.geoJson(theatre, searchstyle),
-		/*
-		L.geoJson(daycare, searchstyle),
-		L.geoJson(education, searchstyle),
-		L.geoJson(edudrive, searchstyle),
+		
+		//L.geoJson(daycare, searchstyle),
+		//L.geoJson(education, searchstyle),
+		//L.geoJson(edudrive, searchstyle),
 		
 		L.geoJson(church, searchstyle),
-		L.geoJson(municipal, searchstyle),
-		L.geoJson(emergency, searchstyle),
-		L.geoJson(postal, searchstyle),
-		*/
+		//L.geoJson(municipal, searchstyle),
+		//L.geoJson(emergency, searchstyle),
+		//L.geoJson(postal, searchstyle),
+		
 		L.geoJson(fitness, searchstyle),
 		L.geoJson(sport, searchstyle),
 		/*
