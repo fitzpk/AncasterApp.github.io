@@ -187,6 +187,8 @@ html, body {
 <script src="geojson/franchise/Sport_Geojson.js"></script>
 
 <script src="geojson/franchise/Church_Geojson.js"></script>
+<script src="geojson/franchise/Municipal_Geojson.js"></script>
+<script src="geojson/franchise/Emergency_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1493,7 +1495,7 @@ mapstyle = {
 	});
     var churchlyr = L.geoJson(church, mapstyle)        
     churchclus.addLayer(churchlyr);
-	/*
+	
     //Municipal Services
     var municipalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1529,7 +1531,7 @@ mapstyle = {
 	});
     var emergencylyr = L.geoJson(emergency, mapstyle)        
     emergencyclus.addLayer(emergencylyr);
-
+	/*
     //Postal Services
     var postalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2118,8 +2120,8 @@ mapstyle = {
 						expanded : false,
 						layers    : { 
 						"Churches & Places of Worship": churchclus,
-						//"Community Services": municipalclus,
-						//"Fire Stations & Emergency Services": emergencyclus,
+						"Community Services": municipalclus,
+						"Fire Stations & Emergency Services": emergencyclus,
 						//"Postal Services": postalclus,
 					  }	
                   },/*{
@@ -2223,8 +2225,8 @@ mapstyle = {
 		//L.geoJson(edudrive, searchstyle),
 		
 		L.geoJson(church, searchstyle),
-		//L.geoJson(municipal, searchstyle),
-		//L.geoJson(emergency, searchstyle),
+		L.geoJson(municipal, searchstyle),
+		L.geoJson(emergency, searchstyle),
 		//L.geoJson(postal, searchstyle),
 		
 		L.geoJson(fitness, searchstyle),
