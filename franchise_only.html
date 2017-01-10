@@ -178,6 +178,7 @@ html, body {
 <script src="geojson/franchise/Theatre_Geojson.js"></script>
 
 <script src="geojson/franchise/Aes_Geojson.js"></script>
+<script src="geojson/franchise/Clothing_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1074,13 +1075,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: martialIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-
+		*/
 		//Marker and pop-up for mens clothing services
 		if (feature.properties.amenity == "MensClothing")
 			return L.marker(latlng, {
 				icon: mensclothingIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for municipal services
 		if (feature.properties.amenity == "Munic")
 			return L.marker(latlng, {
@@ -1194,13 +1195,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: sewIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+		*/
 		//Marker and pop-up for clothing stores
 		if (feature.properties.amenity == "Shop")
 			return L.marker(latlng, {
 				icon: clothingIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for soccer services
 		if (feature.properties.amenity == "Soccer")
 			return L.marker(latlng, {
@@ -1294,7 +1295,7 @@ mapstyle = {
 	
 	// set custom emblem and prefix
     L.control.condensedAttribution({
-      emblem: '&nbsp&nbsp&nbsp&nbsp&nbsp<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
+      emblem: '<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
       prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
     }).addTo(map);
 	
@@ -1318,7 +1319,7 @@ mapstyle = {
 	});
     var aeslyr = L.geoJson(aes, mapstyle);        
     aesclus.addLayer(aeslyr);
-    /*		
+    		
 	//Clothing and Textile Businesses
 	var clothingclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1336,7 +1337,7 @@ mapstyle = {
 		});
         var clothinglyr = L.geoJson(clothing, mapstyle)        
         clothingclus.addLayer(clothinglyr);
-   
+    /*
     //Design and Home Decor Businesses
 	var designclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2085,7 +2086,7 @@ mapstyle = {
 						expanded : false,
 						layers    : { 
 						"Aesthetics & Spas": aesclus,
-						//"Fashion": clothingclus,
+						"Fashion": clothingclus,
 						//"Alterations, Dry Cleaning, & Textile Services": textileclus,
 						//"Design & Home Decor": designclus,
 						//"Specialty Retail Services": retailclus,
@@ -2245,8 +2246,8 @@ mapstyle = {
 		L.geoJson(estate, searchstyle),
 		*/
 		L.geoJson(aes, searchstyle),
-		/*
 		L.geoJson(clothing, searchstyle),
+		/*
 		L.geoJson(design, searchstyle),
 		L.geoJson(retail, searchstyle),
 		L.geoJson(textile, searchstyle),
