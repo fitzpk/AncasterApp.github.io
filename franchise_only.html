@@ -179,6 +179,8 @@ html, body {
 
 <script src="geojson/franchise/Aes_Geojson.js"></script>
 <script src="geojson/franchise/Clothing_Geojson.js"></script>
+<script src="geojson/franchise/Design_Geojson.js"></script>
+<script src="geojson/franchise/Retail_Geojson.js"></script>
 <script src="geojson/franchise/Textile_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
@@ -992,13 +994,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: generalIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for golf services
 		if (feature.properties.amenity == "Golf")
 			return L.marker(latlng, {
 				icon: golfIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for grocery stores
 		if (feature.properties.amenity == "Grocery")
 			return L.marker(latlng, {
@@ -1010,13 +1012,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: healIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+		*/
 		//Marker and pop-up for home decor services
 		if (feature.properties.amenity == "Home")
 			return L.marker(latlng, {
 				icon: homeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for horseback riding and stable services
 		if (feature.properties.amenity == "Horse")
 			return L.marker(latlng, {
@@ -1118,13 +1120,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: pharmIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for photo studios and camera stores
 		if (feature.properties.amenity == "Photo")
 			return L.marker(latlng, {
 				icon: photoIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for physiotherapy clinics
 		if (feature.properties.amenity == "Physio")
 			return L.marker(latlng, {
@@ -1166,13 +1168,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: foodIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for retail stores
 		if (feature.properties.amenity == "Retail")
 			return L.marker(latlng, {
 				icon: retailIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for sub and sandwich shops
 		if (feature.properties.amenity == "Sandwich")
 			return L.marker(latlng, {
@@ -1338,7 +1340,7 @@ mapstyle = {
 		});
         var clothinglyr = L.geoJson(clothing, mapstyle)        
         clothingclus.addLayer(clothinglyr);
-    /*
+    
     //Design and Home Decor Businesses
 	var designclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1374,7 +1376,7 @@ mapstyle = {
 	});
     var retaillyr = L.geoJson(retail, mapstyle)        
     retailclus.addLayer(retaillyr);  
-	*/
+	
     //Alteration, Dry Cleaning, and Textile Businesses
  	var textileclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2089,8 +2091,8 @@ mapstyle = {
 						"Aesthetics & Spas": aesclus,
 						"Fashion": clothingclus,
 						"Alterations, Dry Cleaning, & Textile Services": textileclus,
-						//"Design & Home Decor": designclus,
-						//"Specialty Retail Services": retailclus,
+						"Design & Home Decor": designclus,
+						"Specialty Retail Services": retailclus,
 			     	  }	
                   },{
 						groupName : "Arts & Entertainment",
@@ -2150,8 +2152,8 @@ mapstyle = {
 						groupName : "Health Services",
 						expanded : false,
 						layers    : { 
-					    "Chiropractic Services": chiroclus,
-					    "Physiotherapy Services": physioclus,
+					    	"Chiropractic Services": chiroclus,
+					    	"Physiotherapy Services": physioclus,
 						"Dental Services": dentalclus,	
 						"Optical Services": opticalclus,
 						"Pharmacies": pharmacyclus,
@@ -2248,11 +2250,10 @@ mapstyle = {
 		*/
 		L.geoJson(aes, searchstyle),
 		L.geoJson(clothing, searchstyle),
-		L.geoJson(textile, searchstyle),
-		/*
 		L.geoJson(design, searchstyle),
 		L.geoJson(retail, searchstyle),
-		
+		L.geoJson(textile, searchstyle),
+		/*
 		L.geoJson(autogas, searchstyle),
 		L.geoJson(manueng, searchstyle),
 		L.geoJson(landmain, searchstyle),
