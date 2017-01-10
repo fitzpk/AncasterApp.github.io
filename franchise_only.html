@@ -908,12 +908,6 @@ mapstyle = {
 				icon: carrepairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 
-		//Marker and pop-up for cheese shops
-		if (feature.properties.amenity == "Cheese")
-			return L.marker(latlng, {
-				icon: cheeseIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
 		//Marker and pop-up for chiropractors
 		if (feature.properties.amenity == "Chiro")
 			return L.marker(latlng, {
