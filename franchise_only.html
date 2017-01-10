@@ -179,6 +179,7 @@ html, body {
 
 <script src="geojson/franchise/Aes_Geojson.js"></script>
 <script src="geojson/franchise/Clothing_Geojson.js"></script>
+<script src="geojson/franchise/Textile_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1373,7 +1374,7 @@ mapstyle = {
 	});
     var retaillyr = L.geoJson(retail, mapstyle)        
     retailclus.addLayer(retaillyr);  
-
+	*/
     //Alteration, Dry Cleaning, and Textile Businesses
  	var textileclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1391,7 +1392,7 @@ mapstyle = {
 	});
     var textilelyr = L.geoJson(textile, mapstyle)        
     textileclus.addLayer(textilelyr);
-    */
+    
 	//Group 2
 	//Art and Music Businesses
  	var artmusicclus = new L.MarkerClusterGroup({
@@ -2087,7 +2088,7 @@ mapstyle = {
 						layers    : { 
 						"Aesthetics & Spas": aesclus,
 						"Fashion": clothingclus,
-						//"Alterations, Dry Cleaning, & Textile Services": textileclus,
+						"Alterations, Dry Cleaning, & Textile Services": textileclus,
 						//"Design & Home Decor": designclus,
 						//"Specialty Retail Services": retailclus,
 			     	  }	
@@ -2247,10 +2248,10 @@ mapstyle = {
 		*/
 		L.geoJson(aes, searchstyle),
 		L.geoJson(clothing, searchstyle),
+		L.geoJson(textile, searchstyle),
 		/*
 		L.geoJson(design, searchstyle),
 		L.geoJson(retail, searchstyle),
-		L.geoJson(textile, searchstyle),
 		
 		L.geoJson(autogas, searchstyle),
 		L.geoJson(manueng, searchstyle),
