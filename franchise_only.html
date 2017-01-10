@@ -182,6 +182,9 @@ html, body {
 <script src="geojson/franchise/Design_Geojson.js"></script>
 <script src="geojson/franchise/Retail_Geojson.js"></script>
 <script src="geojson/franchise/Textile_Geojson.js"></script>
+
+<script src="geojson/franchise/Fitness_Geojson.js"></script>
+<script src="geojson/franchise/Sport_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1210,13 +1213,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: soccerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+		*/
 		//Marker and pop-up for sporting stores, ballparks, etc.
 		if (feature.properties.amenity == "Sport")
 			return L.marker(latlng, {
 				icon: sportIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+		/*
 		//Marker and pop-up for swimming pools and aquatic centres
 		if (feature.properties.amenity == "Swim")
 			return L.marker(latlng, {
@@ -1253,13 +1256,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: vetIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-
+		*/
 		//Marker and pop-up for nutrition stores
 		if (feature.properties.amenity == "Vitamin")
 			return L.marker(latlng, {
 				icon: vitaminIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-
+		/*
 		//Marker and pop-up for car wash stations
 		if (feature.properties.amenity == "Wash")
 			return L.marker(latlng, {
@@ -1432,7 +1435,7 @@ mapstyle = {
     var theatrelyr = L.geoJson(theatre, mapstyle)        
     theatreclus.addLayer(theatrelyr);
     
-    /*
+    
     //Group 3
 	//Fitness and Nutrition Businesses
     var fitnessclus = new L.MarkerClusterGroup({
@@ -1469,7 +1472,7 @@ mapstyle = {
 	});
     var sportlyr = L.geoJson(sport, mapstyle)        
     sportclus.addLayer(sportlyr);
-    
+    /*
     //Group 4
     //Churches and Religious Services
     var churchclus = new L.MarkerClusterGroup({
@@ -2101,14 +2104,14 @@ mapstyle = {
 						"Arts & Music": artmusicclus,
 						"Theatre & Entertainment": theatreclus,
 					  }	
-                  },/*{
+                  },{
 						groupName : "Athletics & Fitness",
 						expanded : false,
 						layers    : { 
 						"Fitness Centres & Nutrition Stores": fitnessclus,
 						"Sport Academies, Clubs, & Stores": sportclus		
 					  }	
-                  },{
+                  },/*{
 						groupName : "Churches & Community Services",
 						expanded : false,
 						layers    : { 
@@ -2152,8 +2155,8 @@ mapstyle = {
 						groupName : "Health Services",
 						expanded : false,
 						layers    : { 
-					    	"Chiropractic Services": chiroclus,
-					    	"Physiotherapy Services": physioclus,
+					    "Chiropractic Services": chiroclus,
+					    "Physiotherapy Services": physioclus,
 						"Dental Services": dentalclus,	
 						"Optical Services": opticalclus,
 						"Pharmacies": pharmacyclus,
@@ -2221,10 +2224,10 @@ mapstyle = {
 		L.geoJson(municipal, searchstyle),
 		L.geoJson(emergency, searchstyle),
 		L.geoJson(postal, searchstyle),
-		
+		*/
 		L.geoJson(fitness, searchstyle),
 		L.geoJson(sport, searchstyle),
-		
+		/*
 		L.geoJson(grocery, searchstyle),
 		L.geoJson(rest, searchstyle),
 		L.geoJson(alcohol, searchstyle),
