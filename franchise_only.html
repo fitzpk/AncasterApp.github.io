@@ -921,12 +921,6 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: danceIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		*/
-		//Marker and pop-up for daycare
-		if (feature.properties.amenity == "Daycare")
-			return L.marker(latlng, {
-				icon: daycareIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
 		/*
 		//Marker and pop-up for car dealerships
 		if (feature.properties.amenity == "Dealer")
