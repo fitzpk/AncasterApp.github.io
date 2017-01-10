@@ -202,6 +202,8 @@ html, body {
 <script src="geojson/franchise/Cater_Geojson.js"></script>
 <script src="geojson/franchise/FastFood_Geojson.js"></script>
 <script src="geojson/franchise/Special_Rest_Geojson.js"></script>
+
+<script src="geojson/franchise/Auto_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -880,13 +882,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: cafeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		/*
+		
 		//Marker and pop-up for Car Repair Services
 		if (feature.properties.amenity == "Carrepair")
 			return L.marker(latlng, {
 				icon: carrepairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+/*
 		//Marker and pop-up for cheese shops
 		if (feature.properties.amenity == "Cheese")
 			return L.marker(latlng, {
@@ -1002,13 +1004,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: flowerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for gas stations
 		if (feature.properties.amenity == "Gas")
 			return L.marker(latlng, {
 				icon: gasIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for general services
 		if (feature.properties.amenity == "General")
 			return L.marker(latlng, {
@@ -1255,13 +1257,12 @@ mapstyle = {
 				icon: theatreIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
 		
-		/*
 		//Marker and pop-up for trucking and transportation services
 		if (feature.properties.amenity == "Transport")
 			return L.marker(latlng, {
 				icon: transportIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-			
+		/*	
 		//Marker and pop-up for trucking and transportation services
 		if (feature.properties.amenity == "Travel")
 			return L.marker(latlng, {
@@ -1743,7 +1744,7 @@ mapstyle = {
 	});
     var specrestlyr = L.geoJson(specrest, mapstyle)        
     specrestclus.addLayer(specrestlyr);
-    /*
+    
     //Group 7
     //Automotive and Gas Services
     var autogasclus = new L.MarkerClusterGroup({
@@ -1762,7 +1763,7 @@ mapstyle = {
 	});
     var autogaslyr = L.geoJson(autogas, mapstyle)        
     autogasclus.addLayer(autogaslyr);
-    
+    /*
     //Manufacturing and Engineering Services
     var manuengclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2156,18 +2157,18 @@ mapstyle = {
 						"Fast Food & Convenience Stores": fastfoodclus,
 						"Specialty Food Services": specrestclus	
 					   }	
-                  },/*{
+                  },{
 						groupName : "General Services",
 						expanded : false,
 						layers    : {
 						"Automotive & Gas Services": autogasclus,
-						"Engineering & Manufacturing Services": manuengclus,
-						"Landscaping & Home Maintenance Services": landmainclus,
-						"Specialty Services": generalclus,
-						"Science & Computer Services": techclus,
-						"Utility & Construction Services": utilityclus
+						//"Engineering & Manufacturing Services": manuengclus,
+						//"Landscaping & Home Maintenance Services": landmainclus,
+						//"Specialty Services": generalclus,
+						//"Science & Computer Services": techclus,
+						//"Utility & Construction Services": utilityclus
 					   }	
-                  },{
+                  },/*{
 						groupName : "Health Services",
 						expanded : false,
 						layers    : { 
@@ -2229,6 +2230,12 @@ mapstyle = {
 	
 	// Create layer group for the search widget, insert style settings
 	var poiLayers = L.layerGroup([
+		L.geoJson(aes, searchstyle),
+		L.geoJson(clothing, searchstyle),
+		L.geoJson(design, searchstyle),
+		L.geoJson(retail, searchstyle),
+		L.geoJson(textile, searchstyle),
+		
 		L.geoJson(artmusic, searchstyle),
 		L.geoJson(theatre, searchstyle),
 		
@@ -2251,7 +2258,15 @@ mapstyle = {
 		L.geoJson(cater, searchstyle),
 		L.geoJson(fastfood, searchstyle),
 		L.geoJson(specrest, searchstyle),
+		
+		L.geoJson(autogas, searchstyle),
 		/*
+		L.geoJson(manueng, searchstyle),
+		L.geoJson(landmain, searchstyle),
+		L.geoJson(tech, searchstyle),
+		L.geoJson(utility, searchstyle),
+		L.geoJson(general, searchstyle),
+		
 		L.geoJson(chiro, searchstyle),
 		L.geoJson(physio, searchstyle),
 		L.geoJson(dental, searchstyle),
@@ -2266,19 +2281,6 @@ mapstyle = {
 		L.geoJson(law, searchstyle),
 		L.geoJson(insure, searchstyle),
 		L.geoJson(estate, searchstyle),
-		*/
-		L.geoJson(aes, searchstyle),
-		L.geoJson(clothing, searchstyle),
-		L.geoJson(design, searchstyle),
-		L.geoJson(retail, searchstyle),
-		L.geoJson(textile, searchstyle),
-		/*
-		L.geoJson(autogas, searchstyle),
-		L.geoJson(manueng, searchstyle),
-		L.geoJson(landmain, searchstyle),
-		L.geoJson(tech, searchstyle),
-		L.geoJson(utility, searchstyle),
-		L.geoJson(general, searchstyle),
 		*/
 	]);
 
