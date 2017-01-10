@@ -198,6 +198,8 @@ html, body {
 <script src="geojson/franchise/Grocery_Geojson.js"></script>
 <script src="geojson/franchise/Rest_Geojson.js"></script>
 <script src="geojson/franchise/Alcohol_Geojson.js"></script>
+<script src="geojson/franchise/Cafe_Geojson.js"></script>
+<script src="geojson/franchise/Cater_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -870,13 +872,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: beerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		/*
+		
 		//Marker and pop-up for Cafes
 		if (feature.properties.amenity == "Cafe")
 			return L.marker(latlng, {
 				icon: cafeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		/*
 		//Marker and pop-up for Car Repair Services
 		if (feature.properties.amenity == "Carrepair")
 			return L.marker(latlng, {
@@ -1667,7 +1669,7 @@ mapstyle = {
 	});
     var alcohollyr = L.geoJson(alcohol, mapstyle)        
     alcoholclus.addLayer(alcohollyr);
-	/*
+	
     //Bakeries and Catering Services
     var caterclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1703,7 +1705,7 @@ mapstyle = {
 	});
     var cafelyr = L.geoJson(cafe, mapstyle)        
     cafeclus.addLayer(cafelyr);
-    
+    /*
     //Fast Food Restaurants and Convenience Stores
     var fastfoodclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2147,8 +2149,8 @@ mapstyle = {
 						"Grocery Stores & Farmer's Markets": groceryclus,
 						"Restaurants & Lodges": restclus,
 						"Alcohol Vendors": alcoholclus,
-						//"Bakeries & Catering Services": caterclus,
-						//"Breakfast Cafes & Coffee Shops": cafeclus,
+						"Bakeries & Catering Services": caterclus,
+						"Breakfast Cafes & Coffee Shops": cafeclus,
 						//"Fast Food & Convenience Stores": fastfoodclus,
 						//"Specialty Food Services": specrestclus	
 					   }	
@@ -2243,9 +2245,9 @@ mapstyle = {
 		L.geoJson(grocery, searchstyle),
 		L.geoJson(rest, searchstyle),
 		L.geoJson(alcohol, searchstyle),
-		/*
 		L.geoJson(cafe, searchstyle),
 		L.geoJson(cater, searchstyle),
+		/*
 		L.geoJson(fastfood, searchstyle),
 		L.geoJson(specrest, searchstyle),
 		
