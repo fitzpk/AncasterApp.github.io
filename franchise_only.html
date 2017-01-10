@@ -207,6 +207,8 @@ html, body {
 <script src="geojson/franchise/Manu_Geojson.js"></script>
 <script src="geojson/franchise/LandMain_Geojson.js"></script>
 <script src="geojson/franchise/Tech_Geojson.js"></script>
+<script src="geojson/franchise/General_Geojson.js"></script>
+<script src="geojson/franchise/Utility_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1121,13 +1123,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: musicIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-			
+		*/	
 		//Marker and pop-up for oil and natural gas services
 		if (feature.properties.amenity == "Oil")
 			return L.marker(latlng, {
 				icon: oilIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-
+		/*
 		//Marker and pop-up for optometry services
 		if (feature.properties.amenity == "Optom")
 			return L.marker(latlng, {
@@ -1802,7 +1804,7 @@ mapstyle = {
 	});
     var landmainlyr = L.geoJson(landmain, mapstyle)        
     landmainclus.addLayer(landmainlyr);
-    /*
+    
     //Extra General Services or Specialty Services
     var generalclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1820,7 +1822,7 @@ mapstyle = {
 	});
     var generallyr = L.geoJson(general, mapstyle)        
     generalclus.addLayer(generallyr);
-    */
+    
     //Science and Computer Services
     var techclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1838,7 +1840,7 @@ mapstyle = {
 	});
     var techlyr = L.geoJson(tech, mapstyle)        
     techclus.addLayer(techlyr);
-    /*
+    
     //Utility and Construction Services
     var utilityclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1856,7 +1858,7 @@ mapstyle = {
 	});
     var utilitylyr = L.geoJson(utility, mapstyle)        
     utilityclus.addLayer(utilitylyr);
-    
+    /*
     //Group 8
     //Chiropractic Services
     var chiroclus = new L.MarkerClusterGroup({
@@ -2167,9 +2169,9 @@ mapstyle = {
 						"Automotive & Gas Services": autogasclus,
 						"Engineering & Manufacturing Services": manuengclus,
 						"Landscaping & Home Maintenance Services": landmainclus,
-						//"Specialty Services": generalclus,
+						"Specialty Services": generalclus,
 						"Science & Computer Services": techclus,
-						//"Utility & Construction Services": utilityclus
+						"Utility & Construction Services": utilityclus
 					   }	
                   },/*{
 						groupName : "Health Services",
@@ -2266,10 +2268,9 @@ mapstyle = {
 		L.geoJson(manueng, searchstyle),
 		L.geoJson(landmain, searchstyle),
 		L.geoJson(tech, searchstyle),
-		/*
 		L.geoJson(utility, searchstyle),
 		L.geoJson(general, searchstyle),
-		
+		/*
 		L.geoJson(chiro, searchstyle),
 		L.geoJson(physio, searchstyle),
 		L.geoJson(dental, searchstyle),
