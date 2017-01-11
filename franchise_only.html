@@ -218,6 +218,8 @@ html, body {
 <script src="geojson/franchise/Physician_Geojson.js"></script>
 <script src="geojson/franchise/SpecHeal_Geojson.js"></script>
 <script src="geojson/franchise/Vet_Geojson.js"></script>
+
+<script src="geojson/franchise/Advise_Geojson.js"></script>
 <script>
 // Get the filter button, and when the user clicks on it, execute open filter function
 document.getElementById("myBtn").onclick = function() {openfilter()};
@@ -1186,13 +1188,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: poolIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+		*/
 		//Marker and pop-up for professional services
 		if (feature.properties.amenity == "Pro")
 			return L.marker(latlng, {
 				icon: proIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		*/	
+			
 		//Marker and pop-up for convenience stores
 		if (feature.properties.amenity == "Quick")
 			return L.marker(latlng, {
@@ -1276,13 +1278,13 @@ mapstyle = {
 			return L.marker(latlng, {
 				icon: transportIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		/*	
+			
 		//Marker and pop-up for trucking and transportation services
 		if (feature.properties.amenity == "Travel")
 			return L.marker(latlng, {
 				icon: travelIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
 			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+		/*
 		//Marker and pop-up for veterinary services
 		if (feature.properties.amenity == "Vet")
 			return L.marker(latlng, {
@@ -2012,7 +2014,7 @@ mapstyle = {
 	});
     var vetlyr = L.geoJson(vet, mapstyle)        
     vetclus.addLayer(vetlyr);
-    /*
+    
     //Group 9
 	//Advisory and Consulting Businesses
     var adviseclus = new L.MarkerClusterGroup({
@@ -2031,7 +2033,7 @@ mapstyle = {
 	});
     var adviselyr = L.geoJson(advise, mapstyle)        
     adviseclus.addLayer(adviselyr);
-    
+    /*
   	//Financial Services
     var financeclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -2186,8 +2188,8 @@ mapstyle = {
 						groupName : "Health Services",
 						expanded : false,
 						layers    : { 
-					    	"Chiropractic Services": chiroclus,
-					    	"Physiotherapy Services": physioclus,
+					    "Chiropractic Services": chiroclus,
+					    "Physiotherapy Services": physioclus,
 						"Dental Services": dentalclus,	
 						"Optical Services": opticalclus,
 						"Pharmacies": pharmacyclus,
@@ -2195,23 +2197,23 @@ mapstyle = {
 						"Specialty Health Services": spechealclus,
 						"Veterinary & Pet Services": vetclus,
 					   }	
-                  },/*{
+                  },{
 						groupName : "Professional Services",
 						expanded : false,
 						layers    : { 
 						"Advisory & Consulting Services": adviseclus,
-						"Financial Services": financeclus,
-						"Legal Services": lawclus,
-						"Insurance Services": insureclus,
-						"Real Estate Services": estateclus,
+						//"Financial Services": financeclus,
+						//"Legal Services": lawclus,
+						//"Insurance Services": insureclus,
+						//"Real Estate Services": estateclus,
 					   }	
-                  }*/							 
+                  }							 
 			];
 	
 	//Options/setting needed for the styled layer control widget	
 	var options = {
 		autoResize: true,
-		group_maxHeight: "200px",
+		group_maxHeight: "225px",
 		//container_maxHeight : "350px", 
 		exclusive: false,
 		collapsed: true, 
@@ -2288,8 +2290,9 @@ mapstyle = {
 		L.geoJson(physician, searchstyle),
 		L.geoJson(specheal, searchstyle),
 		L.geoJson(vet, searchstyle),
-		/*
+		
 		L.geoJson(advise, searchstyle),
+		/*
 		L.geoJson(finance, searchstyle),
 		L.geoJson(law, searchstyle),
 		L.geoJson(insure, searchstyle),
