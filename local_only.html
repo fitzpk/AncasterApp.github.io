@@ -8,6 +8,7 @@
 <meta name="keywords" content="Ancaster, Local, Business, Franchise, Ontario, GIS, Analysis, Map, Web Mapping, Leaflet, Javascript, GeoJSON">
 <meta name="author" content="Kevin Fitzgerald">
 <link rel="stylesheet" href="css/leaflet.css"/>
+<link rel="stylesheet" href="css/custom-popups.css"/>
 <link rel="stylesheet" href="css/custom-markercluster.css"/>
 <link rel="stylesheet" href="css/styledLayerControl.css" />
 <link rel="stylesheet" href="css/leaflet-search.css" />
@@ -697,6 +698,14 @@ var photoIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
+//Symbol for physicians
+var physicianIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/yj6fhm19iowkt0m/physician.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
 //Symbol for physiotherapy clinics
 var physioIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/edqxmv8p1fo6otu/physio.png?dl=0',
@@ -879,471 +888,710 @@ mapstyle = {
 		//Marker and pop-up for aesthetic stores
 		if (feature.properties.amenity == "Aes")
 			return L.marker(latlng, {
-				icon: aesIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: aesIcon}).bindPopup('<div class="aespopup"><header class="aespopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 	 	//Marker and pop-up for arenas and rinks
 		if (feature.properties.amenity == "Arena")
 			return L.marker(latlng, {
-				icon: arenaIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: arenaIcon}).bindPopup('<div class="arenapopup"><header class="arenapopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for galleries and art stores
 		if (feature.properties.amenity == "Art")
 			return L.marker(latlng, {
-				icon: artIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: artIcon}).bindPopup('<div class="artpopup"><header class="artpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});	
 
 		//Marker and pop-up for bakers and bakeries
 		if (feature.properties.amenity == "Bake")
 			return L.marker(latlng, {
-				icon: bakeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: bakeIcon}).bindPopup('<div class="bakepopup"><header class="bakepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for banks
 		if (feature.properties.amenity == "Bank")
 			return L.marker(latlng, {
-				icon: bankIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-		
+				icon: bankIcon}).bindPopup('<div class="bankpopup"><header class="bankpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
+		/*
 		//Marker and pop-up for beer store and pubs
 		if (feature.properties.amenity == "Beer")
 			return L.marker(latlng, {
-				icon: beerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: beerIcon}).bindPopup('<div class="beerpopup"><header class="beerpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
+		*/
 		//Marker and pop-up for Cafes
 		if (feature.properties.amenity == "Cafe")
 			return L.marker(latlng, {
-				icon: cafeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: cafeIcon}).bindPopup('<div class="cafepopup"><header class="cafepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for Car Repair Services
 		if (feature.properties.amenity == "Carrepair")
 			return L.marker(latlng, {
-				icon: carrepairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: carrepairIcon}).bindPopup('<div class="carrepairpopup"><header class="carrepairpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for cheese shops
 		if (feature.properties.amenity == "Cheese")
 			return L.marker(latlng, {
-				icon: cheeseIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: cheeseIcon}).bindPopup('<div class="cheesepopup"><header class="cheesepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for chiropractors
 		if (feature.properties.amenity == "Chiro")
 			return L.marker(latlng, {
-				icon: chiroIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: chiroIcon}).bindPopup('<div class="chiropopup"><header class="chiropopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for churches
 		if (feature.properties.amenity == "Church")
 			return L.marker(latlng, {
-				icon: churchIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: churchIcon}).bindPopup('<div class="churchpopup"><header class="churchpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
+			
 		//Marker and pop-up for computer and software technology services
 		if (feature.properties.amenity == "Comp")
 			return L.marker(latlng, {
 				tags: ['Franchise'],
-				icon: compIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: compIcon}).bindPopup('<div class="comppopup"><header class="comppopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 			
 		//Marker and pop-up for computer and software technology services
 		if (feature.properties.amenity == "Construct")
 			return L.marker(latlng, {
-				icon: constructIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: constructIcon}).bindPopup('<div class="constructpopup"><header class="constructpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 		
 		//Marker and pop-up for cycling or bike stores
 		if (feature.properties.amenity == "Cycle")
 			return L.marker(latlng, {
-				icon: cycleIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: cycleIcon}).bindPopup('<div class="cyclepopup"><header class="cyclepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for dance studios
 		if (feature.properties.amenity == "Dance")
 			return L.marker(latlng, {
-				icon: danceIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: danceIcon}).bindPopup('<div class="dancepopup"><header class="dancepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for daycare
 		if (feature.properties.amenity == "Daycare")
 			return L.marker(latlng, {
-				icon: daycareIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: daycareIcon}).bindPopup('<div class="daycarepopup"><header class="daycarepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 		
 		//Marker and pop-up for car dealerships
 		if (feature.properties.amenity == "Dealer")
 			return L.marker(latlng, {
-				icon: dealerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: dealerIcon}).bindPopup('<div class="dealerpopup"><header class="dealerpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for dental services
 		if (feature.properties.amenity == "Dental")
 			return L.marker(latlng, {
-				icon: dentalIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: dentalIcon}).bindPopup('<div class="dentalpopup"><header class="dentalpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for dryclean services
 		if (feature.properties.amenity == "Dryclean")
 			return L.marker(latlng, {
 				tags: ['Franchise'],
-				icon: drycleanIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: drycleanIcon}).bindPopup('<div class="drycleanpopup"><header class="drycleanpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for electrical services
 		if (feature.properties.amenity == "Electric")
 			return L.marker(latlng, {
-				icon: electricIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: electricIcon}).bindPopup('<div class="electricpopup"><header class="electricpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for engineering and manufacturing services
 		if (feature.properties.amenity == "Eng")
 			return L.marker(latlng, {
-				icon: engIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: engIcon}).bindPopup('<div class="engpopup"><header class="engpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
+			{maxWidth : 560});
 
 		//Marker and pop-up for real estate services
 		if (feature.properties.amenity == "Estate")
 			return L.marker(latlng, {
-				icon: estateIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: estateIcon}).bindPopup('<div class="estatepopup"><header class="estatepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for fairgrounds
 		if (feature.properties.amenity == "Fair")
 			return L.marker(latlng, {
-				icon: fairIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: fairIcon}).bindPopup('<div class="fairpopup"><header class="fairpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for farms and the farmers market
 		if (feature.properties.amenity == "Farm")
 			return L.marker(latlng, {
-				icon: farmIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: farmIcon}).bindPopup('<div class="farmpopup"><header class="farmpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		/*
 		//Marker and pop-up for fast food restaurants
 		if (feature.properties.amenity == "Fast")
 			return L.marker(latlng, {
-				icon: fastIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: fastIcon}).bindPopup('<div class="fastpopup"><header class="fastpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		*/
 		//Marker and pop-up for financial services
 		if (feature.properties.amenity == "Finance")
 			return L.marker(latlng, {
-				icon: financeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: financeIcon}).bindPopup('<div class="financepopup"><header class="financepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for fire stations
 		if (feature.properties.amenity == "Fire")
 			return L.marker(latlng, {
-				icon: fireIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: fireIcon}).bindPopup('<div class="firepopup"><header class="firepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for flower shops
 		if (feature.properties.amenity == "Flower")
 			return L.marker(latlng, {
-				icon: flowerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: flowerIcon}).bindPopup('<div class="flowerpopup"><header class="flowerpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		/*
 		//Marker and pop-up for gas stations
 		if (feature.properties.amenity == "Gas")
 			return L.marker(latlng, {
-				icon: gasIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: gasIcon}).bindPopup('<div class="gaspopup"><header class="gaspopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		*/
 		//Marker and pop-up for general services
 		if (feature.properties.amenity == "General")
 			return L.marker(latlng, {
-				icon: generalIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: generalIcon}).bindPopup('<div class="generalpopup"><header class="generalpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for golf services
 		if (feature.properties.amenity == "Golf")
 			return L.marker(latlng, {
-				icon: golfIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: golfIcon}).bindPopup('<div class="golfpopup"><header class="golfpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		/*
 		//Marker and pop-up for grocery stores
 		if (feature.properties.amenity == "Grocery")
 			return L.marker(latlng, {
-				icon: groceryIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: groceryIcon}).bindPopup('<div class="grocerypopup"><header class="grocerypopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		*/
 		//Marker and pop-up for general health services
 		if (feature.properties.amenity == "Heal")
 			return L.marker(latlng, {
-				icon: healIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: healIcon}).bindPopup('<div class="healpopup"><header class="healpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for home decor services
 		if (feature.properties.amenity == "Home")
 			return L.marker(latlng, {
-				icon: homeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: homeIcon}).bindPopup('<div class="homepopup"><header class="homepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for horseback riding and stable services
 		if (feature.properties.amenity == "Horse")
 			return L.marker(latlng, {
-				icon: horseIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: horseIcon}).bindPopup('<div class="horsepopup"><header class="horsepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 			
 		//Marker and pop-up for hotels and inns
 		if (feature.properties.amenity == "Hotel")
 			return L.marker(latlng, {
-				icon: hotelIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: hotelIcon}).bindPopup('<div class="hotelpopup"><header class="hotelpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 					
 		//Marker and pop-up for ice cream shops
 		if (feature.properties.amenity == "Ice")
 			return L.marker(latlng, {
-				icon: iceIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: iceIcon}).bindPopup('<div class="icepopup"><header class="icepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for insurance services
 		if (feature.properties.amenity == "Insure")
 			return L.marker(latlng, {
-				icon: insureIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: insureIcon}).bindPopup('<div class="insurepopup"><header class="insurepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 			
 		//Marker and pop-up for jewellery shops
 		if (feature.properties.amenity == "Jewel")
 			return L.marker(latlng, {
-				icon: jewelIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: jewelIcon}).bindPopup('<div class="jewelpopup"><header class="jewelpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for landscape services
 		if (feature.properties.amenity == "Landscape")
 			return L.marker(latlng, {
-				icon: landscapeIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: landscapeIcon}).bindPopup('<div class="landscapepopup"><header class="landscapepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for legal services
 		if (feature.properties.amenity == "Law")
 			return L.marker(latlng, {
-				icon: lawIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: lawIcon}).bindPopup('<div class="lawpopup"><header class="lawpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for libraries
 		if (feature.properties.amenity == "Library")
 			return L.marker(latlng, {
-				icon: libraryIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: libraryIcon}).bindPopup('<div class="librarypopup"><header class="librarypopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+		/*
 		//Marker and pop-up for post offices and mail services
 		if (feature.properties.amenity == "Mail")
 			return L.marker(latlng, {
-				icon: mailIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
-
+				icon: mailIcon}).bindPopup('<div class="mailpopup"><header class="mailpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
+		*/
 		//Marker and pop-up for martial arts services
 		if (feature.properties.amenity == "Martial")
 			return L.marker(latlng, {
-				icon: martialIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: martialIcon}).bindPopup('<div class="martialpopup"><header class="martialpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for mens clothing services
 		if (feature.properties.amenity == "MensClothing")
 			return L.marker(latlng, {
-				icon: mensclothingIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: mensclothingIcon}).bindPopup('<div class="mensclothingpopup"><header class="mensclothingpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for municipal services
 		if (feature.properties.amenity == "Munic")
 			return L.marker(latlng, {
-				icon: municIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: municIcon}).bindPopup('<div class="municpopup"><header class="municpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for museums
 		if (feature.properties.amenity == "Museum")
 			return L.marker(latlng, {
-				icon: museumIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: museumIcon}).bindPopup('<div class="museumpopup"><header class="museumpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for music services
 		if (feature.properties.amenity == "Music")
 			return L.marker(latlng, {
-				icon: musicIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: musicIcon}).bindPopup('<div class="musicpopup"><header class="musicpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 			
 		//Marker and pop-up for oil and natural gas services
 		if (feature.properties.amenity == "Oil")
 			return L.marker(latlng, {
-				icon: oilIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: oilIcon}).bindPopup('<div class="oilpopup"><header class="oilpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for optometry services
 		if (feature.properties.amenity == "Optom")
 			return L.marker(latlng, {
-				icon: optomIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: optomIcon}).bindPopup('<div class="optompopup"><header class="optompopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 		
 		//Marker and pop-up for pet stores
 		if (feature.properties.amenity == "Pets")
 			return L.marker(latlng, {
-				icon: petsIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: petsIcon}).bindPopup('<div class="petspopup"><header class="petspopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for pharmacies
 		if (feature.properties.amenity == "Pharm")
 			return L.marker(latlng, {
-				icon: pharmIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: pharmIcon}).bindPopup('<div class="pharmpopup"><header class="pharmpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for photo studios and camera stores
 		if (feature.properties.amenity == "Photo")
 			return L.marker(latlng, {
-				icon: photoIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: photoIcon}).bindPopup('<div class="photopopup"><header class="photopopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+
+		//Marker and pop-up for physicians
+		if (feature.properties.amenity == "Physician")
+			return L.marker(latlng, {
+				icon: physicianIcon}).bindPopup('<div class="physicianpopup"><header class="physicianpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for physiotherapy clinics
 		if (feature.properties.amenity == "Physio")
 			return L.marker(latlng, {
-				icon: physioIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: physioIcon}).bindPopup('<div class="physiopopup"><header class="physiopopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for pizza shops
 		if (feature.properties.amenity == "Pizza")
 			return L.marker(latlng, {
-				icon: pizzaIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: pizzaIcon}).bindPopup('<div class="pizzapopup"><header class="pizzapopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for indoor playgrounds
 		if (feature.properties.amenity == "Play")
 			return L.marker(latlng, {
-				icon: playIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
-
+				icon: playIcon}).bindPopup('<div class="playpopup"><header class="playpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
+			
 		//Marker and pop-up for pool services
 		if (feature.properties.amenity == "Pool")
 			return L.marker(latlng, {
-				icon: poolIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: poolIcon}).bindPopup('<div class="poolpopup"><header class="poolpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for professional services
 		if (feature.properties.amenity == "Pro")
 			return L.marker(latlng, {
-				icon: proIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: proIcon}).bindPopup('<div class="propopup"><header class="propopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 			
 		//Marker and pop-up for convenience stores
 		if (feature.properties.amenity == "Quick")
 			return L.marker(latlng, {
-				icon: quickIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: quickIcon}).bindPopup('<div class="quickpopup"><header class="quickpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for restaurants
 		if (feature.properties.amenity == "Rest")
 			return L.marker(latlng, {
-				icon: foodIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: foodIcon}).bindPopup('<div class="restpopup"><header class="restpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for retail stores
 		if (feature.properties.amenity == "Retail")
 			return L.marker(latlng, {
-				icon: retailIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: retailIcon}).bindPopup('<div class="retailpopup"><header class="retailpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for schools and educational services
 		if (feature.properties.amenity == "School")
 			return L.marker(latlng, {
-				icon: schoolIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: schoolIcon}).bindPopup('<div class="schoolpopup"><header class="schoolpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for senior homes and retirement centres
 		if (feature.properties.amenity == "Senior")
 			return L.marker(latlng, {
-				icon: seniorIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: seniorIcon}).bindPopup('<div class="seniorpopup"><header class="seniorpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for fabric stores and alterations
 		if (feature.properties.amenity == "Sew")
 			return L.marker(latlng, {
-				icon: sewIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: sewIcon}).bindPopup('<div class="sewpopup"><header class="sewpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for shooting ranges
 		if (feature.properties.amenity == "Shoot")
 			return L.marker(latlng, {
-				icon: shootIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: shootIcon}).bindPopup('<div class="shootpopup"><header class="shootpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for clothing stores
 		if (feature.properties.amenity == "Shop")
 			return L.marker(latlng, {
-				icon: clothingIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: clothingIcon}).bindPopup('<div class="shoppopup"><header class="shoppopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for soccer services
 		if (feature.properties.amenity == "Soccer")
 			return L.marker(latlng, {
-				icon: soccerIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: soccerIcon}).bindPopup('<div class="soccerpopup"><header class="soccerpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for sporting stores, ballparks, etc.
 		if (feature.properties.amenity == "Sport")
 			return L.marker(latlng, {
-				icon: sportIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: sportIcon}).bindPopup('<div class="sportpopup"><header class="sportpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 		
 		//Marker and pop-up for swimming pools and aquatic centres
 		if (feature.properties.amenity == "Swim")
 			return L.marker(latlng, {
-				icon: swimIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: swimIcon}).bindPopup('<div class="swimpopup"><header class="swimpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for tennis services
 		if (feature.properties.amenity == "Tennis")
 			return L.marker(latlng, {
-				icon: tennisIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: tennisIcon}).bindPopup('<div class="tennispopup"><header class="tennispopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for theatres
 		if (feature.properties.amenity == "Theatre")
 			return L.marker(latlng, {
-				icon: theatreIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: theatreIcon}).bindPopup('<div class="theatrepopup"><header class="theatrepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 		
 		//Marker and pop-up for trucking and transportation services
 		if (feature.properties.amenity == "Transport")
 			return L.marker(latlng, {
-				icon: transportIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: transportIcon}).bindPopup('<div class="transportpopup"><header class="transportpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 			
-		//Marker and pop-up for trucking and transportation services
+		//Marker and pop-up for travel agency services
 		if (feature.properties.amenity == "Travel")
 			return L.marker(latlng, {
-				icon: travelIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: travelIcon}).bindPopup('<div class="travelpopup"><header class="travelpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for veterinary services
 		if (feature.properties.amenity == "Vet")
 			return L.marker(latlng, {
-				icon: vetIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: vetIcon}).bindPopup('<div class="vetpopup"><header class="vetpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for nutrition stores
 		if (feature.properties.amenity == "Vitamin")
 			return L.marker(latlng, {
-				icon: vitaminIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);	
+				icon: vitaminIcon}).bindPopup('<div class="vitaminpopup"><header class="vitaminpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});	
 
 		//Marker and pop-up for car wash stations
 		if (feature.properties.amenity == "Wash")
 			return L.marker(latlng, {
-				icon: washIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);
+				icon: washIcon}).bindPopup('<div class="washpopup"><header class="washpopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});
 
 		//Marker and pop-up for wine shops
 		if (feature.properties.amenity == "Wine")
 			return L.marker(latlng, {
-				icon: wineIcon}).bindPopup('<b>'+feature.properties.name+'</b>'+'<br><br>'+'Address: '+feature.properties.address+'<br><br>'
-			+'Phone: '+feature.properties.phone+'<br><br>' + feature.properties.url);		
+				icon: wineIcon}).bindPopup('<div class="winepopup"><header class="winepopuptitle">'+feature.properties.name+'</header>'
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
+			{maxWidth : 560});		
 		}
 	};
 	
-	var mbAttr = 'KPF &copy 2017 | ' +
+	var mbAttr = 'KPF &copy 2016 | ' +
 				 'Basemaps & Imagery Provided By: <a href="http://mapbox.com">Mapbox</a> and <a href="http://google.com">Google</a>',
 		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
 
@@ -1366,7 +1614,7 @@ mapstyle = {
 	
 	// set custom emblem and prefix
     L.control.condensedAttribution({
-      emblem: '<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
+      emblem: '&nbsp&nbsp&nbsp&nbsp&nbsp<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
       prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
     }).addTo(map);
 
