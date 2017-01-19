@@ -197,6 +197,9 @@
 .leaflet-container a {
 	color: #0078A8;
 	}
+.leaflet-container a.leaflet-active {
+	outline: none;
+	}
 .leaflet-zoom-box {
 	border: 2px dotted #38f;
 	background: rgba(255,255,255,0.5);
@@ -271,11 +274,11 @@
 
 .leaflet-touch .leaflet-control-zoom-in {
 	font-size: 22px;
-	box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+	background-color: rgba(255, 255, 255, 1);
 	}
 .leaflet-touch .leaflet-control-zoom-out {
 	font-size: 24px;
-	box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+	background-color: rgba(255, 255, 255, 1);
 	}
 
 
@@ -351,6 +354,7 @@
 	}
 
 
+
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
@@ -403,11 +407,12 @@
 	}
 
 .leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
 .leaflet-touch .leaflet-bar {
 	box-shadow: none;
 	}
+.leaflet-touch .leaflet-control-layers,
 .leaflet-touch .leaflet-bar {
-	border: none;
 	background-clip: padding-box;
 	}
 
@@ -419,14 +424,31 @@
 	text-align: center;
 	}
 .leaflet-popup-content-wrapper {
-	padding: 1px;
 	text-align: left;
 	border-radius: 12px;
 	}
 .leaflet-popup-content {
-	margin: 13px 19px;
-	line-height: 1.4;
+	/*margin: 13px 19px;
+	padding: 1px 1px 1px 1px;*/
 	}
+img.popupicon {
+	position: relative;
+	left: 10px;
+	height: 16px;
+	width: 16px;
+}
+.popuplink:hover #link{
+	/* Firefox */
+	-moz-transform: rotate(15deg);
+	/* WebKit */
+	-webkit-transform: rotate(15deg);
+	/* Opera */
+	-o-transform: rotate(15deg);
+	/* Standard */
+	transform: rotate(15deg);
+	transition: all 0.3s ease-in-out;
+	z-index: 1000;
+}
 .leaflet-popup-content p {
 	margin: 18px 0;
 	}
@@ -441,9 +463,7 @@
 	width: 17px;
 	height: 17px;
 	padding: 1px;
-
 	margin: -10px auto 0;
-
 	-webkit-transform: rotate(45deg);
 	   -moz-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
@@ -453,13 +473,12 @@
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
 	background: white;
-
 	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 	}
 .leaflet-container a.leaflet-popup-close-button {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 2px;
+	right: 3px;
 	padding: 4px 4px 0 0;
 	text-align: center;
 	width: 18px;
@@ -507,3 +526,5 @@
 	background: #fff;
 	border: 1px solid #666;
 }
+
+
