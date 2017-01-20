@@ -941,18 +941,18 @@ mapstyle = {
 		if (feature.properties.amenity == "Bank")
 			return L.marker(latlng, {
 				icon: bankIcon}).bindPopup('<div class="bankpopup"><header class="bankpopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});
 		
 		//Marker and pop-up for beer store and pubs
 		if (feature.properties.amenity == "Beer")
 			return L.marker(latlng, {
 				icon: beerIcon}).bindPopup('<div class="beerpopup"><header class="beerpopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});
 
 		//Marker and pop-up for Cafes
