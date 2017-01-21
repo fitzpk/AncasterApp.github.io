@@ -187,11 +187,14 @@ html, body {
 <script src="geojson/local/Emergency_Geojson.js"></script>
 <script src="geojson/local/Postal_Geojson.js"></script>
 
+<script src="geojson/local/Arena_Geojson.js"></script>
 <script src="geojson/local/Fitness_Geojson.js"></script>
+<script src="geojson/local/Golf_Geojson.js"></script>
 <script src="geojson/local/Sport_Geojson.js"></script>
 
 <script src="geojson/local/Grocery_Geojson.js"></script>
 <script src="geojson/local/Rest_Geojson.js"></script>
+<script src="geojson/local/Lodge_Geojson.js"></script>
 <script src="geojson/local/Alcohol_Geojson.js"></script>
 <script src="geojson/local/Cater_Geojson.js"></script>
 <script src="geojson/local/Cafe_Geojson.js"></script>
@@ -1614,7 +1617,7 @@ mapstyle = {
 	
 	// set custom emblem and prefix
     L.control.condensedAttribution({
-      emblem: '<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
+      emblem: '&nbsp&nbsp&nbsp&nbsp&nbsp<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
       prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
     }).addTo(map);
 
@@ -1748,6 +1751,24 @@ mapstyle = {
     theatreclus.addLayer(theatrelyr);
     
     //Group 3
+    //Sport Arenas or Rinks
+    var arenaclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'arenacluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var arenalyr = L.geoJson(arena, mapstyle)        
+    arenaclus.addLayer(arenalyr);
+
 	//Fitness and Nutrition Businesses
     var fitnessclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1765,6 +1786,24 @@ mapstyle = {
 	});
     var fitnesslyr = L.geoJson(fitness, mapstyle)        
     fitnessclus.addLayer(fitnesslyr);
+
+	//Golf Courses and Driving Ranges
+    var golfclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'golfcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var golflyr = L.geoJson(golf, mapstyle)        
+    golfclus.addLayer(golflyr);
     
     //Sport Academies and Sporting Businesses
     var sportclus = new L.MarkerClusterGroup({
@@ -1931,7 +1970,7 @@ mapstyle = {
     var grocerylyr = L.geoJson(grocery, mapstyle)        
     groceryclus.addLayer(grocerylyr);
     
-    //Restaurants and Lodging Services
+    //Restaurants
     var restclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
@@ -1948,6 +1987,24 @@ mapstyle = {
 	});
     var restlyr = L.geoJson(rest, mapstyle)        
     restclus.addLayer(restlyr);
+    
+   //Lodging Services (Hotels and Inns)
+    var lodgeclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'lodgecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var lodgelyr = L.geoJson(lodge, mapstyle)        
+    lodgeclus.addLayer(lodgelyr);
 
     //Alcohol Vendors
     var alcoholclus = new L.MarkerClusterGroup({
@@ -2408,17 +2465,19 @@ mapstyle = {
 						"Specialty Retail Services": retailclus,
 			     	  }	
                   },{
-						groupName : "Arts & Entertainment",
+						groupName : "Arts & Entertainment Services",
 						expanded : false,
 						layers    : { 
 						"Arts & Music": artmusicclus,
 						"Theatre & Entertainment": theatreclus,
 					  }	
                   },{
-						groupName : "Athletics & Fitness",
+						groupName : "Athletics & Fitness Services",
 						expanded : false,
 						layers    : { 
+						"Arenas": arenaclus,
 						"Fitness Centres & Nutrition Stores": fitnessclus,
+						"Golf Courses & Driving Ranges": golfclus,
 						"Sport Academies, Clubs, & Stores": sportclus		
 				      }	
                   },{
@@ -2439,11 +2498,12 @@ mapstyle = {
 						"Driving Schools": edudriveclus
 					  }	
                   },{
-						groupName : "Food & Drink Services",
+						groupName : "Dining & Lodging Services",
 						expanded : false,
 						layers    : { 
 						"Grocery Stores & Farmer's Markets": groceryclus,
 						"Restaurants & Lodges": restclus,
+						"Hotels & Inns": lodgeclus,
 						"Alcohol Vendors": alcoholclus,
 						"Bakeries & Catering Services": caterclus,
 						"Breakfast Cafes & Coffee Shops": cafeclus,
@@ -2535,11 +2595,14 @@ mapstyle = {
 		L.geoJson(emergency, searchstyle),
 		L.geoJson(postal, searchstyle),
 		
+		L.geoJson(arena, searchstyle),
 		L.geoJson(fitness, searchstyle),
+		L.geoJson(golf, searchstyle),
 		L.geoJson(sport, searchstyle),
 		
 		L.geoJson(grocery, searchstyle),
 		L.geoJson(rest, searchstyle),
+		L.geoJson(lodge, searchstyle),
 		L.geoJson(alcohol, searchstyle),
 		L.geoJson(cater, searchstyle),
 		L.geoJson(cafe, searchstyle),

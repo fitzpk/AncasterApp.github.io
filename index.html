@@ -187,11 +187,14 @@ html, body {
 <script src="geojson/all/Emergency_Geojson.js"></script>
 <script src="geojson/all/Postal_Geojson.js"></script>
 
+<script src="geojson/all/Arena_Geojson.js"></script>
 <script src="geojson/all/Fitness_Geojson.js"></script>
+<script src="geojson/all/Golf_Geojson.js"></script>
 <script src="geojson/all/Sport_Geojson.js"></script>
 
 <script src="geojson/all/Grocery_Geojson.js"></script>
 <script src="geojson/all/Rest_Geojson.js"></script>
+<script src="geojson/all/Lodge_Geojson.js"></script>
 <script src="geojson/all/Alcohol_Geojson.js"></script>
 <script src="geojson/all/Cater_Geojson.js"></script>
 <script src="geojson/all/FastFood_Geojson.js"></script>
@@ -905,9 +908,9 @@ mapstyle = {
 		if (feature.properties.amenity == "Aes")
 			return L.marker(latlng, {
 				icon: aesIcon}).bindPopup('<div class="aespopup"><header class="aespopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>  '+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>  '+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>  '+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});
 
         //Marker and pop-up for arenas and rinks
@@ -923,24 +926,24 @@ mapstyle = {
 		if (feature.properties.amenity == "Art")
 			return L.marker(latlng, {
 				icon: artIcon}).bindPopup('<div class="artpopup"><header class="artpopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});	
 
 		//Marker and pop-up for bakers and bakeries
 		if (feature.properties.amenity == "Bake")
 			return L.marker(latlng, {
 				icon: bakeIcon}).bindPopup('<div class="bakepopup"><header class="bakepopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});
 
 		//Marker and pop-up for banks
 		if (feature.properties.amenity == "Bank")
 			return L.marker(latlng, {
-				icon: bankIcon}).bindPopup('<div class="bankpopup"><header class="bankpopuptitle">'+feature.properties.name+'</header>'
+				icon: bankIcon}).bindPopup('<div class="bankpopup"><header class="bankpopuptitle"> '+feature.properties.name+'</header>'
 				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
 			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
 			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
@@ -949,7 +952,7 @@ mapstyle = {
 		//Marker and pop-up for beer store and pubs
 		if (feature.properties.amenity == "Beer")
 			return L.marker(latlng, {
-				icon: beerIcon}).bindPopup('<div class="beerpopup"><header class="beerpopuptitle">'+feature.properties.name+'</header>'
+				icon: beerIcon}).bindPopup('<div class="beerpopup"><header class="beerpopuptitle"> '+feature.properties.name+'</header>'
 				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
 			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
 			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
@@ -959,9 +962,9 @@ mapstyle = {
 		if (feature.properties.amenity == "Cafe")
 			return L.marker(latlng, {
 				icon: cafeIcon}).bindPopup('<div class="cafepopup"><header class="cafepopuptitle">'+feature.properties.name+'</header>'
-				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/>'+feature.properties.address+'<br><br>'
-			+'<img id="link" class="popupicon" src="css/images/earphone.png"/>'+feature.properties.phone+'<br><br>'
-			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/>'+feature.properties.url+'</div></div>', 
+				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
+			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
+			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>', 
 			{maxWidth : 560});
 
 		//Marker and pop-up for Car Repair Services
@@ -1658,7 +1661,7 @@ mapstyle = {
 	
 	// set custom emblem and prefix
     L.control.condensedAttribution({
-      emblem: '<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
+      emblem: '&nbsp&nbsp&nbsp&nbsp&nbsp<div class="emblem-wrap"><img src="https://dl.dropbox.com/s/wfb75jezonbwgi2/info.png?dl=0"/></div>',
       prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
     }).addTo(map);
 	
@@ -1792,6 +1795,24 @@ mapstyle = {
     theatreclus.addLayer(theatrelyr);
     
     //Group 3
+    //Sport Arenas or Rinks
+    var arenaclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'arenacluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var arenalyr = L.geoJson(arena, mapstyle)        
+    arenaclus.addLayer(arenalyr);
+    
 	//Fitness and Nutrition Businesses
     var fitnessclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
@@ -1809,6 +1830,24 @@ mapstyle = {
 	});
     var fitnesslyr = L.geoJson(fitness, mapstyle)        
     fitnessclus.addLayer(fitnesslyr);
+    
+	//Golf Courses and Driving Ranges
+    var golfclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'golfcluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var golflyr = L.geoJson(golf, mapstyle)        
+    golfclus.addLayer(golflyr);
     
     //Sport Academies and Sporting Businesses
     var sportclus = new L.MarkerClusterGroup({
@@ -1975,7 +2014,7 @@ mapstyle = {
     var grocerylyr = L.geoJson(grocery, mapstyle)        
     groceryclus.addLayer(grocerylyr);
     
-    //Restaurants and Lodging Services
+    //Restaurants
     var restclus = new L.MarkerClusterGroup({
 	    iconCreateFunction: function (cluster) {
 	        var childCount = cluster.getChildCount();
@@ -1992,6 +2031,24 @@ mapstyle = {
 	});
     var restlyr = L.geoJson(rest, mapstyle)        
     restclus.addLayer(restlyr);
+
+    //Lodging Services (Hotels and Inns)
+    var lodgeclus = new L.MarkerClusterGroup({
+	    iconCreateFunction: function (cluster) {
+	        var childCount = cluster.getChildCount();
+	        var c = 'lodgecluster-';
+	        if (childCount < 10) {
+	            c += 'small';
+	        } else if (childCount < 20) {
+	            c += 'medium';
+	        } else {
+	            c += 'large';
+	        }
+	        return new L.DivIcon({ html: childCount, className: c, iconSize: null });
+	    }
+	});
+    var lodgelyr = L.geoJson(lodge, mapstyle)        
+    lodgeclus.addLayer(lodgelyr);
 
     //Alcohol Vendors
     var alcoholclus = new L.MarkerClusterGroup({
@@ -2452,17 +2509,19 @@ mapstyle = {
 						"Specialty Retail Services": retailclus,
 			     	  }	
                   },{
-						groupName : "Arts & Entertainment",
+						groupName : "Arts & Entertainment Services",
 						expanded : false,
 						layers    : { 
 						"Arts & Music": artmusicclus,
 						"Theatre & Entertainment": theatreclus,
 					  }	
                   },{
-						groupName : "Athletics & Fitness",
+						groupName : "Athletics & Fitness Services",
 						expanded : false,
 						layers    : { 
+						"Arenas": arenaclus,
 						"Fitness Centres & Nutrition Stores": fitnessclus,
+						"Golf Courses & Driving Ranges": golfclus,
 						"Sport Academies, Clubs, & Stores": sportclus		
 				      }	
                   },{
@@ -2483,11 +2542,12 @@ mapstyle = {
 						"Driving Schools": edudriveclus
 					  }	
                   },{
-						groupName : "Food & Drink Services",
+						groupName : "Dining & Lodging Services",
 						expanded : false,
 						layers    : { 
 						"Grocery Stores & Farmer's Markets": groceryclus,
-						"Restaurants & Lodges": restclus,
+						"Restaurants": restclus,
+						"Hotels & Inns": lodgeclus,
 						"Alcohol Vendors": alcoholclus,
 						"Bakeries & Catering Services": caterclus,
 						"Breakfast Cafes & Coffee Shops": cafeclus,
@@ -2579,11 +2639,14 @@ mapstyle = {
 		L.geoJson(emergency, searchstyle),
 		L.geoJson(postal, searchstyle),
 		
+		L.geoJson(arena, searchstyle),
 		L.geoJson(fitness, searchstyle),
+		L.geoJson(golf, searchstyle),
 		L.geoJson(sport, searchstyle),
 		
 		L.geoJson(grocery, searchstyle),
 		L.geoJson(rest, searchstyle),
+		L.geoJson(lodge, searchstyle),
 		L.geoJson(alcohol, searchstyle),
 		L.geoJson(cater, searchstyle),
 		L.geoJson(cafe, searchstyle),
