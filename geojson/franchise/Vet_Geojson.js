@@ -81,8 +81,8 @@ var vet = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-        	-79.949932,
-            43.226753
+        	-79.949974,
+            43.226734
         ]
       }
     }                        

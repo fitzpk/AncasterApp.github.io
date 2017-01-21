@@ -1,13 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * *
  * 
- * Franchise Businesses
- * 
- * GeoJSON features for landscaping and home maintenance services
+ * GeoJSON features for lodging services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
  * * * * * * * * * * * * * * * * * * * * */
-var landmain = {
+var lodge = {
     "type": "FeatureCollection",
     "features": [
   ]

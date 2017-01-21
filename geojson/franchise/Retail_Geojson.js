@@ -252,8 +252,8 @@ var retail = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.950101,
-          43.226731
+          -79.950127,
+          43.226710
         ]
       }
     },
@@ -271,8 +271,8 @@ var retail = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.950968,
-          43.226598
+          -79.950958,
+          43.226578
         ]
       }
     },
