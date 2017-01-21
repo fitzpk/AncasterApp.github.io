@@ -60,8 +60,8 @@ var design = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.951172,
-          43.226566
+          -79.951170,
+          43.226544 
         ]
       }
     },

@@ -14,7 +14,7 @@ var physician = {
       "properties": {
 		"address":"1144 Wilson St. W",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-6561",
         "url": "<a href='http://ancastermedicalcentre.com/'>Visit Ancaster Medical Centre</a>",
         "name": "Ancaster Medical Centre"
@@ -33,7 +33,7 @@ var physician = {
       "properties": {
 		"address":"326 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-0770",
         "url": "<a href='http://www.shopancastervillage.com/family-physicians/'>Visit Dr. Antoniuk</a>",
         "name": "Doctor Antoniuk - Family Physician"
@@ -52,7 +52,7 @@ var physician = {
       "properties": {
 		"address":"81 Wilson St. W",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-9868",
         "url": "<a href='https://plus.google.com/106159822838859668337/about'>Visit Dr. Fahmy</a>",
         "name": "Doctor N. Fahmy - Family Physician"
@@ -71,7 +71,7 @@ var physician = {
       "properties": {
 		"address":"323 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-304-8367",
         "url": "<a href='http://www.shopancastervillage.com/dr-p-ford/'>Visit Dr. Ford</a>",
         "name": "Doctor Ford - Family Physician"
@@ -90,7 +90,7 @@ var physician = {
       "properties": {
 		"address":"323 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-8786",
         "url": "<a href='http://www.shopancastervillage.com/dr-c-goebel-and-dr-h-boutin/'>Visit Dr. Goebel and Boutin</a>",
         "name": "Doctor Goebel and Doctor Boutin - Family Physicians"
@@ -109,7 +109,7 @@ var physician = {
       "properties": {
 		"address":"277 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-7973",
         "url": "<a href='http://www.shopancastervillage.com/dr-loewith-dr-feng/'>Visit Dr. Loewith and Feng</a>",
         "name": "Doctor Loewith and Doctor Feng - Family Physicians"
@@ -128,7 +128,7 @@ var physician = {
       "properties": {
 		"address":"311 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-1878",
         "url": "No Website Provided",
         "name": "Doctor Mahmood - Family Physician"
@@ -147,7 +147,7 @@ var physician = {
       "properties": {
 		"address":"61 Wilson St. W",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-304-3080",
         "url": "No Website Provided",
         "name": "Doctor K. McCallum - Family Physician"
@@ -166,7 +166,7 @@ var physician = {
       "properties": {
 		"address":"326 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-1517",
         "url": "<a href='http://www.shopancastervillage.com/family-physicians/'>Visit Dr. McMillan</a>",
         "name": "Doctor McMillan - Family Physician"
@@ -185,7 +185,7 @@ var physician = {
       "properties": {
 		"address":"326 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-0770",
         "url": "<a href='http://www.shopancastervillage.com/family-physicians/'>Visit Dr. Nash</a>",
         "name": "Doctor Nash - Family Physician"
@@ -204,7 +204,7 @@ var physician = {
       "properties": {
 		"address":"323 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-1112",
         "url": "<a href='http://www.shopancastervillage.com/dr-m-stephenson/'>Visit Dr. Stephenson</a>",
         "name": "Doctor Stephenson - Family Physician"
@@ -223,7 +223,7 @@ var physician = {
       "properties": {
 		"address":"323 Wilson St. E",
 		"status": "Local",
-	    "amenity": "Heal",
+	    "amenity": "Physician",
 	    "phone": "(905)-648-1431",
         "url": "<a href='http://www.shopancastervillage.com/dr-w-b-watters/'>Visit Dr. Waters</a>",
         "name": "Doctor Waters - Family Physician"

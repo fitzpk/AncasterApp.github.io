@@ -112,7 +112,7 @@ var tech = {
 	    "amenity": "Comp",
 	    "phone": "(905)-648-8400",
         "url": "<a href='http://www.hitheremedia.com/'>Learn more about Hi there Media</a>",
-        "name": "Hi there Media Inc."
+        "name": "Hi There Media Inc."
       },
       "geometry": {
         "type": "Point",

@@ -184,7 +184,7 @@ var landmain = {
       "id": "10",
       "properties": {
 		"address":"1377 Cormorant Rd.",
-	    "status": "Franchise",
+	    "status": "Local",
 	    "amenity": "General",
 	    "phone": "(905)-304-5533",
         "url": "<a href='http://ibx.ca/'>Learn more about IBX</a>",

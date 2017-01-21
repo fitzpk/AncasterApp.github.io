@@ -31,25 +31,6 @@ var rest = {
       "type": "Feature",
       "id": "2",
       "properties": {
-		"address":"425 Wilson St. E",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(289)-445-1234",
-        "url": "<a href='http://www.thebarracksinn.com/'>Visit The Barracks Inn</a>",
-        "name": "The Barracks Inn"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.975163,
-            43.229531
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "3",
-      "properties": {
 		"address":"73 Wilson St. W",
 		"status": "Local",
 	    "amenity": "Rest",
@@ -67,7 +48,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "3",
       "properties": {
 		"address":"1015 Golf Links Rd.",
 		"status": "Franchise",
@@ -86,7 +67,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "4",
       "properties": {
 		"address":"370 Wilson St. E",
 		"status": "Local",
@@ -105,7 +86,7 @@ var rest = {
     },    
     {
       "type": "Feature",
-      "id": "6",
+      "id": "5",
       "properties": {
 		"address":"384 Wilson St. E",
 		"status": "Local",
@@ -124,7 +105,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "7",
+      "id": "6",
       "properties": {
 		"address":"1172 Wilson St. W",
 		"status": "Local",
@@ -143,7 +124,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "8",
+      "id": "7",
       "properties": {
 		"address":"370 Wilson St. E",
 		"status": "Local",
@@ -162,7 +143,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "8",
       "properties": {
 		"address":"839 Golf Links Rd.",
 		"status": "Franchise",
@@ -181,7 +162,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "9",
       "properties": {
 		"address":"771 Golf Links Rd.",
 		"status": "Franchise",
@@ -200,7 +181,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "10",
       "properties": {
 		"address":"53 Wilson St. W",
 		"status": "Local",
@@ -219,7 +200,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "11",
       "properties": {
 		"address":"14 Martindale Cres.",
 		"status": "Franchise",
@@ -238,7 +219,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "12",
       "properties": {
 		"address":"771 Golf Links Rd.",
 		"status": "Franchise",
@@ -257,7 +238,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "13",
       "properties": {
 		"address":"35 Stone Church Rd.",
 		"status": "Local",
@@ -276,26 +257,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "15",
-      "properties": {
-		"address":"1075 Wilson St. W",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(905)-648-1821",
-        "url": "<a href='https://www.facebook.com/pages/Motel-California/1055806731108677'>Enjoy a night at the Motel California</a>",
-        "name": "Motel California"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.016953,
-            43.200242
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "16",
+      "id": "14",
       "properties": {
 		"address":"42 Wilson St. W",
 		"status": "Franchise",
@@ -314,7 +276,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "17",
+      "id": "15",
       "properties": {
 		"address":"1242 Garner Rd. W",
 		"status": "Local",
@@ -333,26 +295,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "18",
-      "properties": {
-		"address":"902 Shaver Rd.",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(905)-648-0116",
-        "url": "<a href='http://theheartofontario.com/operators/view/340/ridgemoor-bed--breakfast#.WEcjchorIxE'>Visit Ridgemoor</a>",
-        "name": "Ridgemoor Bed & Breakfast"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.007977,
-            43.183025
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "19",
+      "id": "16",
       "properties": {
 		"address":"375 Wilson St. E",
 		"status": "Local",
@@ -371,7 +314,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "20",
+      "id": "17",
       "properties": {
 		"address":"1100 Golf Links Rd.",
 		"status": "Local",
@@ -390,7 +333,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "21",
+      "id": "18",
       "properties": {
 		"address":"534 Garner Rd. E",
 		"status": "Local",
@@ -409,7 +352,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "22",
+      "id": "19",
       "properties": {
 		"address":"1000 Golf Links Rd.",
 		"status": "Franchise",
@@ -428,7 +371,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "23",
+      "id": "20",
       "properties": {
 		"address":"1146 Wilson St. W",
 		"status": "Franchise",
@@ -447,7 +390,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "24",
+      "id": "21",
       "properties": {
 		"address":"1654 Wilson St. W",
 		"status": "Local",
@@ -466,7 +409,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "25",
+      "id": "22",
       "properties": {
 		"address":"402 Wilson St. E",
 		"status": "Local",
@@ -485,7 +428,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "26",
+      "id": "23",
       "properties": {
 		"address":"1075 Wilson St. W",
 		"status": "Franchise",

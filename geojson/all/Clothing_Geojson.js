@@ -22,7 +22,7 @@ var clothing = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.950566,
+          -79.950536,
           43.226644
         ]
       }

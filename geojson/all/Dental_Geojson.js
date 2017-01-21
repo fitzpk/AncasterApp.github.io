@@ -281,7 +281,7 @@ var dental = {
 		"address":"26 Legend Crt.",
 		"status": "Local",
 	    "amenity": "Dental",
-	    "phone": "(905) 304-1212",
+	    "phone": "(905)-304-1212",
         "url": "<a href='http://www.meadowlandsdental.com/'>Visit Meadowlands Dental</a>",
         "name": "Meadowlands Dental"
       },

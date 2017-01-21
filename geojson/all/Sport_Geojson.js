@@ -145,25 +145,6 @@ var sport = {
       "type": "Feature",
       "id": "8",
       "properties": {
-		"address":"618 Garner Rd. E",
-		"status": "Local",
-	    "amenity": "Golf",
-	    "phone": "(905)-648-9880",
-        "url": "<a href='http://eagleclassicgolfrange.com/'>Visit Eagle Classic Golf Centre</a>",
-        "name": "Eagle Classic Golf Centre & Mini-Putt"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.954612,
-            43.205731
-        ]
-      }
-    },
-    {    
-      "type": "Feature",
-      "id": "9",
-      "properties": {
 		"address":"1330 Sandhill Dr.",
 		"status": "Local",
 	    "amenity": "Martial",
@@ -181,26 +162,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "10",
-      "properties": {
-		"address":"232 Golf Links Rd.",
-		"status": "Local",
-	    "amenity": "Golf",
-	    "phone": "(905)-648-4471",
-        "url": "<a href='http://www.hgcc.ca/'>Visit HGCC</a>",
-        "name": "Hamilton Golf & Country Club"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.976950,
-            43.219001
-        ]
-      }
-    },
-    {    
-      "type": "Feature",
-      "id": "11",
+      "id": "9",
       "properties": {
 		"address":"1330 Sandhill Dr.",
 		"status": "Local",
@@ -219,7 +181,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "12",
+      "id": "10",
       "properties": {
 		"address":"1412 Sandhill Dr.",
 		"status": "Local",
@@ -238,26 +200,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "13",
-      "properties": {
-		"address":"914 Book Rd. W",
-		"status": "Local",
-	    "amenity": "Golf",
-	    "phone": "(905)-648-6687",
-        "url": "<a href='http://www.knollwoodgolfclub.com/'>Visit Knollwood</a>",
-        "name": "Knollwood Old & New Golf Courses"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.017864,
-            43.176638
-        ]
-      }
-    },
-    {    
-      "type": "Feature",
-      "id": "14",
+      "id": "11",
       "properties": {
 		"address":"754 Shaver Rd.",
 		"status": "Local",
@@ -276,26 +219,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "15",
-      "properties": {
-		"address":"1505 Wilson St. W",
-		"status": "Local",
-	    "amenity": "Golf",
-	    "phone": "(905)-648-4653",
-        "url": "<a href='http://oakgables.com/'>Visit Oak Gables</a>",
-        "name": "Oak Gables Golf & Country Club"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.032895,
-            43.195153
-        ]
-      }
-    },
-    {    
-      "type": "Feature",
-      "id": "16",
+      "id": "12",
       "properties": {
 		"address":"1145 Jerseyville Rd.",
 		"status": "Local",
@@ -314,7 +238,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "17",
+      "id": "13",
       "properties": {
 		"address":"1378 Sandhill Dr",
 		"status": "Local",
@@ -333,7 +257,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "18",
+      "id": "14",
       "properties": {
 		"address":"180 Filman Rd.",
 		"status": "Local",
@@ -352,7 +276,7 @@ var sport = {
     },
     {    
       "type": "Feature",
-      "id": "19",
+      "id": "15",
       "properties": {
 		"address":"994 Courtland Dr.",
 		"status": "Local",

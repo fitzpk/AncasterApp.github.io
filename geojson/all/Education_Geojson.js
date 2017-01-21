@@ -151,7 +151,7 @@ var education = {
 	    "amenity": "School",
 	    "phone": "(905)-648-6655",
         "url": "<a href='http://hdch.org/'>Visit Hamilton District Christian High</a>",
-        "name": "Hamilton District Christian High"
+        "name": "Hamilton District Christian High School"
       },
       "geometry": {
         "type": "Point",
