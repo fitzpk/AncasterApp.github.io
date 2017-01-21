@@ -343,7 +343,7 @@ var manueng = {
 	    "amenity": "Eng",
 	    "phone": "(905)-304-9155",
         "url": "<a href='http://www.everestwholesale.com/'>Learn more about Everest</a>",
-        "name": "Everest - Toy, Game, & Gift Manufactor & Distributor"
+        "name": "Everest - Toy, Game, & Gift Manufacturer & Distributor"
       },
       "geometry": {
         "type": "Point",

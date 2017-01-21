@@ -104,29 +104,10 @@ var municipal = {
             43.225685
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "id": "6",
-      "properties": {
-		"address":"64 Sulphur Springs Rd.",
-		"status": "Local",
-	    "amenity": "Museum",
-	    "phone": "(905)-648-8144",
-        "url": "<a href='https://www.hamilton.ca/attractions/hamilton-civic-museums/fieldcote-memorial-park-museum'>Visit Fieldcote Memorial Park & Museum</a>",
-        "name": "Fieldcote Memorial Park & Museum"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.980054,
-            43.226234
-        ]
-      }
     }, 
     {
       "type": "Feature",
-      "id": "9",
+      "id": "6",
       "properties": {
 		"address":"300 Wilson St. E",
 		"status": "Local",
@@ -145,39 +126,20 @@ var municipal = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "7",
       "properties": {
 		"address":"385 Jerseyville Rd. W",
 		"status": "Local",
-	    "amenity": "Arena",
+	    "amenity": "Munic",
 	    "phone": "(905)-546-2489",
-        "url": "<a href='https://www.hamilton.ca/parks-recreation/drop-in-recreation-programs/morgan-firestone-arena'>Visit the Community Park or Arena</a>",
-        "name": "Robert E. Wade Ancaster Community Park/Morgan Fire Stone Arena"
+        "url": "<a href='https://www.facebook.com/pages/Robert-E-Wade-Community-Centre/346892432128703'>Visit the Community Centre</a>",
+        "name": "Robert E. Wade Ancaster Community Centre"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-			-80.007548,
-            43.218000
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "11",
-      "properties": {
-		"address":"29 Orchard Dr. W",
-		"status": "Local",
-	    "amenity": "Arena",
-	    "phone": "(905)-648-4404",
-        "url": "<a href='http://www.arenamaps.com/arenas/1758.htm'>Need Ice time?</a>",
-        "name": "Spring Valley Arena"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.997967,
-            43.217073
+			-80.008205,
+            43.217905
         ]
       }
     }

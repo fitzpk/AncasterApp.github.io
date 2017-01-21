@@ -1,6 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * *
  * 
- * GeoJSON features for restaurants and lodging services
+ * GeoJSON features for full service restaurants and lodging services
  * 
  * Kevin Fitzgerald Copyright 2016
  * 
@@ -31,25 +31,6 @@ var rest = {
       "type": "Feature",
       "id": "2",
       "properties": {
-		"address":"425 Wilson St. E",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(289)-445-1234",
-        "url": "<a href='http://www.thebarracksinn.com/'>Visit The Barracks Inn</a>",
-        "name": "The Barracks Inn"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-79.975163,
-            43.229531
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "3",
-      "properties": {
 		"address":"73 Wilson St. W",
 		"status": "Local",
 	    "amenity": "Rest",
@@ -62,6 +43,25 @@ var rest = {
         "coordinates": [
 			-79.990707,
             43.216650
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "properties": {
+		"address":"1015 Golf Links Rd.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-3759",
+        "url": "<a href='http://www.buffalowildwings.com/en-CA/'>Visit Buffalo Wild Wings</a>",
+        "name": "Buffalo Wild Wings"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.940726,
+            43.228073
         ]
       }
     },
@@ -145,6 +145,44 @@ var rest = {
       "type": "Feature",
       "id": "8",
       "properties": {
+		"address":"839 Golf Links Rd.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-1721",
+        "url": "<a href='http://jackastors.com/'>Visit Jack Astor's</a>",
+        "name": "Jack Astor's Bar & Grill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.949548,
+            43.226885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9",
+      "properties": {
+		"address":"771 Golf Links Rd.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-5100",
+        "url": "<a href='http://www.kelseys.ca/'>Visit Kelsey's</a>",
+        "name": "Kelsey's Original Roadhouse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.953185,
+            43.226088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "10",
+      "properties": {
 		"address":"53 Wilson St. W",
 		"status": "Local",
 	    "amenity": "Rest",
@@ -162,7 +200,45 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "9",
+      "id": "11",
+      "properties": {
+		"address":"14 Martindale Cres.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-648-7147",
+        "url": "<a href='https://www.lonestartexasgrill.com/'>Visit Lone Star</a>",
+        "name": "Lone Star Texas Grill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.938019,
+            43.228583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12",
+      "properties": {
+		"address":"771 Golf Links Rd.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-4980",
+        "url": "<a href='http://www.montanas.ca/'>Visit Montana's</a>",
+        "name": "Montana's BBQ & Bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.952525,
+            43.226195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
       "properties": {
 		"address":"35 Stone Church Rd.",
 		"status": "Local",
@@ -181,26 +257,26 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "10",
+      "id": "14",
       "properties": {
-		"address":"1075 Wilson St. W",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(905)-648-1821",
-        "url": "<a href='https://www.facebook.com/pages/Motel-California/1055806731108677'>Enjoy a night at the Motel California</a>",
-        "name": "Motel California"
+		"address":"42 Wilson St. W",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-8424",
+        "url": "<a href='http://www.mythai.ca/'>Visit My Thai</a>",
+        "name": "My Thai"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-			-80.016953,
-            43.200242
+			-79.988108,
+            43.216602
         ]
       }
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "15",
       "properties": {
 		"address":"1242 Garner Rd. W",
 		"status": "Local",
@@ -219,26 +295,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "12",
-      "properties": {
-		"address":"902 Shaver Rd.",
-		"status": "Local",
-	    "amenity": "Hotel",
-	    "phone": "(905)-648-0116",
-        "url": "<a href='http://theheartofontario.com/operators/view/340/ridgemoor-bed--breakfast#.WEcjchorIxE'>Visit Ridgemoor</a>",
-        "name": "Ridgemoor Bed & Breakfast"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.007977,
-            43.183025
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "13",
+      "id": "16",
       "properties": {
 		"address":"375 Wilson St. E",
 		"status": "Local",
@@ -257,7 +314,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "14",
+      "id": "17",
       "properties": {
 		"address":"1100 Golf Links Rd.",
 		"status": "Local",
@@ -276,7 +333,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "15",
+      "id": "18",
       "properties": {
 		"address":"534 Garner Rd. E",
 		"status": "Local",
@@ -295,7 +352,45 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "16",
+      "id": "19",
+      "properties": {
+		"address":"1000 Golf Links Rd.",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-1885",
+        "url": "<a href='https://www.swisschalet.com/store/ancaster/golf-links-road'>Visit Swiss Chalet of Ancaster</a>",
+        "name": "Swiss Chalet Rotisserie & Grill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.941231,
+            43.227319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "20",
+      "properties": {
+		"address":"1146 Wilson St. W",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-304-6226",
+        "url": "<a href='https://symposiumcafe.com/'>Visit Symposium</a>",
+        "name": "Symposium Cafe Restaurant & Lounge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-80.019048,
+            43.197409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
       "properties": {
 		"address":"1654 Wilson St. W",
 		"status": "Local",
@@ -314,7 +409,7 @@ var rest = {
     },
     {
       "type": "Feature",
-      "id": "17",
+      "id": "22",
       "properties": {
 		"address":"402 Wilson St. E",
 		"status": "Local",
@@ -328,6 +423,25 @@ var rest = {
         "coordinates": [
 			-79.975147,
             43.228562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "23",
+      "properties": {
+		"address":"1075 Wilson St. W",
+		"status": "Franchise",
+	    "amenity": "Rest",
+	    "phone": "(905)-648-2002",
+        "url": "<a href='http://wimpysdiner.ca//'>Visit Wimpy's</a>",
+        "name": "Wimpy's Diner"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-80.016803,
+            43.199898
         ]
       }
     }

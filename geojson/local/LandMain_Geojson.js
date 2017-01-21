@@ -185,6 +185,25 @@ var landmain = {
       "type": "Feature",
       "id": "10",
       "properties": {
+		"address":"1377 Cormorant Rd.",
+	    "status": "Local",
+	    "amenity": "General",
+	    "phone": "(905)-304-5533",
+        "url": "<a href='http://ibx.ca/'>Learn more about IBX</a>",
+        "name": "IBX Services - Disaster Restoration"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+        	-80.026838,
+            43.187943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "11",
+      "properties": {
 		"address":"1735 Wilson St. W",
 	    "status": "Local",
 	    "amenity": "Landscape",
@@ -202,7 +221,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "11",
+      "id": "12",
       "properties": {
 		"address":"1404 Cormorant Rd.",
 	    "status": "Local",
@@ -221,7 +240,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "12",
+      "id": "13",
       "properties": {
 		"address":"587 Westview Ave.",
 	    "status": "Local",
@@ -240,7 +259,7 @@ var landmain = {
     },
     {
       "type": "Feature",
-      "id": "13",
+      "id": "14",
       "properties": {
 		"address":"343 Book Rd. E",
 	    "status": "Local",

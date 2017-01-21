@@ -100,8 +100,8 @@ var fitness = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-			-79.950786,
-            43.226613
+			-79.950749,
+            43.226610
         ]
       }
     },

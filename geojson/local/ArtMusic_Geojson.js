@@ -52,6 +52,25 @@ var artmusic = {
       "type": "Feature",
       "id": "3",
       "properties": {
+		"address":"64 Sulphur Springs Rd.",
+		"status": "Local",
+	    "amenity": "Museum",
+	    "phone": "(905)-648-8144",
+        "url": "<a href='https://www.hamilton.ca/attractions/hamilton-civic-museums/fieldcote-memorial-park-museum'>Visit Fieldcote Memorial Park & Museum</a>",
+        "name": "Fieldcote Memorial Park & Museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			-79.980054,
+            43.226234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
 		"address":"580 Tuscarora Dr.",
 		"status": "Local",
 	    "amenity": "Music",
@@ -69,7 +88,7 @@ var artmusic = {
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "5",
       "properties": {
 		"address":"470 Kitty Murray Ln",
 		"status": "Local",
@@ -88,7 +107,7 @@ var artmusic = {
     },
     {
       "type": "Feature",
-      "id": "5",
+      "id": "6",
       "properties": {
 		"address":"44 Carnegie Place",
 	    "status": "Local",
@@ -107,7 +126,7 @@ var artmusic = {
     },
     {
       "type": "Feature",
-      "id": "6",
+      "id": "7",
       "properties": {
 		"address":"240 Wilson St. E",
 		"status": "Local",
