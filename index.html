@@ -1641,6 +1641,11 @@ mapstyle = {
 	    subdomains:['mt0','mt1','mt2','mt3']
 	});
 	
+	var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    maxZoom: 19,
+	    attribution: mbAttr
+	});
+	
 	function biastyle(feature) {
 	    return {
 	        weight: 3.5,
@@ -2491,7 +2496,7 @@ mapstyle = {
 						groupName: "<b>Base Maps</b>",
 						expanded: false,
 						layers: {
-						"Streets":  streets,
+						"Streets":  OpenStreetMap_Mapnik,
 						"Satellite Imagery": googleSat,
 						"Comic-Style": comic
 						}
