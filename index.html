@@ -1641,28 +1641,12 @@ mapstyle = {
 	    attribution: mbAttr
 	});
 	
-	var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-	    maxZoom: 20,
-	    attribution: mbAttr
-	});
-	
-	function biastyle(feature) {
-	    return {
-	        weight: 3.5,
-	        opacity: 1,
-	        color: 'green',
-	        fillOpacity: 0.2
-	    };
-	}
-	
-	var bia = L.geoJson(bia, {style: biastyle});
-	
 	//Create map
 	var map = L.map('map', {
 		center: [43.217779, -79.987283],
 		zoom: 13,
 		condensedAttributionControl: false,
-		layers: [OpenStreetMap_Mapnik, bia]
+		layers: [OpenStreetMap_Mapnik]
 	});
 	
 	// set custom emblem and prefix
@@ -2497,8 +2481,7 @@ mapstyle = {
 						expanded: false,
 						layers: {
 						"Streets":  OpenStreetMap_Mapnik,
-						"Satellite Imagery": googleSat,
-						"Grayscale": OpenStreetMap_BlackAndWhite
+						"Satellite Imagery": googleSat
 						}
 				    }							
 				];
