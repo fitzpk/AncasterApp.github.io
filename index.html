@@ -1628,12 +1628,7 @@ mapstyle = {
 	};
 	
 	var mbAttr = 'KPF &copy 2017 | ' +
-				 'Basemaps & Imagery Provided By: <a href="http://mapbox.com">Mapbox</a> and <a href="http://google.com">Google</a>',
-		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
-
-	var grayscale = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.satellite', attribution: mbAttr}),
-		streets = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.streets', attribution: mbAttr}),
-		comic = L.tileLayer(mbUrl, {maxZoom: 20, id: 'mapbox.comic', attribution: mbAttr});
+	'Basemaps Provided By: <a href="http://wiki.openstreetmap.org/wiki/Tiles">OpenStreetMap</a> and <a href="http://google.com">Google</a>';
 		
 	var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
 	    maxZoom: 20,
@@ -1642,6 +1637,11 @@ mapstyle = {
 	});
 	
 	var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    maxZoom: 20,
+	    attribution: mbAttr
+	});
+	
+	var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 	    maxZoom: 20,
 	    attribution: mbAttr
 	});
@@ -2498,7 +2498,7 @@ mapstyle = {
 						layers: {
 						"Streets":  OpenStreetMap_Mapnik,
 						"Satellite Imagery": googleSat,
-						"Comic-Style": comic
+						"Grayscale": OpenStreetMap_BlackAndWhite
 						}
 				    }							
 				];
