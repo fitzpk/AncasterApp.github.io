@@ -33,25 +33,6 @@ var theatre = {
       "type": "Feature",
       "id": "2",
       "properties": {
-		"address":"1365 Sandhill Dr.",
-		"status": "Local",
-	    "amenity": "Rest",
-	    "phone": "(905)-304-4416",
-        "url": "<a href='http://www.marquisgardens.com/'>Visit Marquis Gardens</a>",
-        "name": "Marquis Gardens - Banquet Hall & Convention Centre"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-			-80.028404,
-            43.191791
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "3",
-      "properties": {
 		"address":"334 Wilson St. E",
 		"status": "Local",
 	    "amenity": "Theatre",
@@ -69,7 +50,7 @@ var theatre = {
     },
     {    
       "type": "Feature",
-      "id": "4",
+      "id": "3",
       "properties": {
 		"address":"665 Tradewind Dr.",
 		"status": "Local",
