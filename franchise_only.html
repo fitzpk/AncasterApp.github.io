@@ -350,14 +350,6 @@ var churchIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
-//Symbol for Clothing Stores
-var clothingIcon = L.icon({
-	iconUrl: 'https://dl.dropbox.com/s/svzmyqzaryfw6t8/clothers_female.png?dl=0',
-	iconSize: [36, 40],
-	iconAnchor: [17, 35],
-	popupAnchor: [0, -28]
-});
-
 //Symbol for computer and software technology services
 var compIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/c6jf50t2uz3dsow/computers.png?dl=0',
@@ -484,15 +476,7 @@ var flowerIcon = L.icon({
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
-});	
-
-//Symbol for Food Stores
-var foodIcon = L.icon({
-	iconUrl: 'https://dl.dropbox.com/s/8r8lwsypgsmn24b/restaurant.png?dl=0',
-	iconSize: [36, 40],
-	iconAnchor: [17, 35],
-	popupAnchor: [0, -28]
-});	
+});		
 
 //Symbol for gas stations
 var gasIcon = L.icon({
@@ -742,6 +726,14 @@ var quickIcon = L.icon({
 	popupAnchor: [0, -28]
 });
 
+//Symbol for Food Stores
+var restIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/8r8lwsypgsmn24b/restaurant.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+	
 //Symbol for Retail Services
 var retailIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/0yo8aziwsfqi52v/retail.png?dl=0',
@@ -777,6 +769,14 @@ var seniorIcon = L.icon({
 //Symbol for Sewing and Alteration Stores
 var sewIcon = L.icon({
 	iconUrl: 'https://dl.dropbox.com/s/sbdvxk5xadq3rxs/sewing.png?dl=0',
+	iconSize: [36, 40],
+	iconAnchor: [17, 35],
+	popupAnchor: [0, -28]
+});
+
+//Symbol for Clothing Stores
+var shopIcon = L.icon({
+	iconUrl: 'https://dl.dropbox.com/s/svzmyqzaryfw6t8/clothers_female.png?dl=0',
 	iconSize: [36, 40],
 	iconAnchor: [17, 35],
 	popupAnchor: [0, -28]
@@ -1407,7 +1407,7 @@ mapstyle = {
 		//Marker and pop-up for restaurants
 		if (feature.properties.amenity == "Rest")
 			return L.marker(latlng, {
-				icon: foodIcon}).bindPopup('<div class="restpopup"><header class="restpopuptitle">'+feature.properties.name+'</header>'
+				icon: restIcon}).bindPopup('<div class="restpopup"><header class="restpopuptitle">'+feature.properties.name+'</header>'
 				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
 			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
 			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
@@ -1461,7 +1461,7 @@ mapstyle = {
 		//Marker and pop-up for clothing stores
 		if (feature.properties.amenity == "Shop")
 			return L.marker(latlng, {
-				icon: clothingIcon}).bindPopup('<div class="shoppopup"><header class="shoppopuptitle">'+feature.properties.name+'</header>'
+				icon: shopIcon}).bindPopup('<div class="shoppopup"><header class="shoppopuptitle">'+feature.properties.name+'</header>'
 				+'<br><br>'+'<img id="link" class="popupicon" src="css/images/road.png"/> '+feature.properties.address+'<br><br>'
 			+'<img id="link" class="popupicon" src="css/images/earphone.png"/> '+feature.properties.phone+'<br><br>'
 			+'<div class="popuplink"><img id="link" class="popupicon" src="css/images/link.png"/> '+feature.properties.url+'</div></div>',
